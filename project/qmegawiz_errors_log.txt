@@ -1,0 +1,163 @@
+
+
+C:/Users/yctung/Desktop/TOP_CDT_100/Simu_RAM.vhd
+
+Feb 02 09PM:00:27>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+Simu_RAM.v
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_dff38.vhd
+
+Feb 05 11PM:23:28>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or_38b2.vhd
+
+Feb 05 11PM:26:22>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or_38b2.vhd
+
+Feb 05 11PM:26:24>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or_38b2.vhd
+
+Feb 05 11PM:26:34>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_dff38.vhd
+
+Feb 05 11PM:26:38>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or_38b2.vhd
+
+Feb 06 03PM:26:23>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:23:53>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:24:26>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:25:02>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:26:06>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:26:16>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:26:40>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:26:50>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:26:55>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:27:00>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:27:18>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:27:23>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:27:29>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:27:36>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:28:03>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v100/mapping_or38b.vhd
+
+Feb 07 01AM:34:13>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v104/mapping_or38_38b.vhd
+
+Feb 10 07PM:20:21>: Megafunction LPM_OR is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v108/lpm_dff14b.vhd
+
+Feb 17 09PM:40:21>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_clustering_v113/dff16.vhd
+
+Apr 01 05PM:04:57>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_Et_v101/dff16.vhd
+
+Apr 16 09PM:27:48>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/yctung/Desktop/OFC_Et_v108/dff_one.vhd
+
+Apr 25 03PM:46:54>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/qslin/Project/LV2/Module_test/SFP_6G_block/v3/OFC_Et_v115/dff4.vhd
+
+Oct 30 04PM:19:54>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/qslin/Project/LV2/Module_test/v75/dff_one.vhd
+
+Nov 23 09AM:54:50>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/qslin/Project/LV2/Module_test/v77/dff_15.vhd
+
+Nov 24 09PM:43:41>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/koto_firmware/OFC-I/package_storage.tdf
+
+Dec 13 01PM:56:50>: Megafunction ALTSYNCRAM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

@@ -1,0 +1,1238 @@
+ -- Copyright (C) 1991-2012 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCPGM        : Dedicated power pin for configuration, which MUST be connected to 1.8V, 2.5V or 3.0V depending on the requirements of the configuration device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.1V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 3A:		3.0V
+ --					Bank 3B:		3.0V
+ --					Bank 3C:		3.0V
+ --					Bank 3D:		3.0V
+ --					Bank 4D:		3.0V
+ --					Bank 4C:		3.0V
+ --					Bank 4B:	3.0V
+ --					Bank 4A:	3.0V
+ --					Bank 7A:	3.0V
+ --					Bank 7B:	3.0V
+ --					Bank 7C:	3.0V
+ --					Bank 7D:	3.0V
+ --					Bank 8D:	2.5V
+ --					Bank 8C:	1.8V
+ --					Bank 8B:	1.8V
+ --					Bank 8A:	1.8V
+ -- RREF          : External reference resistor for the quad, MUST be connected to
+ --                 GND via a 2k Ohm resistor.
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks, connect each pin marked GND*
+ --           	    either individually through a 10k Ohm resistor to GND or tie all pins
+ --           	    together and connect through a single 10k Ohm resistor to GND.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- GXB_GND*      : Unused GXB Receiver or dedicated reference clock pin. This pin
+ --                 must be connected to GXB_GND through a 10k Ohm resistor.
+ -- GXB_NC        : Unused GXB Transmitter or dedicated clock output pin. This pin
+ --                 must not be connected.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II 64-Bit Version 12.0 Build 263 08/02/2012 Service Pack 2.16 SJ Full Version
+CHIP  "Rx"  ASSIGNED TO AN: 5AGXFB5H4F35C4
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND*                         : A2        :        :                   :         : 7A        :                
+GND*                         : A3        :        :                   :         : 7A        :                
+GND*                         : A4        :        :                   :         : 7A        :                
+GND*                         : A5        :        :                   :         : 7A        :                
+GND*                         : A6        :        :                   :         : 7B        :                
+GND*                         : A7        :        :                   :         : 7B        :                
+GND*                         : A8        :        :                   :         : 7B        :                
+VCCIO7B                      : A9        : power  :                   : 3.0V    : 7B        :                
+GND*                         : A10       :        :                   :         : 7B        :                
+GND*                         : A11       :        :                   :         : 7C        :                
+VCCIO7C                      : A12       : power  :                   : 3.0V    : 7C        :                
+GND*                         : A13       :        :                   :         : 7C        :                
+debug[1]                     : A14       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+VCCIO7D                      : A15       : power  :                   : 3.0V    : 7D        :                
+GND*                         : A16       :        :                   :         : 8D        :                
+GND*                         : A17       :        :                   :         : 8D        :                
+VCCIO8D                      : A18       : power  :                   : 2.5V    : 8D        :                
+GND*                         : A19       :        :                   :         : 8D        :                
+GND*                         : A20       :        :                   :         : 8D        :                
+VCCIO8C                      : A21       : power  :                   : 1.8V    : 8C        :                
+mem_dq[0]                    : A22       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_dq[2]                    : A23       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+VCCIO8B                      : A24       : power  :                   : 1.8V    : 8B        :                
+mem_a[0]                     : A25       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_a[3]                     : A26       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_dq[34]                   : A27       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[32]                   : A28       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[30]                   : A29       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+mem_qvld(n)                  : A30       : input  : Differential 1.8-V HSTL Class I :         : 8A        : Y              
+mem_qvld                     : A31       : input  : Differential 1.8-V HSTL Class I :         : 8A        : Y              
+GND*                         : A32       :        :                   :         : 8A        :                
+nCE                          : A33       :        :                   :         : 8A        :                
+GND                          : AA1       : gnd    :                   :         :           :                
+GND                          : AA2       : gnd    :                   :         :           :                
+dataout2[2]                  : AA3       : output : 1.5-V PCML        :         : B0R       : Y              
+dataout2[2](n)               : AA4       : output : 1.5-V PCML        :         : B0R       : Y              
+VCCR_GXBR                    : AA5       : power  :                   : 1.15V   :           :                
+VCCR_GXBR                    : AA6       : power  :                   : 1.15V   :           :                
+GXB_GND*                     : AA7       :        :                   :         : B0R       :                
+GXB_GND*                     : AA8       :        :                   :         : B0R       :                
+GND                          : AA9       : gnd    :                   :         :           :                
+GND*                         : AA10      :        :                   :         : 4B        :                
+GND                          : AA11      : gnd    :                   :         :           :                
+GND*                         : AA12      :        :                   :         : 4C        :                
+GND                          : AA13      : gnd    :                   :         :           :                
+HOLDtoHS[8]                  : AA14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+vme_addr[10]                 : AA15      : input  : 3.0-V LVTTL       :         : 4D        : N              
+GND                          : AA16      : gnd    :                   :         :           :                
+vme_addr[24]                 : AA17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+vme_addr[22]                 : AA18      : input  : 3.0-V LVTTL       :         : 3D        : N              
+GND                          : AA19      : gnd    :                   :         :           :                
+vme_data[2]                  : AA20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[12]                 : AA21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND                          : AA22      : gnd    :                   :         :           :                
+vme_data[31]                 : AA23      : bidir  : 3.0-V LVTTL       :         : 3B        : N              
+GND                          : AA24      : gnd    :                   :         :           :                
+ID[1]                        : AA25      : input  : 3.0-V LVTTL       :         : 3B        : N              
+GND                          : AA26      : gnd    :                   :         :           :                
+GXB_GND*                     : AA27      :        :                   :         : B0L       :                
+GXB_GND*                     : AA28      :        :                   :         : B0L       :                
+VCCR_GXBL                    : AA29      : power  :                   : 1.15V   :           :                
+VCCR_GXBL                    : AA30      : power  :                   : 1.15V   :           :                
+dataout1[1](n)               : AA31      : output : 1.5-V PCML        :         : B0L       : Y              
+dataout1[1]                  : AA32      : output : 1.5-V PCML        :         : B0L       : Y              
+GND                          : AA33      : gnd    :                   :         :           :                
+GND                          : AA34      : gnd    :                   :         :           :                
+hitdatain2[2]                : AB1       : input  : 1.5-V PCML        :         : B0R       : Y              
+hitdatain2[2](n)             : AB2       : input  : 1.5-V PCML        :         : B0R       : Y              
+GND                          : AB3       : gnd    :                   :         :           :                
+GND                          : AB4       : gnd    :                   :         :           :                
+GND                          : AB5       : gnd    :                   :         :           :                
+VCCPD4A                      : AB6       : power  :                   : 3.0V    : 4A        :                
+GND                          : AB7       : gnd    :                   :         :           :                
+GND                          : AB8       : gnd    :                   :         :           :                
+VCCPD4A                      : AB9       : power  :                   : 3.0V    : 4A        :                
+GND*                         : AB10      :        :                   :         : 4B        :                
+LED1                         : AB11      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+vme_addr[12]                 : AB12      : input  : 3.0-V LVTTL       :         : 4C        : N              
+SFP_Control[0]               : AB13      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+GND*                         : AB14      :        :                   :         : 4D        :                
+debug[2]                     : AB15      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+SFP_Control[4]               : AB16      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+vme_addr[21]                 : AB17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+vme_addr[16]                 : AB18      : input  : 3.0-V LVTTL       :         : 3D        : N              
+InternalAUXbus[2]            : AB19      : bidir  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[13]                 : AB20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[16]                 : AB21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+HOLDtoAMB[2]                 : AB22      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[10]                 : AB23      : bidir  : 3.0-V LVTTL       :         : 3B        : N              
+GND*                         : AB24      :        :                   :         : 3B        :                
+GND*                         : AB25      :        :                   :         : 3B        :                
+VCCPD3                       : AB26      : power  :                   : 3.0V    :           :                
+GND                          : AB27      : gnd    :                   :         :           :                
+GND                          : AB28      : gnd    :                   :         :           :                
+GND                          : AB29      : gnd    :                   :         :           :                
+GND                          : AB30      : gnd    :                   :         :           :                
+GND                          : AB31      : gnd    :                   :         :           :                
+GND                          : AB32      : gnd    :                   :         :           :                
+hitdatain1[1](n)             : AB33      : input  : 1.5-V PCML        :         : B0L       : Y              
+hitdatain1[1]                : AB34      : input  : 1.5-V PCML        :         : B0L       : Y              
+GND                          : AC1       : gnd    :                   :         :           :                
+GND                          : AC2       : gnd    :                   :         :           :                
+dataout2[1]                  : AC3       : output : 1.5-V PCML        :         : B0R       : Y              
+dataout2[1](n)               : AC4       : output : 1.5-V PCML        :         : B0R       : Y              
+GND                          : AC5       : gnd    :                   :         :           :                
+GND*                         : AC6       :        :                   :         : 4A        :                
+GND*                         : AC7       :        :                   :         : 4A        :                
+GND*                         : AC8       :        :                   :         : 4B        :                
+GND*                         : AC9       :        :                   :         : 4B        :                
+GND*                         : AC10      :        :                   :         : 4B        :                
+GND*                         : AC11      :        :                   :         : 4C        :                
+GND*                         : AC12      :        :                   :         : 4C        :                
+InternalAUXbus[3]            : AC13      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+SFP_Control[3]               : AC14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+InternalAUXbus[5]            : AC15      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+InternalAUXbus[7]            : AC16      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+vme_addr[14]                 : AC17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+vme_write_read               : AC18      : input  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[0]                  : AC19      : bidir  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[27]                 : AC20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[25]                 : AC21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND*                         : AC22      :        :                   :         : 3C        :                
+GND*                         : AC23      :        :                   :         : 3B        :                
+GND*                         : AC24      :        :                   :         : 3B        :                
+GND*                         : AC25      :        :                   :         : 3B        :                
+VCCPGM                       : AC26      : power  :                   : 3.0V    :           :                
+VCCPD3                       : AC27      : power  :                   : 3.0V    :           :                
+TDO                          : AC28      : output :                   :         : 3A        :                
+TDI                          : AC29      : input  :                   :         : 3A        :                
+GND                          : AC30      : gnd    :                   :         :           :                
+dataout1[2](n)               : AC31      : output : 1.5-V PCML        :         : B0L       : Y              
+dataout1[2]                  : AC32      : output : 1.5-V PCML        :         : B0L       : Y              
+GND                          : AC33      : gnd    :                   :         :           :                
+GND                          : AC34      : gnd    :                   :         :           :                
+hitdatain2[1]                : AD1       : input  : 1.5-V PCML        :         : B0R       : Y              
+hitdatain2[1](n)             : AD2       : input  : 1.5-V PCML        :         : B0R       : Y              
+GND                          : AD3       : gnd    :                   :         :           :                
+GND                          : AD4       : gnd    :                   :         :           :                
+VCCIO4A                      : AD5       : power  :                   : 3.0V    : 4A        :                
+GND*                         : AD6       :        :                   :         : 4A        :                
+GND                          : AD7       : gnd    :                   :         :           :                
+GND*                         : AD8       :        :                   :         : 4B        :                
+GND*                         : AD9       :        :                   :         : 4B        :                
+GND                          : AD10      : gnd    :                   :         :           :                
+vme_addr[7]                  : AD11      : input  : 3.0-V LVTTL       :         : 4C        : N              
+GND*                         : AD12      :        :                   :         : 4C        :                
+GND                          : AD13      : gnd    :                   :         :           :                
+GND*                         : AD14      :        :                   :         : 4D        :                
+SFP_Control[5]               : AD15      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+GND                          : AD16      : gnd    :                   :         :           :                
+vme_addr[17]                 : AD17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+DNU                          : AD18      :        :                   :         :           :                
+GND                          : AD19      : gnd    :                   :         :           :                
+vme_data[3]                  : AD20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[23]                 : AD21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND                          : AD22      : gnd    :                   :         :           :                
+GND*                         : AD23      :        :                   :         : 3B        :                
+GND*                         : AD24      :        :                   :         : 3B        :                
+GND                          : AD25      : gnd    :                   :         :           :                
+GND*                         : AD26      :        :                   :         : 3A        :                
+GND*                         : AD27      :        :                   :         : 3A        :                
+GND                          : AD28      : gnd    :                   :         :           :                
+GND*                         : AD29      :        :                   :         : 3A        :                
+VCCIO3A                      : AD30      : power  :                   : 3.0V    : 3A        :                
+GND                          : AD31      : gnd    :                   :         :           :                
+GND                          : AD32      : gnd    :                   :         :           :                
+hitdatain1[2](n)             : AD33      : input  : 1.5-V PCML        :         : B0L       : Y              
+hitdatain1[2]                : AD34      : input  : 1.5-V PCML        :         : B0L       : Y              
+GND                          : AE1       : gnd    :                   :         :           :                
+GND                          : AE2       : gnd    :                   :         :           :                
+dataout2[0]                  : AE3       : output : 1.5-V PCML        :         : B0R       : Y              
+dataout2[0](n)               : AE4       : output : 1.5-V PCML        :         : B0R       : Y              
+GND                          : AE5       : gnd    :                   :         :           :                
+GND*                         : AE6       :        :                   :         : 4A        :                
+GND*                         : AE7       :        :                   :         : 4A        :                
+GND*                         : AE8       :        :                   :         : 4B        :                
+GND*                         : AE9       :        :                   :         : 4B        :                
+GND*                         : AE10      :        :                   :         : 4B        :                
+GND*                         : AE11      :        :                   :         : 4C        :                
+GND*                         : AE12      :        :                   :         : 4C        :                
+GND*                         : AE13      :        :                   :         : 4C        :                
+AUXin[3]                     : AE14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+GND*                         : AE15      :        :                   :         : 4D        :                
+InternalAUXbus[4]            : AE16      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+ID[0]                        : AE17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+dir_trans                    : AE18      : output : 3.0-V LVTTL       :         : 3D        : N              
+GND*                         : AE19      :        :                   :         : 3D        :                
+vme_data[6]                  : AE20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND*                         : AE21      :        :                   :         : 3C        :                
+GND*                         : AE22      :        :                   :         : 3C        :                
+GND*                         : AE23      :        :                   :         : 3B        :                
+GND*                         : AE24      :        :                   :         : 3B        :                
+GND*                         : AE25      :        :                   :         : 3B        :                
+GND*                         : AE26      :        :                   :         : 3A        :                
+GND*                         : AE27      :        :                   :         : 3A        :                
+GND*                         : AE28      :        :                   :         : 3A        :                
+GND*                         : AE29      :        :                   :         : 3A        :                
+GND                          : AE30      : gnd    :                   :         :           :                
+dataout1[0](n)               : AE31      : output : 1.5-V PCML        :         : B0L       : Y              
+dataout1[0]                  : AE32      : output : 1.5-V PCML        :         : B0L       : Y              
+GND                          : AE33      : gnd    :                   :         :           :                
+GND                          : AE34      : gnd    :                   :         :           :                
+hitdatain2[0]                : AF1       : input  : 1.5-V PCML        :         : B0R       : Y              
+hitdatain2[0](n)             : AF2       : input  : 1.5-V PCML        :         : B0R       : Y              
+GND                          : AF3       : gnd    :                   :         :           :                
+GND                          : AF4       : gnd    :                   :         :           :                
+VCCIO4A                      : AF5       : power  :                   : 3.0V    : 4A        :                
+GND*                         : AF6       :        :                   :         : 4A        :                
+GND*                         : AF7       :        :                   :         : 4A        :                
+GND*                         : AF8       :        :                   :         : 4B        :                
+VCCIO4B                      : AF9       : power  :                   : 3.0V    : 4B        :                
+GND*                         : AF10      :        :                   :         : 4B        :                
+vme_addr[4]                  : AF11      : input  : 3.0-V LVTTL       :         : 4C        : N              
+VCCIO4C                      : AF12      : power  :                   : 3.0V    : 4C        :                
+GND*                         : AF13      :        :                   :         : 4C        :                
+HOLDtoHS[5]                  : AF14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+VCCIO4D                      : AF15      : power  :                   : 3.0V    : 4D        :                
+HOLDtoHS[4]                  : AF16      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+vme_addr[19]                 : AF17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+VCCIO3D                      : AF18      : power  :                   : 3.0V    : 3D        :                
+GND*                         : AF19      :        :                   :         : 3D        :                
+vme_data[1]                  : AF20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+VCCIO3C                      : AF21      : power  :                   : 3.0V    : 3C        :                
+vme_data[30]                 : AF22      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND*                         : AF23      :        :                   :         : 3B        :                
+VCCIO3B                      : AF24      : power  :                   : 3.0V    : 3B        :                
+GND*                         : AF25      :        :                   :         : 3B        :                
+GND*                         : AF26      :        :                   :         : 3A        :                
+VCCIO3A                      : AF27      : power  :                   : 3.0V    : 3A        :                
+GND*                         : AF28      :        :                   :         : 3A        :                
+GND*                         : AF29      :        :                   :         : 3A        :                
+TMS                          : AF30      : input  :                   :         : 3A        :                
+GND                          : AF31      : gnd    :                   :         :           :                
+GND                          : AF32      : gnd    :                   :         :           :                
+hitdatain1[0](n)             : AF33      : input  : 1.5-V PCML        :         : B0L       : Y              
+hitdatain1[0]                : AF34      : input  : 1.5-V PCML        :         : B0L       : Y              
+GND                          : AG1       : gnd    :                   :         :           :                
+GND                          : AG2       : gnd    :                   :         :           :                
+GXB_NC                       : AG3       :        :                   :         : B0R       :                
+GXB_NC                       : AG4       :        :                   :         : B0R       :                
+GND                          : AG5       : gnd    :                   :         :           :                
+GND*                         : AG6       :        :                   :         : 4A        :                
+GND                          : AG7       : gnd    :                   :         :           :                
+GND*                         : AG8       :        :                   :         : 4B        :                
+vme_addr[11]                 : AG9       : input  : 3.0-V LVTTL       :         : 4B        : N              
+GND                          : AG10      : gnd    :                   :         :           :                
+GND*                         : AG11      :        :                   :         : 4C        :                
+GND*                         : AG12      :        :                   :         : 4C        :                
+GND                          : AG13      : gnd    :                   :         :           :                
+HOLDtoHS[6]                  : AG14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+AUXout[3]                    : AG15      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+GND                          : AG16      : gnd    :                   :         :           :                
+GND*                         : AG17      :        :                   :         : 3D        :                
+GND*                         : AG18      :        :                   :         : 3D        :                
+GND                          : AG19      : gnd    :                   :         :           :                
+vme_data[8]                  : AG20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[17]                 : AG21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND                          : AG22      : gnd    :                   :         :           :                
+GND*                         : AG23      :        :                   :         : 3B        :                
+GND*                         : AG24      :        :                   :         : 3B        :                
+GND                          : AG25      : gnd    :                   :         :           :                
+GND*                         : AG26      :        :                   :         : 3A        :                
+GND*                         : AG27      :        :                   :         : 3A        :                
+GND                          : AG28      : gnd    :                   :         :           :                
+GND*                         : AG29      :        :                   :         : 3A        :                
+GND                          : AG30      : gnd    :                   :         :           :                
+GXB_NC                       : AG31      :        :                   :         : B0L       :                
+GXB_NC                       : AG32      :        :                   :         : B0L       :                
+GND                          : AG33      : gnd    :                   :         :           :                
+GND                          : AG34      : gnd    :                   :         :           :                
+GXB_GND*                     : AH1       :        :                   :         : B0R       :                
+GXB_GND*                     : AH2       :        :                   :         : B0R       :                
+GND                          : AH3       : gnd    :                   :         :           :                
+GND                          : AH4       : gnd    :                   :         :           :                
+VCCIO4A                      : AH5       : power  :                   : 3.0V    : 4A        :                
+GND*                         : AH6       :        :                   :         : 4A        :                
+GND*                         : AH7       :        :                   :         : 4A        :                
+GND*                         : AH8       :        :                   :         : 4B        :                
+GND*                         : AH9       :        :                   :         : 4B        :                
+GND*                         : AH10      :        :                   :         : 4B        :                
+GND*                         : AH11      :        :                   :         : 4C        :                
+GND*                         : AH12      :        :                   :         : 4C        :                
+HOLDtoAMB[0]                 : AH13      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+SFP_Control[6]               : AH14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+InternalAUXbus[6]            : AH15      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+transceivers_OE              : AH16      : output : 3.0-V LVTTL       :         : 4D        : N              
+GND*                         : AH17      :        :                   :         : 3D        :                
+vme_addr[9]                  : AH18      : input  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[28]                 : AH19      : bidir  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[24]                 : AH20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[14]                 : AH21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[26]                 : AH22      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_addr[6]                  : AH23      : input  : 3.0-V LVTTL       :         : 3B        : N              
+GND*                         : AH24      :        :                   :         : 3B        :                
+GND*                         : AH25      :        :                   :         : 3B        :                
+GND*                         : AH26      :        :                   :         : 3A        :                
+GND*                         : AH27      :        :                   :         : 3A        :                
+GND*                         : AH28      :        :                   :         : 3A        :                
+GND*                         : AH29      :        :                   :         : 3A        :                
+VCCIO3A                      : AH30      : power  :                   : 3.0V    : 3A        :                
+GND                          : AH31      : gnd    :                   :         :           :                
+GND                          : AH32      : gnd    :                   :         :           :                
+GXB_GND*                     : AH33      :        :                   :         : B0L       :                
+GXB_GND*                     : AH34      :        :                   :         : B0L       :                
+GND                          : AJ1       : gnd    :                   :         :           :                
+GND                          : AJ2       : gnd    :                   :         :           :                
+GXB_NC                       : AJ3       :        :                   :         : B0R       :                
+GXB_NC                       : AJ4       :        :                   :         : B0R       :                
+GND                          : AJ5       : gnd    :                   :         :           :                
+GND*                         : AJ6       :        :                   :         : 4A        :                
+GND*                         : AJ7       :        :                   :         : 4A        :                
+GND*                         : AJ8       :        :                   :         : 4B        :                
+VCCIO4B                      : AJ9       : power  :                   : 3.0V    : 4B        :                
+GND*                         : AJ10      :        :                   :         : 4B        :                
+GND*                         : AJ11      :        :                   :         : 4C        :                
+VCCIO4C                      : AJ12      : power  :                   : 3.0V    : 4C        :                
+GND*                         : AJ13      :        :                   :         : 4C        :                
+debug[0]                     : AJ14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+VCCIO4D                      : AJ15      : power  :                   : 3.0V    : 4D        :                
+debug[5]                     : AJ16      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+vme_addr[20]                 : AJ17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+VCCIO3D                      : AJ18      : power  :                   : 3.0V    : 3D        :                
+GND*                         : AJ19      :        :                   :         : 3D        :                
+vme_data[19]                 : AJ20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+VCCIO3C                      : AJ21      : power  :                   : 3.0V    : 3C        :                
+vme_data[5]                  : AJ22      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND*                         : AJ23      :        :                   :         : 3B        :                
+VCCIO3B                      : AJ24      : power  :                   : 3.0V    : 3B        :                
+GND*                         : AJ25      :        :                   :         : 3B        :                
+GND*                         : AJ26      :        :                   :         : 3A        :                
+VCCIO3A                      : AJ27      : power  :                   : 3.0V    : 3A        :                
+GND*                         : AJ28      :        :                   :         : 3A        :                
+GND*                         : AJ29      :        :                   :         : 3A        :                
+GND                          : AJ30      : gnd    :                   :         :           :                
+GXB_NC                       : AJ31      :        :                   :         : B0L       :                
+GXB_NC                       : AJ32      :        :                   :         : B0L       :                
+GND                          : AJ33      : gnd    :                   :         :           :                
+GND                          : AJ34      : gnd    :                   :         :           :                
+GXB_GND*                     : AK1       :        :                   :         : B0R       :                
+GXB_GND*                     : AK2       :        :                   :         : B0R       :                
+GND                          : AK3       : gnd    :                   :         :           :                
+GND                          : AK4       : gnd    :                   :         :           :                
+VCCIO4A                      : AK5       : power  :                   : 3.0V    : 4A        :                
+GND*                         : AK6       :        :                   :         : 4A        :                
+GND                          : AK7       : gnd    :                   :         :           :                
+GND*                         : AK8       :        :                   :         : 4B        :                
+vme_addr[3]                  : AK9       : input  : 3.0-V LVTTL       :         : 4B        : N              
+GND                          : AK10      : gnd    :                   :         :           :                
+InternalAUXbus[0]            : AK11      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+GND*                         : AK12      :        :                   :         : 4C        :                
+GND                          : AK13      : gnd    :                   :         :           :                
+HOLDtoHS[10]                 : AK14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+debug[4]                     : AK15      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+GND                          : AK16      : gnd    :                   :         :           :                
+vme_addr[23]                 : AK17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+vme_addr[18]                 : AK18      : input  : 3.0-V LVTTL       :         : 3D        : N              
+GND                          : AK19      : gnd    :                   :         :           :                
+vme_data[29]                 : AK20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[18]                 : AK21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND                          : AK22      : gnd    :                   :         :           :                
+GND*                         : AK23      :        :                   :         : 3B        :                
+vme_addr[8]                  : AK24      : input  : 3.0-V LVTTL       :         : 3B        : N              
+GND                          : AK25      : gnd    :                   :         :           :                
+GND*                         : AK26      :        :                   :         : 3A        :                
+GND*                         : AK27      :        :                   :         : 3A        :                
+GND                          : AK28      : gnd    :                   :         :           :                
+GND*                         : AK29      :        :                   :         : 3A        :                
+VCCIO3A                      : AK30      : power  :                   : 3.0V    : 3A        :                
+GND                          : AK31      : gnd    :                   :         :           :                
+GND                          : AK32      : gnd    :                   :         :           :                
+datain_fromAMB[3](n)         : AK33      : input  : 1.5-V PCML        :         : B0L       : Y              
+datain_fromAMB[3]            : AK34      : input  : 1.5-V PCML        :         : B0L       : Y              
+GND                          : AL1       : gnd    :                   :         :           :                
+GND                          : AL2       : gnd    :                   :         :           :                
+GND                          : AL3       : gnd    :                   :         :           :                
+GND*                         : AL4       :        :                   :         : 4A        :                
+GND*                         : AL5       :        :                   :         : 4A        :                
+GND*                         : AL6       :        :                   :         : 4A        :                
+GND*                         : AL7       :        :                   :         : 4A        :                
+GND*                         : AL8       :        :                   :         : 4B        :                
+GND*                         : AL9       :        :                   :         : 4B        :                
+GND*                         : AL10      :        :                   :         : 4B        :                
+HOLDtoHS[0]                  : AL11      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+AUXout[0]                    : AL12      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+HOLDtoHS[3]                  : AL13      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+debug[6]                     : AL14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+GND*                         : AL15      :        :                   :         : 4D        :                
+SFP_Control[7]               : AL16      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+GND*                         : AL17      :        :                   :         : 3D        :                
+AUXout[2]                    : AL18      : bidir  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[22]                 : AL19      : bidir  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[21]                 : AL20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+HOLDtoHS[2]                  : AL21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+AUXin[2]                     : AL22      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND*                         : AL23      :        :                   :         : 3B        :                
+GND*                         : AL24      :        :                   :         : 3B        :                
+GND*                         : AL25      :        :                   :         : 3A        :                
+GND*                         : AL26      :        :                   :         : 3A        :                
+GND*                         : AL27      :        :                   :         : 3A        :                
+GND*                         : AL28      :        :                   :         : 3A        :                
+GND*                         : AL29      :        :                   :         : 3A        :                
+GND*                         : AL30      :        :                   :         : 3A        :                
+GND*                         : AL31      :        :                   :         : 3A        :                
+DNU                          : AL32      :        :                   :         :           :                
+GND                          : AL33      : gnd    :                   :         :           :                
+GND                          : AL34      : gnd    :                   :         :           :                
+RREF                         : AM1       :        :                   :         :           :                
+DNU                          : AM2       :        :                   :         :           :                
+GND*                         : AM3       :        :                   :         : 4A        :                
+GND*                         : AM4       :        :                   :         : 4A        :                
+GND*                         : AM5       :        :                   :         : 4A        :                
+vme_as                       : AM6       : input  : 3.0-V LVTTL       :         : 4A        : N              
+GND*                         : AM7       :        :                   :         : 4A        :                
+GND*                         : AM8       :        :                   :         : 4B        :                
+VCCIO4B                      : AM9       : power  :                   : 3.0V    : 4B        :                
+GND*                         : AM10      :        :                   :         : 4B        :                
+GND*                         : AM11      :        :                   :         : 4B        :                
+VCCIO4C                      : AM12      : power  :                   : 3.0V    : 4C        :                
+AUXin[0]                     : AM13      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+debug[7]                     : AM14      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+VCCIO4D                      : AM15      : power  :                   : 3.0V    : 4D        :                
+HOLDtoHS[7]                  : AM16      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+vme_addr[15]                 : AM17      : input  : 3.0-V LVTTL       :         : 3D        : N              
+VCCIO3D                      : AM18      : power  :                   : 3.0V    : 3D        :                
+vme_data[7]                  : AM19      : bidir  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[11]                 : AM20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+VCCIO3C                      : AM21      : power  :                   : 3.0V    : 3C        :                
+vme_data[9]                  : AM22      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND*                         : AM23      :        :                   :         : 3B        :                
+VCCIO3B                      : AM24      : power  :                   : 3.0V    : 3B        :                
+GND*                         : AM25      :        :                   :         : 3A        :                
+GND*                         : AM26      :        :                   :         : 3A        :                
+VCCIO3A                      : AM27      : power  :                   : 3.0V    : 3A        :                
+GND*                         : AM28      :        :                   :         : 3A        :                
+GND*                         : AM29      :        :                   :         : 3A        :                
+GND*                         : AM30      :        :                   :         : 3A        :                
+GND*                         : AM31      :        :                   :         : 3A        :                
+DCLK                         : AM32      : bidir  :                   :         : 3A        :                
+AS_DATA3, DATA3              : AM33      :        :                   :         : 3A        :                
+nCSO, DATA4                  : AM34      :        :                   :         : 3A        :                
+GND                          : AN1       : gnd    :                   :         :           :                
+DNU                          : AN2       :        :                   :         :           :                
+GND*                         : AN3       :        :                   :         : 4A        :                
+GND                          : AN4       : gnd    :                   :         :           :                
+GND*                         : AN5       :        :                   :         : 4A        :                
+GND*                         : AN6       :        :                   :         : 4A        :                
+GND                          : AN7       : gnd    :                   :         :           :                
+GND*                         : AN8       :        :                   :         : 4B        :                
+GND*                         : AN9       :        :                   :         : 4B        :                
+GND                          : AN10      : gnd    :                   :         :           :                
+vme_addr[2]                  : AN11      : input  : 3.0-V LVTTL       :         : 4B        : N              
+HOLDtoAMB[3]                 : AN12      : bidir  : 3.0-V LVTTL       :         : 4C        : N              
+GND                          : AN13      : gnd    :                   :         :           :                
+GND*                         : AN14      :        :                   :         : 4C        :                
+LED2                         : AN15      : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+GND                          : AN16      : gnd    :                   :         :           :                
+GND*                         : AN17      :        :                   :         : 3D        :                
+GND*                         : AN18      :        :                   :         : 3D        :                
+GND                          : AN19      : gnd    :                   :         :           :                
+vme_data[15]                 : AN20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+vme_data[4]                  : AN21      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+GND                          : AN22      : gnd    :                   :         :           :                
+GND*                         : AN23      :        :                   :         : 3B        :                
+GND*                         : AN24      :        :                   :         : 3B        :                
+GND                          : AN25      : gnd    :                   :         :           :                
+GND*                         : AN26      :        :                   :         : 3A        :                
+GND*                         : AN27      :        :                   :         : 3A        :                
+GND                          : AN28      : gnd    :                   :         :           :                
+GND*                         : AN29      :        :                   :         : 3A        :                
+GND*                         : AN30      :        :                   :         : 3A        :                
+GND                          : AN31      : gnd    :                   :         :           :                
+TCK                          : AN32      : input  :                   :         : 3A        :                
+AS_DATA1, DATA1              : AN33      :        :                   :         : 3A        :                
+AS_DATA0, ASDO, DATA0        : AN34      :        :                   :         : 3A        :                
+ID[2]                        : AP2       : input  : 3.0-V LVTTL       :         : 4A        : N              
+GND*                         : AP3       :        :                   :         : 4A        :                
+GND*                         : AP4       :        :                   :         : 4A        :                
+GND*                         : AP5       :        :                   :         : 4A        :                
+GND*                         : AP6       :        :                   :         : 4A        :                
+GND*                         : AP7       :        :                   :         : 4A        :                
+GND*                         : AP8       :        :                   :         : 4A        :                
+VCCIO4B                      : AP9       : power  :                   : 3.0V    : 4B        :                
+GND*                         : AP10      :        :                   :         : 4B        :                
+GND*                         : AP11      :        :                   :         : 4B        :                
+VCCIO4C                      : AP12      : power  :                   : 3.0V    : 4C        :                
+GND*                         : AP13      :        :                   :         : 4C        :                
+GND*                         : AP14      :        :                   :         : 4C        :                
+VCCIO4D                      : AP15      : power  :                   : 3.0V    : 4D        :                
+vme_addr[26]                 : AP16      : input  : 3.0-V LVTTL       :         : 4D        : N              
+GND*                         : AP17      :        :                   :         : 3D        :                
+VCCIO3D                      : AP18      : power  :                   : 3.0V    : 3D        :                
+vme_addr[5]                  : AP19      : input  : 3.0-V LVTTL       :         : 3D        : N              
+vme_data[20]                 : AP20      : bidir  : 3.0-V LVTTL       :         : 3C        : N              
+VCCIO3C                      : AP21      : power  :                   : 3.0V    : 3C        :                
+GND*                         : AP22      :        :                   :         : 3B        :                
+GND*                         : AP23      :        :                   :         : 3B        :                
+VCCIO3B                      : AP24      : power  :                   : 3.0V    : 3B        :                
+GND*                         : AP25      :        :                   :         : 3A        :                
+GND*                         : AP26      :        :                   :         : 3A        :                
+GND*                         : AP27      :        :                   :         : 3A        :                
+GND*                         : AP28      :        :                   :         : 3A        :                
+GND*                         : AP29      :        :                   :         : 3A        :                
+GND*                         : AP30      :        :                   :         : 3A        :                
+GND*                         : AP31      :        :                   :         : 3A        :                
+vme_ds                       : AP32      : input  : 3.0-V LVTTL       :         : 3A        : N              
+AS_DATA2, DATA2              : AP33      :        :                   :         : 3A        :                
+GND                          : B1        : gnd    :                   :         :           :                
+GND*                         : B2        :        :                   :         : 7A        :                
+GND*                         : B3        :        :                   :         : 7A        :                
+GND                          : B4        : gnd    :                   :         :           :                
+GND*                         : B5        :        :                   :         : 7A        :                
+GND*                         : B6        :        :                   :         : 7B        :                
+GND                          : B7        : gnd    :                   :         :           :                
+GND*                         : B8        :        :                   :         : 7B        :                
+GND*                         : B9        :        :                   :         : 7B        :                
+GND                          : B10       : gnd    :                   :         :           :                
+GND*                         : B11       :        :                   :         : 7C        :                
+GND*                         : B12       :        :                   :         : 7C        :                
+GND                          : B13       : gnd    :                   :         :           :                
+HOLDfromSFP                  : B14       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+GND*                         : B15       :        :                   :         : 7D        :                
+GND                          : B16       : gnd    :                   :         :           :                
+GND*                         : B17       :        :                   :         : 8D        :                
+GND*                         : B18       :        :                   :         : 8D        :                
+GND                          : B19       : gnd    :                   :         :           :                
+mem_dq[4]                    : B20       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_dq[6]                    : B21       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+GND                          : B22       : gnd    :                   :         :           :                
+mem_dq[17]                   : B23       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_we_n                     : B24       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+GND                          : B25       : gnd    :                   :         :           :                
+mem_a[1]                     : B26       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+GND*                         : B27       :        :                   :         : 8A        :                
+GND                          : B28       : gnd    :                   :         :           :                
+mem_dq[26]                   : B29       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+GND*                         : B30       :        :                   :         : 8A        :                
+GND                          : B31       : gnd    :                   :         :           :                
+GND*                         : B32       :        :                   :         : 8A        :                
+GND                          : B33       :        :                   :         : 8A        :                
+nSTATUS                      : B34       :        :                   :         : 8A        :                
+GND*                         : C1        :        :                   :         : 7A        :                
+GND*                         : C2        :        :                   :         : 7A        :                
+GND*                         : C3        :        :                   :         : 7A        :                
+GND*                         : C4        :        :                   :         : 7A        :                
+VCCIO7A                      : C5        : power  :                   : 3.0V    : 7A        :                
+GND*                         : C6        :        :                   :         : 7A        :                
+GND*                         : C7        :        :                   :         : 7B        :                
+GND*                         : C8        :        :                   :         : 7B        :                
+VCCIO7B                      : C9        : power  :                   : 3.0V    : 7B        :                
+GND*                         : C10       :        :                   :         : 7C        :                
+GND*                         : C11       :        :                   :         : 7C        :                
+VCCIO7C                      : C12       : power  :                   : 3.0V    : 7C        :                
+HOLDtoHS[1]                  : C13       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+FREEZEin                     : C14       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+VCCIO7D                      : C15       : power  :                   : 3.0V    : 7D        :                
+GND*                         : C16       :        :                   :         : 7D        :                
+GND*                         : C17       :        :                   :         : 8D        :                
+VCCIO8D                      : C18       : power  :                   : 2.5V    : 8D        :                
+GND*                         : C19       :        :                   :         : 8D        :                
+GND*                         : C20       :        :                   :         : 8C        :                
+VCCIO8C                      : C21       : power  :                   : 1.8V    : 8C        :                
+mem_dq[1]                    : C22       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_a[5]                     : C23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+VCCIO8B                      : C24       : power  :                   : 1.8V    : 8B        :                
+mem_a[14]                    : C25       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_a[11]                    : C26       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+VCCIO8A                      : C27       : power  :                   : 1.8V    : 8A        :                
+mem_dq[28]                   : C28       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[35]                   : C29       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+VCCIO8A                      : C30       : power  :                   : 1.8V    : 8A        :                
+GND*                         : C31       :        :                   :         : 8A        :                
+master_clock(n)              : C32       : input  : LVDS              :         : 8A        : N              
+nCONFIG                      : C33       : input  :                   :         : 8A        :                
+CONF_DONE                    : C34       : bidir  :                   :         : 8A        :                
+GND*                         : D1        :        :                   :         : 7A        :                
+GND                          : D2        : gnd    :                   :         :           :                
+GND*                         : D3        :        :                   :         : 7A        :                
+GND                          : D4        : gnd    :                   :         :           :                
+GND*                         : D5        :        :                   :         : 7A        :                
+GND*                         : D6        :        :                   :         : 7A        :                
+GND*                         : D7        :        :                   :         : 7B        :                
+GND*                         : D8        :        :                   :         : 7B        :                
+GND*                         : D9        :        :                   :         : 7B        :                
+GND*                         : D10       :        :                   :         : 7C        :                
+GND*                         : D11       :        :                   :         : 7C        :                
+GND*                         : D12       :        :                   :         : 7C        :                
+GND*                         : D13       :        :                   :         : 7D        :                
+GND*                         : D14       :        :                   :         : 7D        :                
+GND*                         : D15       :        :                   :         : 7D        :                
+GND*                         : D16       :        :                   :         : 7D        :                
+GND*                         : D17       :        :                   :         : 8D        :                
+GND*                         : D18       :        :                   :         : 8D        :                
+GND*                         : D19       :        :                   :         : 8D        :                
+mem_qk_n[0]                  : D20       : input  : Differential 1.8-V HSTL Class I :         : 8C        : Y              
+mem_dq[3]                    : D21       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_dq[5]                    : D22       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_a[12]                    : D23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_ba[0]                    : D24       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_a[10]                    : D25       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_dq[33]                   : D26       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[31]                   : D27       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+GND*                         : D28       :        :                   :         : 8A        :                
+mem_dk[1]                    : D29       : output : Differential 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dm[0]                    : D30       : output : 1.8-V HSTL Class I :         : 8A        : Y              
+GND*                         : D31       :        :                   :         : 8A        :                
+GND*                         : D32       :        :                   :         : 8A        :                
+master_clock                 : D33       : input  : LVDS              :         : 8A        : Y              
+MSEL0                        : D34       : input  :                   :         : 8A        :                
+GND*                         : E1        :        :                   :         : 7A        :                
+GND*                         : E2        :        :                   :         : 7A        :                
+GND*                         : E3        :        :                   :         : 7A        :                
+GND*                         : E4        :        :                   :         : 7A        :                
+GND*                         : E5        :        :                   :         : 7A        :                
+GND*                         : E6        :        :                   :         : 7A        :                
+GND                          : E7        : gnd    :                   :         :           :                
+GND*                         : E8        :        :                   :         : 7B        :                
+GND*                         : E9        :        :                   :         : 7B        :                
+GND                          : E10       : gnd    :                   :         :           :                
+GND*                         : E11       :        :                   :         : 7C        :                
+GND*                         : E12       :        :                   :         : 7C        :                
+GND                          : E13       : gnd    :                   :         :           :                
+GND*                         : E14       :        :                   :         : 7D        :                
+HOLDtoHS[11]                 : E15       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+GND                          : E16       : gnd    :                   :         :           :                
+GND*                         : E17       :        :                   :         : 8D        :                
+GND*                         : E18       :        :                   :         : 8D        :                
+GND                          : E19       : gnd    :                   :         :           :                
+mem_qk[0]                    : E20       : input  : Differential 1.8-V HSTL Class I :         : 8C        : Y              
+mem_dq[7]                    : E21       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+GND                          : E22       : gnd    :                   :         :           :                
+mem_a[2]                     : E23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_a[8]                     : E24       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+GND                          : E25       : gnd    :                   :         :           :                
+mem_dq[29]                   : E26       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[27]                   : E27       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+GND                          : E28       : gnd    :                   :         :           :                
+mem_dk_n[1]                  : E29       : output : Differential 1.8-V HSTL Class I :         : 8A        : Y              
+GND*                         : E30       :        :                   :         : 8A        :                
+GND                          : E31       : gnd    :                   :         :           :                
+oct_rzqin                    : E32       : input  : 1.8 V             :         : 8A        : Y              
+DNU                          : E33       :        :                   :         :           :                
+GND                          : E34       : gnd    :                   :         :           :                
+GND*                         : F1        :        :                   :         : 7A        :                
+VCCIO7A                      : F2        : power  :                   : 3.0V    : 7A        :                
+GND                          : F3        : gnd    :                   :         :           :                
+GND                          : F4        : gnd    :                   :         :           :                
+VCCIO7A                      : F5        : power  :                   : 3.0V    : 7A        :                
+GND*                         : F6        :        :                   :         : 7A        :                
+GND*                         : F7        :        :                   :         : 7B        :                
+GND*                         : F8        :        :                   :         : 7B        :                
+VCCIO7B                      : F9        : power  :                   : 3.0V    : 7B        :                
+GND*                         : F10       :        :                   :         : 7C        :                
+GND*                         : F11       :        :                   :         : 7C        :                
+VCCIO7C                      : F12       : power  :                   : 3.0V    : 7C        :                
+GND*                         : F13       :        :                   :         : 7C        :                
+SFP_Control[1]               : F14       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+VCCIO7D                      : F15       : power  :                   : 3.0V    : 7D        :                
+GND*                         : F16       :        :                   :         : 7D        :                
+GND*                         : F17       :        :                   :         : 8D        :                
+VCCIO8D                      : F18       : power  :                   : 2.5V    : 8D        :                
+GND*                         : F19       :        :                   :         : 8D        :                
+mem_dq[9]                    : F20       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+VCCIO8C                      : F21       : power  :                   : 1.8V    : 8C        :                
+mem_dk[0]                    : F22       : output : Differential 1.8-V HSTL Class I :         : 8C        : Y              
+mem_a[15]                    : F23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+VCCIO8B                      : F24       : power  :                   : 1.8V    : 8B        :                
+mem_a[7]                     : F25       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_dq[25]                   : F26       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+VCCIO8A                      : F27       : power  :                   : 1.8V    : 8A        :                
+mem_dq[23]                   : F28       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[21]                   : F29       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+VCCIO8A                      : F30       : power  :                   : 1.8V    : 8A        :                
+GND                          : F31       : gnd    :                   :         :           :                
+GND                          : F32       : gnd    :                   :         :           :                
+DNU                          : F33       :        :                   :         :           :                
+RREF                         : F34       :        :                   :         :           :                
+GND                          : G1        : gnd    :                   :         :           :                
+GND                          : G2        : gnd    :                   :         :           :                
+GXB_NC                       : G3        :        :                   :         : B1R       :                
+GXB_NC                       : G4        :        :                   :         : B1R       :                
+GND                          : G5        : gnd    :                   :         :           :                
+GND*                         : G6        :        :                   :         : 7A        :                
+GND*                         : G7        :        :                   :         : 7B        :                
+GND*                         : G8        :        :                   :         : 7B        :                
+GND*                         : G9        :        :                   :         : 7B        :                
+GND*                         : G10       :        :                   :         : 7C        :                
+GND*                         : G11       :        :                   :         : 7C        :                
+GND*                         : G12       :        :                   :         : 7C        :                
+GND*                         : G13       :        :                   :         : 7C        :                
+GND*                         : G14       :        :                   :         : 7D        :                
+GND*                         : G15       :        :                   :         : 7D        :                
+GND*                         : G16       :        :                   :         : 7D        :                
+GND*                         : G17       :        :                   :         : 8D        :                
+GND*                         : G18       :        :                   :         : 8D        :                
+GND*                         : G19       :        :                   :         : 8D        :                
+mem_dq[11]                   : G20       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_dq[15]                   : G21       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_dk_n[0]                  : G22       : output : Differential 1.8-V HSTL Class I :         : 8C        : Y              
+mem_ba[1]                    : G23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_ba[2]                    : G24       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+GND*                         : G25       :        :                   :         : 8B        :                
+mem_qk_n[1]                  : G26       : input  : Differential 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[24]                   : G27       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[19]                   : G28       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+GND*                         : G29       :        :                   :         : 8A        :                
+GND                          : G30       : gnd    :                   :         :           :                
+GXB_NC                       : G31       :        :                   :         : B1L       :                
+GXB_NC                       : G32       :        :                   :         : B1L       :                
+GND                          : G33       : gnd    :                   :         :           :                
+GND                          : G34       : gnd    :                   :         :           :                
+GXB_GND*                     : H1        :        :                   :         : B1R       :                
+GXB_GND*                     : H2        :        :                   :         : B1R       :                
+GND                          : H3        : gnd    :                   :         :           :                
+GND                          : H4        : gnd    :                   :         :           :                
+GND                          : H5        :        :                   :         : 7A        :                
+GND*                         : H6        :        :                   :         : 7A        :                
+GND                          : H7        : gnd    :                   :         :           :                
+GND*                         : H8        :        :                   :         : 7B        :                
+GND*                         : H9        :        :                   :         : 7B        :                
+GND                          : H10       : gnd    :                   :         :           :                
+GND*                         : H11       :        :                   :         : 7C        :                
+GND*                         : H12       :        :                   :         : 7C        :                
+GND                          : H13       : gnd    :                   :         :           :                
+AUXout[1]                    : H14       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+GND*                         : H15       :        :                   :         : 7D        :                
+GND                          : H16       : gnd    :                   :         :           :                
+GND*                         : H17       :        :                   :         : 8D        :                
+GND*                         : H18       :        :                   :         : 8D        :                
+GND                          : H19       : gnd    :                   :         :           :                
+mem_dq[13]                   : H20       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+GND*                         : H21       :        :                   :         : 8C        :                
+GND                          : H22       : gnd    :                   :         :           :                
+mem_a[13]                    : H23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_a[19]                    : H24       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+GND                          : H25       : gnd    :                   :         :           :                
+mem_qk[1]                    : H26       : input  : Differential 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[20]                   : H27       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+GND                          : H28       : gnd    :                   :         :           :                
+GND*                         : H29       :        :                   :         : 8A        :                
+MSEL1                        : H30       : input  :                   :         : 8A        :                
+GND                          : H31       : gnd    :                   :         :           :                
+GND                          : H32       : gnd    :                   :         :           :                
+datain_fromAMB[0](n)         : H33       : input  : 1.5-V PCML        :         : B1L       : Y              
+datain_fromAMB[0]            : H34       : input  : 1.5-V PCML        :         : B1L       : Y              
+GND                          : J1        : gnd    :                   :         :           :                
+GND                          : J2        : gnd    :                   :         :           :                
+GXB_NC                       : J3        :        :                   :         : B1R       :                
+GXB_NC                       : J4        :        :                   :         : B1R       :                
+GND                          : J5        : gnd    :                   :         :           :                
+GND*                         : J6        :        :                   :         : 7A        :                
+GND*                         : J7        :        :                   :         : 7A        :                
+GND*                         : J8        :        :                   :         : 7B        :                
+VCCIO7B                      : J9        : power  :                   : 3.0V    : 7B        :                
+GND*                         : J10       :        :                   :         : 7B        :                
+GND*                         : J11       :        :                   :         : 7C        :                
+VCCIO7C                      : J12       : power  :                   : 3.0V    : 7C        :                
+GND*                         : J13       :        :                   :         : 7C        :                
+HOLDtoAMB[1]                 : J14       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+VCCIO7D                      : J15       : power  :                   : 3.0V    : 7D        :                
+LED3                         : J16       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+GND*                         : J17       :        :                   :         : 8D        :                
+VCCIO8D                      : J18       : power  :                   : 2.5V    : 8D        :                
+GND*                         : J19       :        :                   :         : 8D        :                
+GND*                         : J20       :        :                   :         : 8C        :                
+VCCIO8C                      : J21       : power  :                   : 1.8V    : 8C        :                
+mem_dq[14]                   : J22       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_ref_n                    : J23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+VCCIO8B                      : J24       : power  :                   : 1.8V    : 8B        :                
+mem_a[6]                     : J25       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_ck                       : J26       : output : Differential 1.8-V HSTL Class I :         : 8A        : Y              
+GND*                         : J27       :        :                   :         : 8A        :                
+GND*                         : J28       :        :                   :         : 8A        :                
+VCCIO8A                      : J29       : power  :                   : 1.8V    : 8A        :                
+GND                          : J30       : gnd    :                   :         :           :                
+GXB_NC                       : J31       :        :                   :         : B1L       :                
+GXB_NC                       : J32       :        :                   :         : B1L       :                
+GND                          : J33       : gnd    :                   :         :           :                
+GND                          : J34       : gnd    :                   :         :           :                
+GXB_GND*                     : K1        :        :                   :         : B1R       :                
+GXB_GND*                     : K2        :        :                   :         : B1R       :                
+GND                          : K3        : gnd    :                   :         :           :                
+GND                          : K4        : gnd    :                   :         :           :                
+DNU                          : K5        :        :                   :         :           :                
+GND*                         : K6        :        :                   :         : 7A        :                
+GND*                         : K7        :        :                   :         : 7A        :                
+GND*                         : K8        :        :                   :         : 7B        :                
+GND*                         : K9        :        :                   :         : 7B        :                
+GND*                         : K10       :        :                   :         : 7B        :                
+GND*                         : K11       :        :                   :         : 7C        :                
+GND*                         : K12       :        :                   :         : 7C        :                
+GND*                         : K13       :        :                   :         : 7C        :                
+GND*                         : K14       :        :                   :         : 7D        :                
+debug[3]                     : K15       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+GND*                         : K16       :        :                   :         : 7D        :                
+GND*                         : K17       :        :                   :         : 8D        :                
+extmem_pll_refclk            : K18       : input  : 3.0-V LVTTL       :         : 8D        : N              
+GND*                         : K19       :        :                   :         : 8D        :                
+mem_dq[8]                    : K20       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+mem_dq[12]                   : K21       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+GND*                         : K22       :        :                   :         : 8C        :                
+mem_a[18]                    : K23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_a[16]                    : K24       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_a[9]                     : K25       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_ck_n                     : K26       : output : Differential 1.8-V HSTL Class I :         : 8A        : Y              
+mem_dq[18]                   : K27       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+GND*                         : K28       :        :                   :         : 8A        :                
+mem_dq[22]                   : K29       : bidir  : 1.8-V HSTL Class I :         : 8A        : Y              
+MSEL2                        : K30       : input  :                   :         : 8A        :                
+GND                          : K31       : gnd    :                   :         :           :                
+GND                          : K32       : gnd    :                   :         :           :                
+GXB_GND*                     : K33       :        :                   :         : B1L       :                
+GXB_GND*                     : K34       :        :                   :         : B1L       :                
+GND                          : L1        : gnd    :                   :         :           :                
+GND                          : L2        : gnd    :                   :         :           :                
+dataout3[3]                  : L3        : output : 1.5-V PCML        :         : B1R       : Y              
+dataout3[3](n)               : L4        : output : 1.5-V PCML        :         : B1R       : Y              
+GND                          : L5        : gnd    :                   :         :           :                
+GND*                         : L6        :        :                   :         : 7A        :                
+VCCIO7A                      : L7        : power  :                   : 3.0V    : 7A        :                
+GND                          : L8        : gnd    :                   :         :           :                
+GND*                         : L9        :        :                   :         : 7B        :                
+GND                          : L10       : gnd    :                   :         :           :                
+GND*                         : L11       :        :                   :         : 7C        :                
+GND*                         : L12       :        :                   :         : 7C        :                
+GND                          : L13       : gnd    :                   :         :           :                
+GND*                         : L14       :        :                   :         : 7D        :                
+GND*                         : L15       :        :                   :         : 7D        :                
+GND                          : L16       : gnd    :                   :         :           :                
+vme_addr[25]                 : L17       : input  : 3.0-V LVTTL       :         : 8D        : N              
+DNU                          : L18       :        :                   :         :           :                
+GND                          : L19       : gnd    :                   :         :           :                
+mem_dq[10]                   : L20       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+GND*                         : L21       :        :                   :         : 8C        :                
+GND                          : L22       : gnd    :                   :         :           :                
+mem_a[17]                    : L23       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+mem_cs_n[0]                  : L24       : output : 1.8-V HSTL Class I :         : 8B        : Y              
+GND                          : L25       : gnd    :                   :         :           :                
+GND*                         : L26       :        :                   :         : 8A        :                
+GND*                         : L27       :        :                   :         : 8A        :                
+GND                          : L28       : gnd    :                   :         :           :                
+mem_a[4]                     : L29       : output : 1.8-V HSTL Class I :         : 8A        : Y              
+GND                          : L30       : gnd    :                   :         :           :                
+GXB_NC                       : L31       :        :                   :         : B1L       :                
+GXB_NC                       : L32       :        :                   :         : B1L       :                
+GND                          : L33       : gnd    :                   :         :           :                
+GND                          : L34       : gnd    :                   :         :           :                
+hitdatain3[3]                : M1        : input  : 1.5-V PCML        :         : B1R       : Y              
+hitdatain3[3](n)             : M2        : input  : 1.5-V PCML        :         : B1R       : Y              
+GND                          : M3        : gnd    :                   :         :           :                
+GND                          : M4        : gnd    :                   :         :           :                
+GND                          : M5        : gnd    :                   :         :           :                
+GND                          : M6        : gnd    :                   :         :           :                
+GND*                         : M7        :        :                   :         : 7A        :                
+GND*                         : M8        :        :                   :         : 7B        :                
+VCCPGM                       : M9        : power  :                   : 3.0V    :           :                
+GND*                         : M10       :        :                   :         : 7B        :                
+InternalAUXbus[1]            : M11       : bidir  : 3.0-V LVTTL       :         : 7C        : N              
+GND*                         : M12       :        :                   :         : 7C        :                
+GND*                         : M13       :        :                   :         : 7C        :                
+GND*                         : M14       :        :                   :         : 7D        :                
+AUXin[1]                     : M15       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+GND*                         : M16       :        :                   :         : 7D        :                
+GND*                         : M17       :        :                   :         : 8D        :                
+GND*                         : M18       :        :                   :         : 8D        :                
+GND*                         : M19       :        :                   :         : 8D        :                
+mem_dq[16]                   : M20       : bidir  : 1.8-V HSTL Class I :         : 8C        : Y              
+GND*                         : M21       :        :                   :         : 8C        :                
+GND*                         : M22       :        :                   :         : 8C        :                
+GND*                         : M23       :        :                   :         : 8B        :                
+GND*                         : M24       :        :                   :         : 8B        :                
+GND*                         : M25       :        :                   :         : 8B        :                
+VCCIO8A                      : M26       : power  :                   : 1.8V    : 8A        :                
+VREFB8AN0                    : M27       :        :                   : 0.9V    : 8A        :                
+VCCBAT                       : M28       : power  :                   : 1.2V    :           :                
+MSEL3                        : M29       : input  :                   :         : 8A        :                
+MSEL4                        : M30       : input  :                   :         : 8A        :                
+GND                          : M31       : gnd    :                   :         :           :                
+GND                          : M32       : gnd    :                   :         :           :                
+datain_fromAMB[2](n)         : M33       : input  : 1.5-V PCML        :         : B1L       : Y              
+datain_fromAMB[2]            : M34       : input  : 1.5-V PCML        :         : B1L       : Y              
+GND                          : N1        : gnd    :                   :         :           :                
+GND                          : N2        : gnd    :                   :         :           :                
+dataout3[0]                  : N3        : output : 1.5-V PCML        :         : B1R       : Y              
+dataout3[0](n)               : N4        : output : 1.5-V PCML        :         : B1R       : Y              
+VCCR_GXBR                    : N5        : power  :                   : 1.15V   :           :                
+GND                          : N6        : gnd    :                   :         :           :                
+GND                          : N7        : gnd    :                   :         :           :                
+VCCPD7A                      : N8        : power  :                   : 3.0V    : 7A        :                
+VCCPD7A                      : N9        : power  :                   : 3.0V    : 7A        :                
+GND*                         : N10       :        :                   :         : 7B        :                
+GND*                         : N11       :        :                   :         : 7B        :                
+GND*                         : N12       :        :                   :         : 7C        :                
+GND*                         : N13       :        :                   :         : 7C        :                
+FREEZEout                    : N14       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+HOLDtoHS[9]                  : N15       : bidir  : 3.0-V LVTTL       :         : 7D        : N              
+GND*                         : N16       :        :                   :         : 7D        :                
+GND*                         : N17       :        :                   :         : 8D        :                
+GND*                         : N18       :        :                   :         : 8D        :                
+GND*                         : N19       :        :                   :         : 8D        :                
+VREFB8CN0                    : N20       :        :                   : 0.9V    : 8C        :                
+GND*                         : N21       :        :                   :         : 8C        :                
+GND*                         : N22       :        :                   :         : 8C        :                
+GND*                         : N23       :        :                   :         : 8B        :                
+GND*                         : N24       :        :                   :         : 8B        :                
+GND*                         : N25       :        :                   :         : 8B        :                
+VCCPD8                       : N26       : power  :                   : 2.5V    :           :                
+VCCPD8                       : N27       : power  :                   : 2.5V    :           :                
+GND                          : N28       : gnd    :                   :         :           :                
+GND                          : N29       : gnd    :                   :         :           :                
+VCCR_GXBL                    : N30       : power  :                   : 1.15V   :           :                
+GXB_NC                       : N31       :        :                   :         : B1L       :                
+GXB_NC                       : N32       :        :                   :         : B1L       :                
+GND                          : N33       : gnd    :                   :         :           :                
+GND                          : N34       : gnd    :                   :         :           :                
+hitdatain3[0]                : P1        : input  : 1.5-V PCML        :         : B1R       : Y              
+hitdatain3[0](n)             : P2        : input  : 1.5-V PCML        :         : B1R       : Y              
+GND                          : P3        : gnd    :                   :         :           :                
+GND                          : P4        : gnd    :                   :         :           :                
+VCCL_GXBR1                   : P5        : power  :                   : 1.15V   :           :                
+VCCL_GXBR1                   : P6        : power  :                   : 1.15V   :           :                
+VCCH_GXBR1                   : P7        : power  :                   : 1.5V    :           :                
+GND                          : P8        : gnd    :                   :         :           :                
+VCCD_FPLL                    : P9        : power  :                   : 1.5V    :           :                
+GND                          : P10       : gnd    :                   :         :           :                
+GND*                         : P11       :        :                   :         : 7B        :                
+VCC_AUX                      : P12       : power  :                   : 2.5V    :           :                
+GND                          : P13       : gnd    :                   :         :           :                
+VCCPD7BCD                    : P14       : power  :                   : 3.0V    :           :                
+GND                          : P15       : gnd    :                   :         :           :                
+VCCPD7BCD                    : P16       : power  :                   : 3.0V    :           :                
+GND                          : P17       : gnd    :                   :         :           :                
+VCCP                         : P18       : power  :                   : 1.1V    :           :                
+GND                          : P19       : gnd    :                   :         :           :                
+VCCPD8                       : P20       : power  :                   : 2.5V    :           :                
+GND                          : P21       : gnd    :                   :         :           :                
+VCCPD8                       : P22       : power  :                   : 2.5V    :           :                
+GND                          : P23       : gnd    :                   :         :           :                
+VCC_AUX                      : P24       : power  :                   : 2.5V    :           :                
+GND                          : P25       : gnd    :                   :         :           :                
+VCCD_FPLL                    : P26       : power  :                   : 1.5V    :           :                
+GND                          : P27       : gnd    :                   :         :           :                
+VCCH_GXBL1                   : P28       : power  :                   : 1.5V    :           :                
+VCCL_GXBL1                   : P29       : power  :                   : 1.15V   :           :                
+VCCL_GXBL1                   : P30       : power  :                   : 1.15V   :           :                
+GND                          : P31       : gnd    :                   :         :           :                
+GND                          : P32       : gnd    :                   :         :           :                
+datain_fromAMB[1](n)         : P33       : input  : 1.5-V PCML        :         : B1L       : Y              
+datain_fromAMB[1]            : P34       : input  : 1.5-V PCML        :         : B1L       : Y              
+GND                          : R1        : gnd    :                   :         :           :                
+GND                          : R2        : gnd    :                   :         :           :                
+dataout3[2]                  : R3        : output : 1.5-V PCML        :         : B1R       : Y              
+dataout3[2](n)               : R4        : output : 1.5-V PCML        :         : B1R       : Y              
+GND                          : R5        : gnd    :                   :         :           :                
+VCCT_GXBR1                   : R6        : power  :                   : 1.15V   :           :                
+GND                          : R7        : gnd    :                   :         :           :                
+GXB_GND*                     : R8        :        :                   :         : B1R       :                
+GXB_GND*                     : R9        :        :                   :         : B1R       :                
+GND                          : R10       : gnd    :                   :         :           :                
+VCCPD7BCD                    : R11       : power  :                   : 3.0V    :           :                
+GND                          : R12       : gnd    :                   :         :           :                
+VCCP                         : R13       : power  :                   : 1.1V    :           :                
+VCC                          : R14       : power  :                   : 1.1V    :           :                
+VCC                          : R15       : power  :                   : 1.1V    :           :                
+VCCD_FPLL                    : R16       : power  :                   : 1.5V    :           :                
+VCCA_FPLL                    : R17       : power  :                   : 2.5V    :           :                
+GND                          : R18       : gnd    :                   :         :           :                
+VCC                          : R19       : power  :                   : 1.1V    :           :                
+GND                          : R20       : gnd    :                   :         :           :                
+VCCP                         : R21       : power  :                   : 1.1V    :           :                
+GND                          : R22       : gnd    :                   :         :           :                
+VCC                          : R23       : power  :                   : 1.1V    :           :                
+GND                          : R24       : gnd    :                   :         :           :                
+VCC                          : R25       : power  :                   : 1.1V    :           :                
+GXB_GND*                     : R26       :        :                   :         : B1L       :                
+GXB_GND*                     : R27       :        :                   :         : B1L       :                
+GND                          : R28       : gnd    :                   :         :           :                
+VCCT_GXBL1                   : R29       : power  :                   : 1.15V   :           :                
+GND                          : R30       : gnd    :                   :         :           :                
+GXB_NC                       : R31       :        :                   :         : B1L       :                
+GXB_NC                       : R32       :        :                   :         : B1L       :                
+GND                          : R33       : gnd    :                   :         :           :                
+GND                          : R34       : gnd    :                   :         :           :                
+hitdatain3[2]                : T1        : input  : 1.5-V PCML        :         : B1R       : Y              
+hitdatain3[2](n)             : T2        : input  : 1.5-V PCML        :         : B1R       : Y              
+GND                          : T3        : gnd    :                   :         :           :                
+GND                          : T4        : gnd    :                   :         :           :                
+VCCT_GXBR1                   : T5        : power  :                   : 1.15V   :           :                
+GND                          : T6        : gnd    :                   :         :           :                
+VCCA_GXBR1                   : T7        : power  :                   : 2.5V    :           :                
+GND                          : T8        : gnd    :                   :         :           :                
+VCCA_FPLL                    : T9        : power  :                   : 2.5V    :           :                
+VCCP                         : T10       : power  :                   : 1.1V    :           :                
+GND                          : T11       : gnd    :                   :         :           :                
+VCC                          : T12       : power  :                   : 1.1V    :           :                
+GND                          : T13       : gnd    :                   :         :           :                
+VCC                          : T14       : power  :                   : 1.1V    :           :                
+GND                          : T15       : gnd    :                   :         :           :                
+VCC                          : T16       : power  :                   : 1.1V    :           :                
+GND                          : T17       : gnd    :                   :         :           :                
+VCC                          : T18       : power  :                   : 1.1V    :           :                
+GND                          : T19       : gnd    :                   :         :           :                
+VCC                          : T20       : power  :                   : 1.1V    :           :                
+GND                          : T21       : gnd    :                   :         :           :                
+VCC                          : T22       : power  :                   : 1.1V    :           :                
+GND                          : T23       : gnd    :                   :         :           :                
+VCC                          : T24       : power  :                   : 1.1V    :           :                
+GND                          : T25       : gnd    :                   :         :           :                
+VCCA_FPLL                    : T26       : power  :                   : 2.5V    :           :                
+GND                          : T27       : gnd    :                   :         :           :                
+VCCA_GXBL1                   : T28       : power  :                   : 2.5V    :           :                
+GND                          : T29       : gnd    :                   :         :           :                
+VCCT_GXBL1                   : T30       : power  :                   : 1.15V   :           :                
+GND                          : T31       : gnd    :                   :         :           :                
+GND                          : T32       : gnd    :                   :         :           :                
+GXB_GND*                     : T33       :        :                   :         : B1L       :                
+GXB_GND*                     : T34       :        :                   :         : B1L       :                
+GND                          : U1        : gnd    :                   :         :           :                
+GND                          : U2        : gnd    :                   :         :           :                
+dataout3[1]                  : U3        : output : 1.5-V PCML        :         : B1R       : Y              
+dataout3[1](n)               : U4        : output : 1.5-V PCML        :         : B1R       : Y              
+VCCR_GXBR                    : U5        : power  :                   : 1.15V   :           :                
+VCCR_GXBR                    : U6        : power  :                   : 1.15V   :           :                
+GND                          : U7        : gnd    :                   :         :           :                
+gx_pll_refclkin2(n)          : U8        : input  : 1.5-V PCML        :         : B1R       : Y              
+gx_pll_refclkin2             : U9        : input  : 1.5-V PCML        :         : B1R       : Y              
+GND                          : U10       : gnd    :                   :         :           :                
+VCC                          : U11       : power  :                   : 1.1V    :           :                
+VCC                          : U12       : power  :                   : 1.1V    :           :                
+VCC                          : U13       : power  :                   : 1.1V    :           :                
+GND                          : U14       : gnd    :                   :         :           :                
+VCC                          : U15       : power  :                   : 1.1V    :           :                
+GND                          : U16       : gnd    :                   :         :           :                
+VCC                          : U17       : power  :                   : 1.1V    :           :                
+GND                          : U18       : gnd    :                   :         :           :                
+VCC                          : U19       : power  :                   : 1.1V    :           :                
+VCC                          : U20       : power  :                   : 1.1V    :           :                
+VCC                          : U21       : power  :                   : 1.1V    :           :                
+VCC                          : U22       : power  :                   : 1.1V    :           :                
+VCC                          : U23       : power  :                   : 1.1V    :           :                
+GND                          : U24       : gnd    :                   :         :           :                
+VCCP                         : U25       : power  :                   : 1.1V    :           :                
+gx_pll_refclkin3             : U26       : input  : 1.5-V PCML        :         : B1L       : Y              
+gx_pll_refclkin3(n)          : U27       : input  : 1.5-V PCML        :         : B1L       : Y              
+GND                          : U28       : gnd    :                   :         :           :                
+VCCR_GXBL                    : U29       : power  :                   : 1.15V   :           :                
+VCCR_GXBL                    : U30       : power  :                   : 1.15V   :           :                
+merge_dataout(n)             : U31       : output : 1.5-V PCML        :         : B1L       : Y              
+merge_dataout                : U32       : output : 1.5-V PCML        :         : B1L       : Y              
+GND                          : U33       : gnd    :                   :         :           :                
+GND                          : U34       : gnd    :                   :         :           :                
+hitdatain3[1]                : V1        : input  : 1.5-V PCML        :         : B1R       : Y              
+hitdatain3[1](n)             : V2        : input  : 1.5-V PCML        :         : B1R       : Y              
+GND                          : V3        : gnd    :                   :         :           :                
+GND                          : V4        : gnd    :                   :         :           :                
+VCCL_GXBR0                   : V5        : power  :                   : 1.15V   :           :                
+VCCL_GXBR0                   : V6        : power  :                   : 1.15V   :           :                
+VCCH_GXBR0                   : V7        : power  :                   : 1.5V    :           :                
+GND                          : V8        : gnd    :                   :         :           :                
+VCCA_FPLL                    : V9        : power  :                   : 2.5V    :           :                
+VCCP                         : V10       : power  :                   : 1.1V    :           :                
+GND                          : V11       : gnd    :                   :         :           :                
+VCC                          : V12       : power  :                   : 1.1V    :           :                
+GND                          : V13       : gnd    :                   :         :           :                
+VCC                          : V14       : power  :                   : 1.1V    :           :                
+GND                          : V15       : gnd    :                   :         :           :                
+VCC                          : V16       : power  :                   : 1.1V    :           :                
+GND                          : V17       : gnd    :                   :         :           :                
+VCC                          : V18       : power  :                   : 1.1V    :           :                
+GND                          : V19       : gnd    :                   :         :           :                
+VCC                          : V20       : power  :                   : 1.1V    :           :                
+GND                          : V21       : gnd    :                   :         :           :                
+VCC                          : V22       : power  :                   : 1.1V    :           :                
+GND                          : V23       : gnd    :                   :         :           :                
+VCC                          : V24       : power  :                   : 1.1V    :           :                
+GND                          : V25       : gnd    :                   :         :           :                
+VCCA_FPLL                    : V26       : power  :                   : 2.5V    :           :                
+GND                          : V27       : gnd    :                   :         :           :                
+VCCH_GXBL0                   : V28       : power  :                   : 1.5V    :           :                
+VCCL_GXBL0                   : V29       : power  :                   : 1.15V   :           :                
+VCCL_GXBL0                   : V30       : power  :                   : 1.15V   :           :                
+GND                          : V31       : gnd    :                   :         :           :                
+GND                          : V32       : gnd    :                   :         :           :                
+merge_datain(n)              : V33       : input  : 1.5-V PCML        :         : B1L       : Y              
+merge_datain                 : V34       : input  : 1.5-V PCML        :         : B1L       : Y              
+GND                          : W1        : gnd    :                   :         :           :                
+GND                          : W2        : gnd    :                   :         :           :                
+dataout2[3]                  : W3        : output : 1.5-V PCML        :         : B0R       : Y              
+dataout2[3](n)               : W4        : output : 1.5-V PCML        :         : B0R       : Y              
+GND                          : W5        : gnd    :                   :         :           :                
+VCCT_GXBR0                   : W6        : power  :                   : 1.15V   :           :                
+GND                          : W7        : gnd    :                   :         :           :                
+GXB_GND*                     : W8        :        :                   :         : B0R       :                
+GXB_GND*                     : W9        :        :                   :         : B0R       :                
+GND                          : W10       : gnd    :                   :         :           :                
+VCC_AUX                      : W11       : power  :                   : 2.5V    :           :                
+GND                          : W12       : gnd    :                   :         :           :                
+VCC                          : W13       : power  :                   : 1.1V    :           :                
+GND                          : W14       : gnd    :                   :         :           :                
+VCC                          : W15       : power  :                   : 1.1V    :           :                
+GND                          : W16       : gnd    :                   :         :           :                
+VCC                          : W17       : power  :                   : 1.1V    :           :                
+GND                          : W18       : gnd    :                   :         :           :                
+VCC                          : W19       : power  :                   : 1.1V    :           :                
+GND                          : W20       : gnd    :                   :         :           :                
+VCC                          : W21       : power  :                   : 1.1V    :           :                
+GND                          : W22       : gnd    :                   :         :           :                
+VCC                          : W23       : power  :                   : 1.1V    :           :                
+GND                          : W24       : gnd    :                   :         :           :                
+VCCP                         : W25       : power  :                   : 1.1V    :           :                
+gx_pll_refclkin1             : W26       : input  : 1.5-V PCML        :         : B0L       : Y              
+gx_pll_refclkin1(n)          : W27       : input  : 1.5-V PCML        :         : B0L       : Y              
+GND                          : W28       : gnd    :                   :         :           :                
+VCCT_GXBL0                   : W29       : power  :                   : 1.15V   :           :                
+GND                          : W30       : gnd    :                   :         :           :                
+dataout1[3](n)               : W31       : output : 1.5-V PCML        :         : B0L       : Y              
+dataout1[3]                  : W32       : output : 1.5-V PCML        :         : B0L       : Y              
+GND                          : W33       : gnd    :                   :         :           :                
+GND                          : W34       : gnd    :                   :         :           :                
+hitdatain2[3]                : Y1        : input  : 1.5-V PCML        :         : B0R       : Y              
+hitdatain2[3](n)             : Y2        : input  : 1.5-V PCML        :         : B0R       : Y              
+GND                          : Y3        : gnd    :                   :         :           :                
+GND                          : Y4        : gnd    :                   :         :           :                
+VCCT_GXBR0                   : Y5        : power  :                   : 1.15V   :           :                
+GND                          : Y6        : gnd    :                   :         :           :                
+VCCA_GXBR0                   : Y7        : power  :                   : 2.5V    :           :                
+GND                          : Y8        : gnd    :                   :         :           :                
+VCCD_FPLL                    : Y9        : power  :                   : 1.5V    :           :                
+VCCPD4BCD                    : Y10       : power  :                   : 3.0V    :           :                
+GND*                         : Y11       :        :                   :         : 4C        :                
+VCCP                         : Y12       : power  :                   : 1.1V    :           :                
+VCC                          : Y13       : power  :                   : 1.1V    :           :                
+VCCPD4BCD                    : Y14       : power  :                   : 3.0V    :           :                
+SFP_Control[2]               : Y15       : bidir  : 3.0-V LVTTL       :         : 4D        : N              
+VCCPD4BCD                    : Y16       : power  :                   : 3.0V    :           :                
+VCCD_FPLL                    : Y17       : power  :                   : 1.5V    :           :                
+VCCA_FPLL                    : Y18       : power  :                   : 2.5V    :           :                
+VCCP                         : Y19       : power  :                   : 1.1V    :           :                
+VCC                          : Y20       : power  :                   : 1.1V    :           :                
+VCCPD3                       : Y21       : power  :                   : 3.0V    :           :                
+VCCP                         : Y22       : power  :                   : 1.1V    :           :                
+vme_addr[13]                 : Y23       : input  : 3.0-V LVTTL       :         : 3B        : N              
+VCC_AUX                      : Y24       : power  :                   : 2.5V    :           :                
+VCCPD3                       : Y25       : power  :                   : 3.0V    :           :                
+VCCD_FPLL                    : Y26       : power  :                   : 1.5V    :           :                
+GND                          : Y27       : gnd    :                   :         :           :                
+VCCA_GXBL0                   : Y28       : power  :                   : 2.5V    :           :                
+GND                          : Y29       : gnd    :                   :         :           :                
+VCCT_GXBL0                   : Y30       : power  :                   : 1.15V   :           :                
+GND                          : Y31       : gnd    :                   :         :           :                
+GND                          : Y32       : gnd    :                   :         :           :                
+hitdatain1[3](n)             : Y33       : input  : 1.5-V PCML        :         : B0L       : Y              
+hitdatain1[3]                : Y34       : input  : 1.5-V PCML        :         : B0L       : Y              

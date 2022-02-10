@@ -1,0 +1,30 @@
+Core: RLDRAMII_p0 - Instance: inst20|rldramii_inst
+Path, Setup Margin, Hold Margin
+"Address Command (Slow 1100mV 85C Model)",1.362,1.241
+"Bus Turnaround Time (Slow 1100mV 85C Model)",4.547,--
+"Core (Slow 1100mV 85C Model)",1.941,0.114
+"Core Recovery/Removal (Slow 1100mV 85C Model)",3.833,0.551
+"DK vs CK (Slow 1100mV 85C Model)",0.26,0.173
+"Read Capture (Slow 1100mV 85C Model)",0.459,0.498
+"Write (Slow 1100mV 85C Model)",0.684,0.686
+"Address Command (Slow 1100mV 0C Model)",1.439,1.164
+"Bus Turnaround Time (Slow 1100mV 0C Model)",4.584,--
+"Core (Slow 1100mV 0C Model)",1.973,0.164
+"Core Recovery/Removal (Slow 1100mV 0C Model)",4.143,0.429
+"DK vs CK (Slow 1100mV 0C Model)",0.279,0.186
+"Read Capture (Slow 1100mV 0C Model)",0.47,0.509
+"Write (Slow 1100mV 0C Model)",0.702,0.702
+"Address Command (Fast 1100mV 85C Model)",1.759,1.074
+"Bus Turnaround Time (Fast 1100mV 85C Model)",4.797,--
+"Core (Fast 1100mV 85C Model)",2.48,0.06
+"Core Recovery/Removal (Fast 1100mV 85C Model)",5.055,0.315
+"DK vs CK (Fast 1100mV 85C Model)",0.326,0.286
+"Read Capture (Fast 1100mV 85C Model)",0.55,0.593
+"Write (Fast 1100mV 85C Model)",0.73,0.73
+"Address Command (Fast 1100mV 0C Model)",1.813,1.04
+"Bus Turnaround Time (Fast 1100mV 0C Model)",4.806,--
+"Core (Fast 1100mV 0C Model)",2.489,0.061
+"Core Recovery/Removal (Fast 1100mV 0C Model)",5.335,0.28
+"DK vs CK (Fast 1100mV 0C Model)",0.336,0.296
+"Read Capture (Fast 1100mV 0C Model)",0.547,0.59
+"Write (Fast 1100mV 0C Model)",0.741,0.741
