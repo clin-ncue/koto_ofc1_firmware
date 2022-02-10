@@ -21,7 +21,7 @@ agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 256 144)
+	(rect 16 16 248 144)
 	(text "data_storage" (rect 5 0 80 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
@@ -34,8 +34,8 @@ agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "live" (rect 0 0 18 14)(font "Arial" (font_size 8)))
-		(text "live" (rect 21 43 39 57)(font "Arial" (font_size 8)))
+		(text "live_rising" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "live_rising" (rect 21 43 77 57)(font "Arial" (font_size 8)))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "raddr[13..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
-		(text "raddr[13..0]" (rect 21 75 87 89)(font "Arial" (font_size 8)))
+		(text "raddr[14..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "raddr[14..0]" (rect 21 75 87 89)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
@@ -60,20 +60,20 @@ agreement for further details.
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
-		(pt 240 32)
+		(pt 232 32)
 		(output)
-		(text "even_out[15..0]" (rect 0 0 88 14)(font "Arial" (font_size 8)))
-		(text "even_out[15..0]" (rect 131 27 219 41)(font "Arial" (font_size 8)))
-		(line (pt 240 32)(pt 224 32)(line_width 3))
+		(text "data_out[31..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "data_out[31..0]" (rect 127 27 211 41)(font "Arial" (font_size 8)))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
 	)
 	(port
-		(pt 240 48)
+		(pt 232 48)
 		(output)
-		(text "odd_out[15..0]" (rect 0 0 81 14)(font "Arial" (font_size 8)))
-		(text "odd_out[15..0]" (rect 138 43 219 57)(font "Arial" (font_size 8)))
-		(line (pt 240 48)(pt 224 48)(line_width 3))
+		(text "complete" (rect 0 0 50 14)(font "Arial" (font_size 8)))
+		(text "complete" (rect 161 43 211 57)(font "Arial" (font_size 8)))
+		(line (pt 232 48)(pt 216 48))
 	)
 	(drawing
-		(rectangle (rect 16 16 224 112))
+		(rectangle (rect 16 16 216 112))
 	)
 )

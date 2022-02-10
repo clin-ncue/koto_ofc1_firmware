@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 248 160)
+	(rect 16 16 248 192)
 	(text "write_control" (rect 5 0 54 12)(font "Arial" ))
-	(text "inst" (rect 8 128 20 140)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -34,8 +34,8 @@ agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "live" (rect 0 0 12 12)(font "Arial" ))
-		(text "live" (rect 21 43 33 55)(font "Arial" ))
+		(text "live_rising" (rect 0 0 38 12)(font "Arial" ))
+		(text "live_rising" (rect 21 43 59 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
@@ -62,15 +62,15 @@ agreement for further details.
 	(port
 		(pt 232 48)
 		(output)
-		(text "even_addr[13..0]" (rect 0 0 67 12)(font "Arial" ))
-		(text "even_addr[13..0]" (rect 144 43 211 55)(font "Arial" ))
+		(text "even_addr[14..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "even_addr[14..0]" (rect 143 43 211 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(port
 		(pt 232 64)
 		(output)
-		(text "wren" (rect 0 0 18 12)(font "Arial" ))
-		(text "wren" (rect 193 59 211 71)(font "Arial" ))
+		(text "even_wren" (rect 0 0 44 12)(font "Arial" ))
+		(text "even_wren" (rect 167 59 211 71)(font "Arial" ))
 		(line (pt 232 64)(pt 216 64)(line_width 1))
 	)
 	(port
@@ -83,17 +83,36 @@ agreement for further details.
 	(port
 		(pt 232 96)
 		(output)
-		(text "odd_addr[13..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "odd_addr[13..0]" (rect 150 91 211 103)(font "Arial" ))
+		(text "odd_addr[14..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "odd_addr[14..0]" (rect 149 91 211 103)(font "Arial" ))
 		(line (pt 232 96)(pt 216 96)(line_width 3))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "odd_wren" (rect 0 0 38 12)(font "Arial" ))
+		(text "odd_wren" (rect 173 107 211 119)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112)(line_width 1))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "valid" (rect 0 0 17 12)(font "Arial" ))
+		(text "valid" (rect 194 123 211 135)(font "Arial" ))
+		(line (pt 232 128)(pt 216 128)(line_width 1))
 	)
 	(parameter
 		"PACKAGE_LENGTH"
 		"1036"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MEMORY_DEPTH"
+		"24576"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
-		(rectangle (rect 16 16 216 128)(line_width 1))
+		(rectangle (rect 16 16 216 160)(line_width 1))
 	)
 	(annotation_block (parameter)(rect 248 -64 348 16))
 )

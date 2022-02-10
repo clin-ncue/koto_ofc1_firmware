@@ -3789,14 +3789,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt -2048 -2928)
-	(pt -2128 -2928)
-)
-(connector
-	(pt -2048 -2944)
-	(pt -2152 -2944)
-)
-(connector
 	(pt -2424 -2784)
 	(pt -2368 -2784)
 )
@@ -3830,33 +3822,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt -1728 -2912)
-	(pt -1336 -2912)
-	(bus)
-)
-(connector
-	(pt -1728 -2896)
-	(pt -1336 -2896)
-)
-(connector
-	(pt -1728 -2944)
-	(pt -1336 -2944)
-	(bus)
-)
-(connector
-	(pt -1728 -2928)
-	(pt -1336 -2928)
-)
-(connector
-	(pt -1728 -2880)
-	(pt -1336 -2880)
-)
-(connector
-	(pt -1728 -2864)
-	(pt -1336 -2864)
-	(bus)
-)
-(connector
 	(pt -2592 -2808)
 	(pt -2368 -2808)
 	(bus)
@@ -3883,16 +3848,8 @@ agreement for further details.
 	(pt -2128 -2984)
 )
 (connector
-	(pt -2128 -2984)
-	(pt -2128 -2928)
-)
-(connector
 	(pt -2152 -3528)
 	(pt -2152 -3024)
-)
-(connector
-	(pt -2152 -3024)
-	(pt -2152 -2944)
 )
 (connector
 	(pt -2472 -3352)
@@ -4024,14 +3981,6 @@ agreement for further details.
 (connector
 	(pt -2472 -2768)
 	(pt -2472 -2232)
-)
-(connector
-	(pt -2152 -2944)
-	(pt -2152 -2232)
-)
-(connector
-	(pt -2128 -2928)
-	(pt -2128 -2208)
 )
 (connector
 	(pt -856 -5336)
@@ -4503,27 +4452,27 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "SFP_Out[0]" (rect -750 -5264 -654 -5246)(font "Arial" (font_size 12)))
+	(text "SFP_Out[0]" (rect -750 -5264 -649 -5246)(font "Arial" (font_size 12)))
 	(pt -856 -5256)
 	(pt -800 -5256)
 )
 (connector
-	(text "SFP_Out[1]" (rect -750 -4688 -654 -4670)(font "Arial" (font_size 12)))
+	(text "SFP_Out[1]" (rect -750 -4688 -649 -4670)(font "Arial" (font_size 12)))
 	(pt -864 -4680)
 	(pt -800 -4680)
 )
 (connector
-	(text "SFP_Out[2]" (rect -742 -4112 -646 -4094)(font "Arial" (font_size 12)))
+	(text "SFP_Out[2]" (rect -742 -4112 -641 -4094)(font "Arial" (font_size 12)))
 	(pt -856 -4104)
 	(pt -792 -4104)
 )
 (connector
-	(text "SFP_Out[3]" (rect -750 -3536 -654 -3518)(font "Arial" (font_size 12)))
+	(text "SFP_Out[3]" (rect -750 -3536 -649 -3518)(font "Arial" (font_size 12)))
 	(pt -864 -3528)
 	(pt -800 -3528)
 )
 (connector
-	(text "SFP_Out[4]" (rect -742 -2952 -646 -2934)(font "Arial" (font_size 12)))
+	(text "SFP_Out[4]" (rect -742 -2952 -641 -2934)(font "Arial" (font_size 12)))
 	(pt -856 -2944)
 	(pt -792 -2944)
 )
@@ -4725,6 +4674,57 @@ agreement for further details.
 	(pt 696 -2704)
 	(pt 736 -2704)
 	(bus)
+)
+(connector
+	(pt -2152 -2944)
+	(pt -2048 -2944)
+)
+(connector
+	(pt -1336 -2944)
+	(pt -1728 -2944)
+	(bus)
+)
+(connector
+	(pt -2128 -2928)
+	(pt -2048 -2928)
+)
+(connector
+	(pt -1336 -2928)
+	(pt -1728 -2928)
+)
+(connector
+	(pt -1336 -2912)
+	(pt -1728 -2912)
+	(bus)
+)
+(connector
+	(pt -1336 -2896)
+	(pt -1728 -2896)
+)
+(connector
+	(pt -1336 -2880)
+	(pt -1728 -2880)
+)
+(connector
+	(pt -1336 -2864)
+	(pt -1728 -2864)
+	(bus)
+)
+(connector
+	(pt -2152 -3024)
+	(pt -2152 -2944)
+)
+(connector
+	(pt -2152 -2944)
+	(pt -2152 -2232)
+)
+(connector
+	(pt -2128 -2984)
+	(pt -2128 -2928)
+)
+(connector
+	(pt -2128 -2928)
+	(pt -2128 -2208)
 )
 (junction (pt -2424 -5096))
 (junction (pt -2424 -5048))
