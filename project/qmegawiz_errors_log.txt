@@ -4,3 +4,17 @@ C:/workspace/main/OFC-I/dff16.vhd
 
 Dec 28 06PM:31:36>: Megafunction LPM_FF is not listed in any 
 wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/firmware/OFC-I/main/project/dff_one.vhd
+
+Mar 03 04PM:27:25>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/firmware/OFC-I/main/project/altpll_digout.tdf
+
+Mar 11 03PM:11:36>: Error in CNX file format.
+
+Error messages are listed in file
+C:/workspace/firmware/OFC-I/main/project/altpll_digout.cnxerr.
+
+Can't create the custom megafunction variation file(s)

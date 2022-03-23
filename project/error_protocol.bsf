@@ -21,7 +21,7 @@ agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 248 176)
+	(rect 16 16 232 176)
 	(text "error_protocol" (rect 5 0 86 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 144 25 156)(font "Arial" ))
 	(port
@@ -34,29 +34,29 @@ agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "pending_err" (rect 0 0 68 14)(font "Arial" (font_size 8)))
-		(text "pending_err" (rect 21 43 89 57)(font "Arial" (font_size 8)))
+		(text "live_rising" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "live_rising" (rect 21 43 77 57)(font "Arial" (font_size 8)))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "evtno_err[15..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
-		(text "evtno_err[15..0]" (rect 21 59 111 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
+		(text "pending_err" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "pending_err" (rect 21 59 89 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "spillno_err[15..0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
-		(text "spillno_err[15..0]" (rect 21 75 115 89)(font "Arial" (font_size 8)))
+		(text "evtno_err[15..0]" (rect 0 0 90 14)(font "Arial" (font_size 8)))
+		(text "evtno_err[15..0]" (rect 21 75 111 89)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
 		(pt 0 96)
 		(input)
-		(text "eneword_err[15..0]" (rect 0 0 110 14)(font "Arial" (font_size 8)))
-		(text "eneword_err[15..0]" (rect 21 91 131 105)(font "Arial" (font_size 8)))
+		(text "spillno_err[15..0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
+		(text "spillno_err[15..0]" (rect 21 91 115 105)(font "Arial" (font_size 8)))
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
@@ -67,13 +67,20 @@ agreement for further details.
 		(line (pt 0 112)(pt 16 112))
 	)
 	(port
-		(pt 232 32)
+		(pt 0 128)
+		(input)
+		(text "read_overflow" (rect 0 0 84 14)(font "Arial" (font_size 8)))
+		(text "read_overflow" (rect 21 123 105 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 216 32)
 		(output)
 		(text "error_output" (rect 0 0 70 14)(font "Arial" (font_size 8)))
-		(text "error_output" (rect 141 27 211 41)(font "Arial" (font_size 8)))
-		(line (pt 232 32)(pt 216 32))
+		(text "error_output" (rect 125 27 195 41)(font "Arial" (font_size 8)))
+		(line (pt 216 32)(pt 200 32))
 	)
 	(drawing
-		(rectangle (rect 16 16 216 144))
+		(rectangle (rect 16 16 200 144))
 	)
 )
