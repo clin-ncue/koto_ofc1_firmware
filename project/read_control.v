@@ -24,7 +24,7 @@ module read_control
   input_id          ,
   ren               ,
   raddr             ,
-  n_pileup       
+  n_mem_queue       
 );
 
 
@@ -38,7 +38,7 @@ input wire         read_start;
 output reg [3  :0] input_id;
 output reg         ren;
 output reg [14 :0] raddr;
-output reg [5  :0] n_pileup;
+output reg [5  :0] n_mem_queue;
 
 // 
 reg        [14 :0] init_addr;
@@ -52,15 +52,15 @@ always @(posedge clk) begin
 	   input_id <= 0;
 		ren <= 1'b0;
 		raddr <= 0;
-		n_pileup <= 0;
+		n_mem_queue <= 0;
 		init_addr <= 0;
 	end
 		
 	if( read_start == 1'b1 ) begin
-	   n_pileup <= n_pileup + 1;
+	   n_mem_queue <= n_mem_queue + 1;
 	end
 	
-	if( ren == 1'b0 && n_pileup > 0 ) begin
+	if( ren == 1'b0 && n_mem_queue > 0 ) begin
       ren <= 1'b1;
 		raddr <= init_addr;
 		input_id <= 0;
@@ -79,7 +79,7 @@ always @(posedge clk) begin
 		end
 		else begin
 		   ren <= 1'b0;
-			n_pileup <= n_pileup - 1;
+			n_mem_queue <= n_mem_queue - 1;
 			init_addr <= (init_addr + PACKAGE_LENGTH) % MEMORY_DEPTH;
 		end
 	end

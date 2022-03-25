@@ -12,6 +12,10 @@
 	Update algorithm: Originally, "read_submit" is 1'b1 if pre_request != ~input_mask 
 	and request == ~input_mask. Now, the requirement for the previous word is removed.
 	A 30-clock "lock" is added to avoid continuous read_submit issuing.
+	
+	2022.03.23
+	Change to blocking method. If w_complte and r_submit happen at the same time. 
+	The non-blocking method will cause error.
 */
 
 module read_submitter
@@ -53,43 +57,43 @@ always @(posedge clk) begin
 
    /// lock the read submit judgement for 30 clocks 
 	if( lock_cnt < LOCK_TIME ) begin
-	   lock_cnt <= lock_cnt + 1;
+	   lock_cnt = lock_cnt + 1;
 	end
 	else begin
-	   lock <= 1'b0;
+	   lock = 1'b0;
 	end
 
    /// submit "read" for the next event while all 16 input complete the event-writing.
 	if(    pending_err == 1'b0 
 	    && lock == 1'b0
 		 && request == ~input_mask ) begin
-      read_submit <= 1'b1;
-		pending_time <= 0;
-		lock <= 1'b1;
-		lock_cnt <= 0;
+      read_submit = 1'b1;
+		pending_time = 0;
+		lock = 1'b1;
+		lock_cnt = 0;
    end
    else begin
-      read_submit <= 1'b0;
+      read_submit = 1'b0;
    end	
 	
 	/// start counting the pending time when read request is received.
    if( request == 0 ) begin
-	   pending_time <= 0;
+	   pending_time = 0;
 	end
    else if( pending_err == 1'b0 && request > 0 ) begin
-	   pending_time <= pending_time + 1;
+	   pending_time = pending_time + 1;
 	end
 	
 	/// issue error when pending time larger than limitation.
 	if( pending_time > MAX_PENDING_TIME ) begin
-	   pending_err <= 1'b1;
+	   pending_err = 1'b1;
 	end
 	
 	/// clear error while LIVE is back.
 	/// This must be put in buttom to overwrite the result from "if(pending_time > MAX_PENDING_TIME) clause".
 	if( live_rising == 1'b1 ) begin
-	   pending_time <= 0;
-		pending_err <= 1'b0;
+	   pending_time = 0;
+		pending_err = 1'b0;
 	end
 	
 end
