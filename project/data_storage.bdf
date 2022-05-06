@@ -383,8 +383,104 @@ agreement for further details.
 	(flipx)
 )
 (symbol
-	(rect 1296 240 1552 384)
-	(text "package_storage" (rect 79 1 195 17)(font "Arial" (font_size 10)))
+	(rect 536 344 768 520)
+	(text "write_control" (rect 5 0 66 12)(font "Arial" ))
+	(text "inst2" (rect 8 160 31 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "live_rising" (rect 0 0 49 12)(font "Arial" ))
+		(text "live_rising" (rect 21 43 70 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "get_package" (rect 0 0 62 12)(font "Arial" ))
+		(text "get_package" (rect 21 59 83 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "input_data[15..0]" (rect 0 0 82 12)(font "Arial" ))
+		(text "input_data[15..0]" (rect 21 75 103 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "even_data[15..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "even_data[15..0]" (rect 141 27 224 39)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "even_addr[14..0]" (rect 0 0 83 12)(font "Arial" ))
+		(text "even_addr[14..0]" (rect 141 43 224 55)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48)(line_width 3))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "even_wren" (rect 0 0 53 12)(font "Arial" ))
+		(text "even_wren" (rect 167 59 220 71)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "odd_data[15..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "odd_data[15..0]" (rect 147 75 223 87)(font "Arial" ))
+		(line (pt 232 80)(pt 216 80)(line_width 3))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "odd_addr[14..0]" (rect 0 0 76 12)(font "Arial" ))
+		(text "odd_addr[14..0]" (rect 147 91 223 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96)(line_width 3))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "odd_wren" (rect 0 0 46 12)(font "Arial" ))
+		(text "odd_wren" (rect 173 107 219 119)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112))
+	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "valid" (rect 0 0 23 12)(font "Arial" ))
+		(text "valid" (rect 192 123 215 135)(font "Arial" ))
+		(line (pt 232 128)(pt 216 128))
+	)
+	(parameter
+		"PACKAGE_LENGTH"
+		"1036"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"MEMORY_DEPTH"
+		"24576"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 216 160))
+	)
+	(annotation_block (parameter)(rect 520 264 792 312))
+)
+(symbol
+	(rect 1304 240 1560 384)
+	(text "package_storage_55" (rect 68 1 209 17)(font "Arial" (font_size 10)))
 	(text "inst7" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -429,7 +525,7 @@ agreement for further details.
 		(line (pt 256 88)(pt 192 88)(line_width 3))
 	)
 	(drawing
-		(text "24576 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
+		(text "28490 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
 		(text "RAM" (rect 149 50 161 73)(font "Arial" )(vertical))
 		(text "Block Type: AUTO" (rect 41 124 133 136)(font "Arial" ))
 		(line (pt 128 24)(pt 168 24))
@@ -482,7 +578,7 @@ agreement for further details.
 )
 (symbol
 	(rect 1304 560 1560 704)
-	(text "package_storage" (rect 79 1 195 17)(font "Arial" (font_size 10)))
+	(text "package_storage_55" (rect 68 1 209 17)(font "Arial" (font_size 10)))
 	(text "inst11" (rect 8 128 37 140)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -527,7 +623,7 @@ agreement for further details.
 		(line (pt 256 88)(pt 192 88)(line_width 3))
 	)
 	(drawing
-		(text "24576 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
+		(text "28490 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
 		(text "RAM" (rect 149 50 161 73)(font "Arial" )(vertical))
 		(text "Block Type: AUTO" (rect 41 124 133 136)(font "Arial" ))
 		(line (pt 128 24)(pt 168 24))
@@ -577,102 +673,6 @@ agreement for further details.
 		(line (pt 176 92)(pt 184 92))
 		(line (pt 168 88)(pt 184 88)(line_width 3))
 	)
-)
-(symbol
-	(rect 536 344 768 520)
-	(text "write_control" (rect 5 0 66 12)(font "Arial" ))
-	(text "inst2" (rect 8 160 31 172)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 14 12)(font "Arial" ))
-		(text "clk" (rect 21 27 35 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "live_rising" (rect 0 0 49 12)(font "Arial" ))
-		(text "live_rising" (rect 21 43 70 55)(font "Arial" ))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "get_package" (rect 0 0 62 12)(font "Arial" ))
-		(text "get_package" (rect 21 59 83 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "input_data[15..0]" (rect 0 0 82 12)(font "Arial" ))
-		(text "input_data[15..0]" (rect 21 75 103 87)(font "Arial" ))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 232 32)
-		(output)
-		(text "even_data[15..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "even_data[15..0]" (rect 141 27 211 39)(font "Arial" ))
-		(line (pt 232 32)(pt 216 32)(line_width 3))
-	)
-	(port
-		(pt 232 48)
-		(output)
-		(text "even_addr[14..0]" (rect 0 0 83 12)(font "Arial" ))
-		(text "even_addr[14..0]" (rect 141 43 211 55)(font "Arial" ))
-		(line (pt 232 48)(pt 216 48)(line_width 3))
-	)
-	(port
-		(pt 232 64)
-		(output)
-		(text "even_wren" (rect 0 0 53 12)(font "Arial" ))
-		(text "even_wren" (rect 167 59 211 71)(font "Arial" ))
-		(line (pt 232 64)(pt 216 64))
-	)
-	(port
-		(pt 232 80)
-		(output)
-		(text "odd_data[15..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "odd_data[15..0]" (rect 147 75 211 87)(font "Arial" ))
-		(line (pt 232 80)(pt 216 80)(line_width 3))
-	)
-	(port
-		(pt 232 96)
-		(output)
-		(text "odd_addr[14..0]" (rect 0 0 76 12)(font "Arial" ))
-		(text "odd_addr[14..0]" (rect 147 91 211 103)(font "Arial" ))
-		(line (pt 232 96)(pt 216 96)(line_width 3))
-	)
-	(port
-		(pt 232 112)
-		(output)
-		(text "odd_wren" (rect 0 0 46 12)(font "Arial" ))
-		(text "odd_wren" (rect 173 107 211 119)(font "Arial" ))
-		(line (pt 232 112)(pt 216 112))
-	)
-	(port
-		(pt 232 128)
-		(output)
-		(text "valid" (rect 0 0 23 12)(font "Arial" ))
-		(text "valid" (rect 192 123 211 135)(font "Arial" ))
-		(line (pt 232 128)(pt 216 128))
-	)
-	(parameter
-		"PACKAGE_LENGTH"
-		"1036"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(parameter
-		"MEMORY_DEPTH"
-		"24576"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(rectangle (rect 16 16 216 160))
-	)
-	(annotation_block (parameter)(rect 520 264 792 312))
 )
 (connector
 	(pt 424 184)
@@ -756,16 +756,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 824 376)
-	(pt 824 272)
-	(bus)
-)
-(connector
-	(pt 840 392)
-	(pt 840 288)
-	(bus)
-)
-(connector
 	(pt 824 440)
 	(pt 824 608)
 	(bus)
@@ -776,24 +766,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 856 304)
-	(pt 856 408)
-)
-(connector
-	(pt 824 272)
-	(pt 1296 272)
-	(bus)
-)
-(connector
-	(pt 840 288)
-	(pt 1296 288)
-	(bus)
-)
-(connector
-	(pt 856 304)
-	(pt 1296 304)
-)
-(connector
 	(pt 840 592)
 	(pt 1304 592)
 	(bus)
@@ -801,11 +773,6 @@ agreement for further details.
 (connector
 	(pt 824 608)
 	(pt 1304 608)
-	(bus)
-)
-(connector
-	(pt 1296 328)
-	(pt 1096 328)
 	(bus)
 )
 (connector
@@ -819,16 +786,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1096 328)
-	(pt 1096 408)
-	(bus)
-)
-(connector
-	(pt 1096 408)
-	(pt 1096 648)
-	(bus)
-)
-(connector
 	(text "The_clock" (rect 234 168 283 180)(font "Arial" ))
 	(pt 224 184)
 	(pt 424 184)
@@ -838,30 +795,8 @@ agreement for further details.
 	(pt 1160 184)
 )
 (connector
-	(pt 1160 352)
-	(pt 1296 352)
-)
-(connector
-	(pt 1160 184)
-	(pt 1160 352)
-)
-(connector
-	(pt 1552 328)
-	(pt 1632 328)
-	(bus)
-)
-(connector
-	(pt 1560 648)
-	(pt 1640 648)
-	(bus)
-)
-(connector
 	(pt 1160 472)
 	(pt 1592 472)
-)
-(connector
-	(pt 1160 352)
-	(pt 1160 472)
 )
 (connector
 	(pt 1592 344)
@@ -1016,6 +951,71 @@ agreement for further details.
 	(pt 2056 480)
 	(bus)
 )
+(connector
+	(pt 1560 648)
+	(pt 1640 648)
+	(bus)
+)
+(connector
+	(pt 824 376)
+	(pt 824 272)
+	(bus)
+)
+(connector
+	(pt 840 392)
+	(pt 840 288)
+	(bus)
+)
+(connector
+	(pt 856 408)
+	(pt 856 304)
+)
+(connector
+	(pt 1632 328)
+	(pt 1560 328)
+	(bus)
+)
+(connector
+	(pt 1096 328)
+	(pt 1096 408)
+	(bus)
+)
+(connector
+	(pt 1096 408)
+	(pt 1096 648)
+	(bus)
+)
+(connector
+	(pt 1160 184)
+	(pt 1160 352)
+)
+(connector
+	(pt 1160 352)
+	(pt 1160 472)
+)
+(connector
+	(pt 824 272)
+	(pt 1304 272)
+	(bus)
+)
+(connector
+	(pt 840 288)
+	(pt 1304 288)
+	(bus)
+)
+(connector
+	(pt 856 304)
+	(pt 1304 304)
+)
+(connector
+	(pt 1096 328)
+	(pt 1304 328)
+	(bus)
+)
+(connector
+	(pt 1160 352)
+	(pt 1304 352)
+)
 (junction (pt 1096 408))
 (junction (pt 424 184))
 (junction (pt 1160 352))
@@ -1030,5 +1030,5 @@ agreement for further details.
 (text "Odd number (1,3,5,...)" (rect 1304 536 1531 560)(font "Times New Roman" (color 255 170 0)(font_size 16)(bold_italic)))
 (text "Data Storage" (rect 56 96 296 139)(font "Times New Roman" (color 255 170 0)(font_size 28)(bold_italic)))
 (text "2021.12.13 C. Lin" (rect 48 872 236 896)(font "Times New Roman" (color 255 85 0)(font_size 16)(bold_italic)))
-(text "Memory Depth = 24576 words!" (rect 1192 176 1512 200)(font "Times New Roman" (color 255 0 0)(font_size 16)(bold_italic)))
+(text "Memory Depth = 28490 words!" (rect 1192 176 1512 200)(font "Times New Roman" (color 255 0 0)(font_size 16)(bold_italic)))
 (rectangle (rect 24 80 2400 920)(color 255 170 0)(line_width 5))

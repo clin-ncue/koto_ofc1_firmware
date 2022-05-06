@@ -18,3 +18,28 @@ Error messages are listed in file
 C:/workspace/firmware/OFC-I/main/project/altpll_digout.cnxerr.
 
 Can't create the custom megafunction variation file(s)
+
+C:/workspace/firmware/OFC-I/main/project/package_storage.tdf
+
+Mar 31 03PM:43:42>: Megafunction ALTSYNCRAM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/firmware/OFC-I/main/project/package_storage.tdf
+
+Mar 31 03PM:43:45>: Megafunction ALTSYNCRAM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/firmware/OFC-I/main/project/package_storage.tdf
+
+Mar 31 03PM:43:47>: Megafunction ALTSYNCRAM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/firmware/OFC-I/main/project/package_storage_64.tdf
+
+Mar 31 04PM:13:29>: Megafunction ALTSYNCRAM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/firmware/OFC-I/main/project/dff32.vhd
+
+Apr 12 06PM:16:31>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
