@@ -17,6 +17,9 @@ git branch -M main
 git push -uf origin main
 ```
 
+Always check the agreement between Rx.pin and OFC_ref.pin.
+The pin assignment must be kept identical at all times.
+
 ## Documents
 
 - [OFC module and the skeleton file](https://edg.uchicago.edu/~bogdan/KOTO_OFC_Module/index.html).
