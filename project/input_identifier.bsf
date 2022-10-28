@@ -39,13 +39,6 @@ agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 0 64)
-		(input)
-		(text "live_rising" (rect 0 0 56 14)(font "Arial" (font_size 8)))
-		(text "live_rising" (rect 21 59 77 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
 		(pt 248 32)
 		(output)
 		(text "data_out[15..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))
