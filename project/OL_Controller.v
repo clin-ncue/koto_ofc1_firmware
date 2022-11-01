@@ -86,12 +86,11 @@ begin
 		ena_tx = 1'b1;
 		datak = 2'b00;
 		data_out = data_tx;
-		send_err = 1'b0;
+		send_err = 1'b1;
 		
 	end
 	
 	endcase
-//	error = (ena_rx==1'b0)? 1'b0 : error;
 	
 end
 
