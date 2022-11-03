@@ -6,6 +6,11 @@
 	Preliminary version.
 	Evtno counts from 1, according to signal tag result.
 	
+	2022.11.02
+	Update for the ADC firmware v2464 or above.
+	- spill number length is extended to 10 bits.
+	- event number length is extended to 16 bits.
+	
 */
 
 module header_checker
@@ -30,9 +35,9 @@ input wire         clk;
 
 // inputs
 input wire         live_rising;
-input wire [11 :0] exp_spillno;
-input wire [13 :0] pkg_evtno;
-input wire [8  :0] pkg_spillno;
+input wire [9  :0] exp_spillno;
+input wire [15 :0] pkg_evtno;
+input wire [9  :0] pkg_spillno;
 input wire         get_package;
 
 // output
@@ -40,7 +45,7 @@ output reg         evtno_err;
 output reg         spillno_err;
 
 //
-reg        [13: 0] exp_evtno;
+reg        [15: 0] exp_evtno;
 
 ////////////////////////////////////////////
 always @(posedge clk) begin

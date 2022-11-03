@@ -4,6 +4,10 @@
 	
 	2021.12.23
 	Preliminary version.
+	
+	2022.11.02
+	Update for ADC firmware v2464.
+	- Length is updated to 10 bits.
 */
 
 module spill_counter
@@ -27,7 +31,7 @@ input wire         reset;
 input wire         live_rising;
 
 // output
-output reg [11 :0] spillno;
+output reg [9 :0] spillno;
 
 ////////////////////////////////////////////
 always @(posedge clk) begin

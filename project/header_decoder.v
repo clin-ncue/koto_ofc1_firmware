@@ -12,11 +12,12 @@
 	2021.12.28
 	Further require "data_prebuffer", which is one clock before data_buffer0, to be 50BC. 
 	
-	2022.05.14
-	Modify for the new ADC firmware.
+	2022.11.02
+	Modify for the ADC firmware v2464 or above.
 	- "data_prebuffer" needs to be zeros.
 	- Adjust header decoding based on the new definition.
 	- Remove energy word checks (commented).
+	
 */
 
 module header_decoder
@@ -87,21 +88,6 @@ always @(posedge clk) begin
 		get_package <= 1'b0;
 	end
 
-/*	
-   /// energy word checks ///
-   if( pkg_cnt < PACKAGE_LENGTH ) begin
-	   pkg_cnt <= pkg_cnt + 1;
-		
-		// energy word //
-		if( pkg_cnt < 1024 && data_buffer0[15:14]!=2'b10 ) begin
-		   eneword_err <= 1'b1;
-		end
-		else begin
-		   eneword_err <= 1'b0;
-		end
-		
-	end
-*/	
 end
 
 endmodule
