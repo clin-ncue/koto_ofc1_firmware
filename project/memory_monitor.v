@@ -14,7 +14,6 @@
 */
 
 module memory_monitor
-#( parameter MAX_NEVENT = 45 )
 (
 // input 
   clk               , // system clock
@@ -23,6 +22,7 @@ module memory_monitor
   live_rising       ,
   trig_accepted     ,
   read_complete     ,
+  MAX_NEVENT        ,
    
   // output
   read_overflow     ,
@@ -37,6 +37,7 @@ input wire         clk;
 input wire         live_rising;
 input wire         trig_accepted;
 input wire         read_complete;
+input wire [5  :0] MAX_NEVENT;
 
 // output
 output reg         read_overflow;
@@ -70,10 +71,10 @@ always @(posedge clk) begin
 	   read_overflow = 1'b1;
 	end
 	
-	if( n_pileup > MAX_NEVENT ) begin
+	if( n_pileup > MAX_NEVENT-2 ) begin
 	   stop = 1'b1;
 	end
-	else if( n_pileup < MAX_NEVENT ) begin
+	else if( n_pileup < MAX_NEVENT-2 ) begin
 	   stop = 1'b0;
 	end
 	   

@@ -10,8 +10,6 @@
 */
 
 module read_control
-#( parameter PACKAGE_LENGTH = 518,
-   parameter MEMORY_DEPTH = 24576 )
 (
 // input 
   clk               , // system clock
@@ -19,6 +17,8 @@ module read_control
   // inputs
   live_rising       ,
   read_start        ,
+  HALF_PACKAGE_LENGTH    ,
+  MEMORY_DEPTH      ,
    
   // output
   input_id          ,
@@ -33,6 +33,8 @@ input wire         clk;
 // inputs
 input wire         live_rising;
 input wire         read_start;
+input wire [9  :0] HALF_PACKAGE_LENGTH;
+input wire [14 :0] MEMORY_DEPTH;
 
 // output
 output reg [3  :0] input_id;
@@ -68,7 +70,7 @@ always @(posedge clk) begin
    end	
 	
 	if( ren ==1'b1 ) begin
-	   if( cnt < PACKAGE_LENGTH - 1 ) begin
+	   if( cnt < HALF_PACKAGE_LENGTH - 1 ) begin
 		   raddr <= (raddr < MEMORY_DEPTH - 1 ) ? raddr + 1 : 0;
 			cnt <= cnt + 1;
 		end
@@ -80,7 +82,7 @@ always @(posedge clk) begin
 		else begin
 		   ren <= 1'b0;
 			n_mem_queue <= n_mem_queue - 1;
-			init_addr <= (init_addr + PACKAGE_LENGTH) % MEMORY_DEPTH;
+			init_addr <= (init_addr + HALF_PACKAGE_LENGTH) % MEMORY_DEPTH;
 		end
 	end
 	

@@ -7,11 +7,13 @@
 	
 	2021.12.16
 	In line with the updated memory depth, new logic is introduced.
+	
+	2022.11.03
+	PACKAGE_LENGTH and MEMORY_DEPTH are inputs now 
+	(update for ADC firmware v2464 or above).
 */
 
 module write_control
-#( parameter PACKAGE_LENGTH = 1036,
-   parameter MEMORY_DEPTH = 24576 )
 (
 // input 
   clk               , // system clock
@@ -20,6 +22,8 @@ module write_control
   live_rising       ,
   get_package       ,
   input_data        ,
+  HALF_PACKAGE_LENGTH ,
+  MEMORY_DEPTH      ,
    
   // output
   even_data         ,
@@ -38,6 +42,8 @@ input wire         clk;
 input wire         live_rising;
 input wire         get_package;
 input wire [15 :0] input_data;
+input wire [9  :0] HALF_PACKAGE_LENGTH;
+input wire [14 :0] MEMORY_DEPTH;
 
 // output
 output reg         even_wren;
@@ -55,11 +61,16 @@ reg        [11 :0] pkg_cnt;
 reg                even_en;
 reg                odd_en;
 
+reg        [10 :0] PACKAGE_LENGTH; 
+
 // 
 assign valid = (even_wren || odd_wren);
 
 ////////////////////////////////////////////
 always @(posedge clk) begin
+
+   /// packag length needs to be in even.
+   PACKAGE_LENGTH <= {HALF_PACKAGE_LENGTH, 1'b0 };
 
    /// reset ///
    if( live_rising == 1'b1 ) begin
