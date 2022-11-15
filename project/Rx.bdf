@@ -17017,6 +17017,41 @@ agreement for further details.
 		(rectangle (rect 16 16 272 144))
 	)
 )
+(symbol
+	(rect 4472 608 4616 704)
+	(text "counter32_rst" (rect 33 1 126 17)(font "Arial" (font_size 10)))
+	(text "inst100" (rect 8 80 43 92)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "sclr" (rect 0 0 21 14)(font "Arial" (font_size 8)))
+		(text "sclr" (rect 20 26 41 40)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clock" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "clock" (rect 26 58 55 72)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 144 56)
+		(output)
+		(text "q[31..0]" (rect 0 0 42 14)(font "Arial" (font_size 8)))
+		(text "q[31..0]" (rect 88 50 130 64)(font "Arial" (font_size 8)))
+		(line (pt 144 56)(pt 128 56)(line_width 3))
+	)
+	(drawing
+		(text "up counter" (rect 84 17 135 29)(font "Arial" ))
+		(line (pt 16 16)(pt 128 16))
+		(line (pt 128 16)(pt 128 80))
+		(line (pt 128 80)(pt 16 80))
+		(line (pt 16 80)(pt 16 16))
+		(line (pt 16 58)(pt 22 64))
+		(line (pt 22 64)(pt 16 70))
+	)
+)
 (connector
 	(pt -1048 880)
 	(pt -1016 880)
@@ -19953,10 +19988,6 @@ agreement for further details.
 	(pt 3824 1400)
 )
 (connector
-	(pt 4336 472)
-	(pt 4336 536)
-)
-(connector
 	(pt 4296 536)
 	(pt 4336 536)
 )
@@ -20924,10 +20955,6 @@ agreement for further details.
 (connector
 	(pt 4464 440)
 	(pt 4320 440)
-)
-(connector
-	(pt 4320 440)
-	(pt 4320 576)
 )
 (connector
 	(pt 4104 576)
@@ -26132,6 +26159,36 @@ agreement for further details.
 (connector
 	(pt 6328 760)
 	(pt 6432 760)
+)
+(connector
+	(pt 4336 640)
+	(pt 4472 640)
+)
+(connector
+	(pt 4336 472)
+	(pt 4336 536)
+)
+(connector
+	(pt 4336 536)
+	(pt 4336 640)
+)
+(connector
+	(pt 4320 672)
+	(pt 4472 672)
+)
+(connector
+	(pt 4320 440)
+	(pt 4320 576)
+)
+(connector
+	(pt 4320 576)
+	(pt 4320 672)
+)
+(connector
+	(text "timestamp[31..0]" (rect 4626 640 4764 657)(font "Arial" (font_size 11)(bold_italic)))
+	(pt 4616 664)
+	(pt 4728 664)
+	(bus)
 )
 (junction (pt -1032 848))
 (junction (pt -600 776))
