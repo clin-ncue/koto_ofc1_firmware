@@ -32,7 +32,7 @@ module write_control
   odd_data          ,
   odd_addr          ,
   odd_wren          ,
-  valid             
+  complete               
 );
 
 
@@ -54,7 +54,7 @@ output reg         odd_wren;
 output reg [14 :0] odd_addr;
 output reg [15 :0] odd_data;
 
-output wire        valid;
+output reg         complete;
 
 // counter for package length 
 reg        [11 :0] pkg_cnt; 
@@ -64,7 +64,6 @@ reg                odd_en;
 reg        [10 :0] PACKAGE_LENGTH; 
 
 // 
-assign valid = (even_wren || odd_wren);
 
 ////////////////////////////////////////////
 always @(posedge clk) begin
@@ -81,6 +80,7 @@ always @(posedge clk) begin
 		even_addr <= 15'h7FFF;
 		odd_addr <= 15'h7FFF;
 		pkg_cnt <= PACKAGE_LENGTH;
+		complete <= 1'b0;
 	end
 		
 	/// assign data to even / odd memory 	
@@ -104,10 +104,15 @@ always @(posedge clk) begin
 	if( pkg_cnt == PACKAGE_LENGTH - 1 ) begin
 	   even_en <= 1'b0;
 		even_wren <= 1'b0;
+		complete <= 1'b1;
 	end
 	else if( pkg_cnt == PACKAGE_LENGTH ) begin
 	   odd_en <= 1'b0;
 		odd_wren <= 1'b0;
+		complete <= 1'b0;
+	end
+	else begin
+	   complete <= 1'b0;
 	end
 
 	/// enable odd memory writing if even is enabled.

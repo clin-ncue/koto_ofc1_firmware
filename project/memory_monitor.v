@@ -6,11 +6,16 @@
 	preliminary version
 	
 	2022.03.23
-	Change to blocking method. If w_complte and r_submit happen at the same time. 
-	The non-blocking method will cause error.
+	Change to blocking method. 
+	If w_complte and r_submit happen at the same time, 
+	the non-blocking method will cause error.
 	
 	2022.03.24
 	Introduce two threhsolds to stop (>45) / continue (<45) collecting data.
+	
+	2022.11.04
+	Introduce MAX_NEVENT instead of parameter.
+	
 */
 
 module memory_monitor
@@ -67,7 +72,7 @@ always @(posedge clk) begin
 	
 	/// if #read > #trig, the npileup becomes negative.
    /// OFC-I might not be able to obtain "L1A" correctly. 
-	if( n_pileup == 6'h3F ) begin
+	if( n_pileup > MAX_NEVENT ) begin
 	   read_overflow = 1'b1;
 	end
 	

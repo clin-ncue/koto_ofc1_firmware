@@ -111,8 +111,8 @@ agreement for further details.
 	(port
 		(pt 320 128)
 		(output)
-		(text "valid" (rect 0 0 17 12)(font "Arial" ))
-		(text "valid" (rect 282 123 299 135)(font "Arial" ))
+		(text "complete" (rect 0 0 35 12)(font "Arial" ))
+		(text "complete" (rect 264 123 299 135)(font "Arial" ))
 		(line (pt 320 128)(pt 304 128)(line_width 1))
 	)
 	(drawing
