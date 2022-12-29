@@ -13,7 +13,7 @@
 --applicable agreement for further details.
 
 
-FUNCTION package_storage_50 
+FUNCTION package_storage_n52 
 (
 	clock,
 	data[15..0],

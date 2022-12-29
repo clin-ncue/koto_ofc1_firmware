@@ -13,15 +13,19 @@
 --applicable agreement for further details.
 
 
-FUNCTION package_storage_54 
+FUNCTION mux_line_8 
 (
-	clock,
-	data[15..0],
-	rdaddress[14..0],
-	wraddress[14..0],
-	wren
+	data0,
+	data1,
+	data2,
+	data3,
+	data4,
+	data5,
+	data6,
+	data7,
+	sel[2..0]
 )
 
 RETURNS (
-	q[15..0]
+	result
 );

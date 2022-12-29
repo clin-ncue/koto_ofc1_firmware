@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "symbol" (version "1.1"))
 (symbol
 	(rect 0 0 256 144)
-	(text "package_storage_64" (rect 68 1 209 17)(font "Arial" (font_size 10)))
+	(text "package_storage_n52" (rect 65 1 214 17)(font "Arial" (font_size 10)))
 	(text "inst" (rect 8 128 25 140)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -66,7 +66,7 @@ applicable agreement for further details.
 		(line (pt 256 88)(pt 192 88)(line_width 3))
 	)
 	(drawing
-		(text "32768 Word(s)" (rect 136 29 148 90)(font "Arial" )(vertical))
+		(text "26832 Word(s)" (rect 136 29 148 90)(font "Arial" )(vertical))
 		(text "RAM" (rect 149 50 161 70)(font "Arial" )(vertical))
 		(text "Block Type: AUTO" (rect 41 124 119 136)(font "Arial" ))
 		(line (pt 128 24)(pt 168 24)(line_width 1))

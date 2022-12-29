@@ -16,10 +16,9 @@
 FUNCTION spy_memory 
 (
 	data[255..0],
-	rdaddress[10..0],
+	rdaddress[9..0],
 	rdclock,
-	rden,
-	wraddress[10..0],
+	wraddress[9..0],
 	wrclock,
 	wren
 )
