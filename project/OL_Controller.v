@@ -1,3 +1,13 @@
+/*
+   OL_Controller
+	developed by Y.-C. Tung in 2018
+	
+	Update 02 Jan 2023
+	C. Lin
+   - Get the moment transiting to test mode.
+	- ena_tx becomes internal.
+	
+*/
 module OL_Controller(	
 	clk,
 	LIVE,
@@ -5,7 +15,7 @@ module OL_Controller(
 	data_rx,
 	ena_rx,
 	data_out,
-	ena_tx,
+	start_test,
 	datak,
 	error,
 	send_err
@@ -18,10 +28,12 @@ input wire [15:0] data_rx;
 input wire ena_rx;
 
 output reg [15:0] data_out;
-output reg ena_tx = 1'b1;
+output reg        start_test;
 output reg [1:0] datak;
 output reg error = 1'b1;
 output reg send_err = 1'b0;
+
+reg ena_tx = 1'b1;
 
 reg error_reg = 1'b1;
 
@@ -39,6 +51,7 @@ always @(posedge clk)
 begin
 	
 	mode = (LIVE==1'b0)? 2'b00:mode;
+	start_test = 1'b0;
 	
 	case(mode)
 	2'b00: // alignment
@@ -46,8 +59,15 @@ begin
 	
 		data_out = pattern_align; 
 		ena_tx = (control<20'hFDDDD)? 1'b0 : 1'b1;
-		datak = (control<20'hFDDDD)? 2'b11 : 2'b00;	
-		mode = (control==20'hFEEEE && LIVE==1'b1)? 2'b01 : mode;	
+		datak = (control<20'hFDDDD)? 2'b11 : 2'b00;
+	
+      // 
+	   //	
+		if( control==20'hFEEEE && LIVE==1'b1 ) begin
+		   mode = 2'b01;
+			start_test = 1'b1;
+		end
+	
 		error = 1'b1;
 		error_reg = 1'b1;
 		cnt_pattern = 11'b0;

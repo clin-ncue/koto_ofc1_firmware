@@ -69,8 +69,8 @@ agreement for further details.
 	(port
 		(pt 216 48)
 		(output)
-		(text "ena_tx" (rect 0 0 27 12)(font "Arial" ))
-		(text "ena_tx" (rect 168 43 195 55)(font "Arial" ))
+		(text "start_test" (rect 0 0 37 12)(font "Arial" ))
+		(text "start_test" (rect 158 43 195 55)(font "Arial" ))
 		(line (pt 216 48)(pt 200 48)(line_width 1))
 	)
 	(port
