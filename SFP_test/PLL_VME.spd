@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="PLL_VME_sim/PLL_VME.vho" type="VHDL" />
+ <topLevel name="PLL_VME" />
+ <deviceFamily name="arriav" />
+</simPackage>
