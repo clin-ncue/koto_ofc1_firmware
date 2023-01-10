@@ -479,7 +479,7 @@ agreement for further details.
 )
 (symbol
 	(rect 1304 240 1560 384)
-	(text "package_storage_n47" (rect 65 1 214 17)(font "Arial" (font_size 10)))
+	(text "package_storage_n52" (rect 65 1 214 17)(font "Arial" (font_size 10)))
 	(text "inst2" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
@@ -524,7 +524,7 @@ agreement for further details.
 		(line (pt 256 88)(pt 192 88)(line_width 3))
 	)
 	(drawing
-		(text "24252 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
+		(text "26832 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
 		(text "RAM" (rect 149 50 161 73)(font "Arial" )(vertical))
 		(text "Block Type: AUTO" (rect 41 124 133 136)(font "Arial" ))
 		(line (pt 128 24)(pt 168 24))
@@ -577,8 +577,8 @@ agreement for further details.
 )
 (symbol
 	(rect 1304 560 1560 704)
-	(text "package_storage_n47" (rect 65 1 214 17)(font "Arial" (font_size 10)))
-	(text "inst5" (rect 8 128 31 140)(font "Arial" ))
+	(text "package_storage_n52" (rect 65 1 214 17)(font "Arial" (font_size 10)))
+	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -622,7 +622,7 @@ agreement for further details.
 		(line (pt 256 88)(pt 192 88)(line_width 3))
 	)
 	(drawing
-		(text "24252 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
+		(text "26832 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
 		(text "RAM" (rect 149 50 161 73)(font "Arial" )(vertical))
 		(text "Block Type: AUTO" (rect 41 124 133 136)(font "Arial" ))
 		(line (pt 128 24)(pt 168 24))
@@ -1027,5 +1027,5 @@ agreement for further details.
 (text "Data Storage" (rect 56 96 296 139)(font "Times New Roman" (color 255 170 0)(font_size 28)(bold_italic)))
 (text "2021.12.13 C. Lin" (rect 48 848 236 872)(font "Times New Roman" (color 255 85 0)(font_size 16)(bold_italic)))
 (text "- 2022.11.02 update to fit the ADC firmware v2464 or above." (rect 40 888 515 907)(font "Times New Roman" (color 0 0 255)(font_size 12)(bold_italic)))
-(text "Memory Depth = 47 * 516 = 24252 words" (rect 1192 176 1620 200)(font "Times New Roman" (color 255 0 0)(font_size 16)(bold_italic)))
+(text "Memory Depth = 52 * 516 = 26832 words" (rect 1192 176 1620 200)(font "Times New Roman" (color 255 0 0)(font_size 16)(bold_italic)))
 (rectangle (rect 24 80 2400 920)(color 255 170 0)(line_width 5))

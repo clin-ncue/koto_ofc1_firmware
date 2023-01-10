@@ -16674,10 +16674,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 2336 2824)
-	(pt 2328 2824)
-)
-(connector
 	(pt 2328 2824)
 	(pt 2264 2824)
 )
@@ -16944,11 +16940,6 @@ agreement for further details.
 	(pt 3200 3144)
 	(pt 3312 3144)
 	(bus)
-)
-(connector
-	(text "reset" (rect 2514 3696 2538 3708)(font "Arial" ))
-	(pt 2528 3712)
-	(pt 2504 3712)
 )
 (connector
 	(text "The_clock" (rect 2392 3640 2449 3654)(font "Arial" (font_size 8)))
@@ -18219,11 +18210,6 @@ agreement for further details.
 	(pt 2600 2648)
 )
 (connector
-	(text "The_clock" (rect 1176 628 1188 677)(font "Arial" )(vertical))
-	(pt 1192 624)
-	(pt 1192 680)
-)
-(connector
 	(pt -2552 1136)
 	(pt -2672 1136)
 )
@@ -18348,14 +18334,6 @@ agreement for further details.
 	(pt 2328 3696)
 )
 (connector
-	(pt 2328 3392)
-	(pt 2328 3696)
-)
-(connector
-	(pt 2328 3696)
-	(pt 2328 3704)
-)
-(connector
 	(pt 2640 2664)
 	(pt 2640 3016)
 )
@@ -18370,6 +18348,23 @@ agreement for further details.
 (connector
 	(pt 5168 2664)
 	(pt 5176 2664)
+)
+(connector
+	(text "The_clock" (rect 1168 604 1184 680)(font "Arial" (font_size 10)(bold_italic))(vertical))
+	(pt 1192 624)
+	(pt 1192 680)
+)
+(connector
+	(pt 2328 3712)
+	(pt 2528 3712)
+)
+(connector
+	(pt 2328 3392)
+	(pt 2328 3696)
+)
+(connector
+	(pt 2328 3696)
+	(pt 2328 3712)
 )
 (junction (pt -1032 848))
 (junction (pt -600 776))
@@ -18458,7 +18453,6 @@ agreement for further details.
 (junction (pt 1192 2792))
 (junction (pt 1192 3000))
 (junction (pt 2280 2568))
-(junction (pt 2328 2824))
 (junction (pt 2264 2920))
 (junction (pt 1192 3144))
 (junction (pt 2320 2216))

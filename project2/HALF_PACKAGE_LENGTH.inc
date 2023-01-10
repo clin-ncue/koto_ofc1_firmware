@@ -13,15 +13,11 @@
 --applicable agreement for further details.
 
 
-FUNCTION package_storage_n47 
+FUNCTION HALF_PACKAGE_LENGTH 
 (
-	clock,
-	data[15..0],
-	rdaddress[14..0],
-	wraddress[14..0],
-	wren
+
 )
 
 RETURNS (
-	q[15..0]
+	result[9..0]
 );
