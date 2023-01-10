@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pin_planner>
+	<pin_info>
+		<pin name="mem_ck" direction="Output" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem_ck_n" direction="Output" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem_dk[1]" direction="Output" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem_dk[0]" direction="Output" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem_qk[1]" direction="Input" source="Hierarchy Database" >
+		</pin>
+		<pin name="mem_qk[0]" direction="Input" source="Hierarchy Database" >
+		</pin>
+	</pin_info>
+	<buses>
+	</buses>
+	<group_file_association>
+	</group_file_association>
+	<pin_planner_file_specifies>
+	</pin_planner_file_specifies>
+</pin_planner>

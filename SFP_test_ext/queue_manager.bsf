@@ -1,0 +1,184 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 264 368)
+	(text "queue_manager" (rect 5 0 97 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 336 25 348)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "The_clock" (rect 0 0 57 14)(font "Arial" (font_size 8)))
+		(text "The_clock" (rect 21 27 78 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "live_rising" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "live_rising" (rect 21 43 77 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "complete[15..0]" (rect 0 0 86 14)(font "Arial" (font_size 8)))
+		(text "complete[15..0]" (rect 21 59 107 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "input_mask[15..0]" (rect 0 0 99 14)(font "Arial" (font_size 8)))
+		(text "input_mask[15..0]" (rect 21 75 120 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "read_submit" (rect 0 0 69 14)(font "Arial" (font_size 8)))
+		(text "read_submit" (rect 158 27 227 41)(font "Arial" (font_size 8)))
+		(line (pt 248 32)(pt 232 32))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "pending_err" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "pending_err" (rect 159 43 227 57)(font "Arial" (font_size 8)))
+		(line (pt 248 48)(pt 232 48))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "00_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "00_nqueue[5..0]" (rect 135 59 227 73)(font "Arial" (font_size 8)))
+		(line (pt 248 64)(pt 232 64)(line_width 3))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "01_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "01_nqueue[5..0]" (rect 135 75 227 89)(font "Arial" (font_size 8)))
+		(line (pt 248 80)(pt 232 80)(line_width 3))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "02_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "02_nqueue[5..0]" (rect 135 91 227 105)(font "Arial" (font_size 8)))
+		(line (pt 248 96)(pt 232 96)(line_width 3))
+	)
+	(port
+		(pt 248 112)
+		(output)
+		(text "03_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "03_nqueue[5..0]" (rect 135 107 227 121)(font "Arial" (font_size 8)))
+		(line (pt 248 112)(pt 232 112)(line_width 3))
+	)
+	(port
+		(pt 248 128)
+		(output)
+		(text "04_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "04_nqueue[5..0]" (rect 135 123 227 137)(font "Arial" (font_size 8)))
+		(line (pt 248 128)(pt 232 128)(line_width 3))
+	)
+	(port
+		(pt 248 144)
+		(output)
+		(text "05_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "05_nqueue[5..0]" (rect 135 139 227 153)(font "Arial" (font_size 8)))
+		(line (pt 248 144)(pt 232 144)(line_width 3))
+	)
+	(port
+		(pt 248 160)
+		(output)
+		(text "06_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "06_nqueue[5..0]" (rect 135 155 227 169)(font "Arial" (font_size 8)))
+		(line (pt 248 160)(pt 232 160)(line_width 3))
+	)
+	(port
+		(pt 248 176)
+		(output)
+		(text "07_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "07_nqueue[5..0]" (rect 135 171 227 185)(font "Arial" (font_size 8)))
+		(line (pt 248 176)(pt 232 176)(line_width 3))
+	)
+	(port
+		(pt 248 192)
+		(output)
+		(text "08_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "08_nqueue[5..0]" (rect 135 187 227 201)(font "Arial" (font_size 8)))
+		(line (pt 248 192)(pt 232 192)(line_width 3))
+	)
+	(port
+		(pt 248 208)
+		(output)
+		(text "09_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "09_nqueue[5..0]" (rect 135 203 227 217)(font "Arial" (font_size 8)))
+		(line (pt 248 208)(pt 232 208)(line_width 3))
+	)
+	(port
+		(pt 248 224)
+		(output)
+		(text "10_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "10_nqueue[5..0]" (rect 135 219 227 233)(font "Arial" (font_size 8)))
+		(line (pt 248 224)(pt 232 224)(line_width 3))
+	)
+	(port
+		(pt 248 240)
+		(output)
+		(text "11_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "11_nqueue[5..0]" (rect 135 235 227 249)(font "Arial" (font_size 8)))
+		(line (pt 248 240)(pt 232 240)(line_width 3))
+	)
+	(port
+		(pt 248 256)
+		(output)
+		(text "12_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "12_nqueue[5..0]" (rect 135 251 227 265)(font "Arial" (font_size 8)))
+		(line (pt 248 256)(pt 232 256)(line_width 3))
+	)
+	(port
+		(pt 248 272)
+		(output)
+		(text "13_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "13_nqueue[5..0]" (rect 135 267 227 281)(font "Arial" (font_size 8)))
+		(line (pt 248 272)(pt 232 272)(line_width 3))
+	)
+	(port
+		(pt 248 288)
+		(output)
+		(text "14_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "14_nqueue[5..0]" (rect 135 283 227 297)(font "Arial" (font_size 8)))
+		(line (pt 248 288)(pt 232 288)(line_width 3))
+	)
+	(port
+		(pt 248 304)
+		(output)
+		(text "15_nqueue[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "15_nqueue[5..0]" (rect 135 299 227 313)(font "Arial" (font_size 8)))
+		(line (pt 248 304)(pt 232 304)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 336))
+	)
+)

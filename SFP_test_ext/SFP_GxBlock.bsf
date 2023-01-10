@@ -1,0 +1,233 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 424 376)
+	(text "SFP_GxBlock" (rect 5 0 81 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 296 25 308)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "phy_mgmt_clk" (rect 0 0 80 14)(font "Arial" (font_size 8)))
+		(text "phy_mgmt_clk" (rect 21 27 101 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "phy_mgmt_clk_reset" (rect 0 0 116 14)(font "Arial" (font_size 8)))
+		(text "phy_mgmt_clk_reset" (rect 21 43 137 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "pll_ref_clk" (rect 0 0 57 14)(font "Arial" (font_size 8)))
+		(text "pll_ref_clk" (rect 21 91 78 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "SFP_rx_in_0" (rect 0 0 71 14)(font "Arial" (font_size 8)))
+		(text "SFP_rx_in_0" (rect 21 107 92 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "SFP_rx_in_1" (rect 24 152 95 166)(font "Arial" (font_size 8)))
+		(text "SFP_rx_in_1" (rect 24 152 95 166)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "SFP0_tx_parallel_data[15..0]" (rect 0 0 161 14)(font "Arial" (font_size 8)))
+		(text "SFP0_tx_parallel_data[15..0]" (rect 21 123 182 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "SFP1_tx_parallel_data[15..0]" (rect 24 168 185 182)(font "Arial" (font_size 8)))
+		(text "SFP1_tx_parallel_data[15..0]" (rect 24 168 185 182)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(color 0 128 255)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "SFP_tx0_datak[1..0]" (rect 0 0 113 14)(font "Arial" (font_size 8)))
+		(text "SFP_tx0_datak[1..0]" (rect 21 139 134 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "SFP_tx1_datak[1..0]" (rect 16 192 129 206)(font "Arial" (font_size 8)))
+		(text "SFP_tx1_datak[1..0]" (rect 16 184 129 198)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 8 192)(color 0 128 255)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clk" (rect 24 56 39 70)(font "Arial" (font_size 8)))
+		(text "clk" (rect 24 56 39 70)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "phy_mgmt_addr[8..0]" (rect 24 200 143 214)(font "Arial" (font_size 8)))
+		(text "phy_mgmt_addr[8..0]" (rect 24 200 143 214)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 16 208)(color 0 128 255)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "phy_mgmt_read" (rect 24 216 114 230)(font "Arial" (font_size 8)))
+		(text "phy_mgmt_read" (rect 24 216 114 230)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 16 224))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "phy_mgmt_write" (rect 24 232 118 246)(font "Arial" (font_size 8)))
+		(text "phy_mgmt_write" (rect 24 232 118 246)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 16 240))
+	)
+	(port
+		(pt 0 256)
+		(input)
+		(text "phy_mgmt_writedata[31..0]" (rect 24 248 178 262)(font "Arial" (font_size 8)))
+		(text "phy_mgmt_writedata[31..0]" (rect 24 248 178 262)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 16 256)(color 0 128 255)(line_width 3))
+	)
+	(port
+		(pt 360 112)
+		(output)
+		(text "SFP_rx0_clkout" (rect 0 0 88 14)(font "Arial" (font_size 8)))
+		(text "SFP_rx0_clkout" (rect 184 104 272 118)(font "Arial" (font_size 8)))
+		(line (pt 360 112)(pt 344 112)(color 128 0 255))
+	)
+	(port
+		(pt 360 128)
+		(output)
+		(text "SFP_rx0_parallel_data[15..0]" (rect 0 0 162 14)(font "Arial" (font_size 8)))
+		(text "SFP_rx0_parallel_data[15..0]" (rect 184 123 346 137)(font "Arial" (font_size 8)))
+		(line (pt 360 128)(pt 344 128)(line_width 3))
+	)
+	(port
+		(pt 360 144)
+		(output)
+		(text "SFP_rx0_datak[1..0]" (rect 0 0 114 14)(font "Arial" (font_size 8)))
+		(text "SFP_rx0_datak[1..0]" (rect 184 136 298 150)(font "Arial" (font_size 8)))
+		(line (pt 360 144)(pt 344 144)(line_width 3))
+	)
+	(port
+		(pt 360 32)
+		(output)
+		(text "SFP_Out_0" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "SFP_Out_0" (rect 248 24 311 38)(font "Arial" (font_size 8)))
+		(line (pt 360 32)(pt 344 32))
+	)
+	(port
+		(pt 360 48)
+		(output)
+		(text "SFP_Out_1" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "SFP_Out_1" (rect 248 40 311 54)(font "Arial" (font_size 8)))
+		(line (pt 360 48)(pt 344 48))
+	)
+	(port
+		(pt 360 160)
+		(output)
+		(text "SFP_rx1_clkout" (rect 298 152 386 166)(font "Arial" (font_size 8)))
+		(text "SFP_rx1_clkout" (rect 176 160 264 174)(font "Arial" (font_size 8)))
+		(line (pt 360 160)(pt 344 160))
+	)
+	(port
+		(pt 360 192)
+		(output)
+		(text "SFP_rx1_datak[1..0]" (rect 309 184 423 198)(font "Arial" (font_size 8)))
+		(text "SFP_rx1_datak[1..0]" (rect 192 176 306 190)(font "Arial" (font_size 8)))
+		(line (pt 360 192)(pt 344 192)(color 128 0 255)(line_width 3))
+	)
+	(port
+		(pt 360 176)
+		(output)
+		(text "SFP_rx1_parallel_data[15..0]" (rect 309 168 471 182)(font "Arial" (font_size 8)))
+		(text "SFP_rx1_parallel_data[15..0]" (rect 176 168 338 182)(font "Arial" (font_size 8)))
+		(line (pt 360 176)(pt 344 176)(color 128 0 255)(line_width 3))
+	)
+	(port
+		(pt 360 64)
+		(output)
+		(text "Test_0_0" (rect 309 56 362 70)(font "Arial" (font_size 8)))
+		(text "Test_0_0" (rect 264 64 317 78)(font "Arial" (font_size 8)))
+		(line (pt 360 64)(pt 344 64))
+	)
+	(port
+		(pt 360 80)
+		(output)
+		(text "Test_0_1" (rect 309 72 362 86)(font "Arial" (font_size 8)))
+		(text "Test_0_1" (rect 264 80 317 94)(font "Arial" (font_size 8)))
+		(line (pt 360 80)(pt 344 80))
+	)
+	(port
+		(pt 360 208)
+		(output)
+		(text "Test_1_0" (rect 309 200 362 214)(font "Arial" (font_size 8)))
+		(text "Test_1_0" (rect 280 200 333 214)(font "Arial" (font_size 8)))
+		(line (pt 360 208)(pt 344 208))
+	)
+	(port
+		(pt 360 224)
+		(output)
+		(text "Test_1_1" (rect 309 216 362 230)(font "Arial" (font_size 8)))
+		(text "Test_1_1" (rect 280 216 333 230)(font "Arial" (font_size 8)))
+		(line (pt 360 224)(pt 344 224))
+	)
+	(port
+		(pt 360 96)
+		(output)
+		(text "Test_0_2" (rect 309 88 362 102)(font "Arial" (font_size 8)))
+		(text "Test_0_2" (rect 272 96 325 110)(font "Arial" (font_size 8)))
+		(line (pt 360 96)(pt 344 96))
+	)
+	(port
+		(pt 360 240)
+		(output)
+		(text "Test_1_2" (rect 309 232 362 246)(font "Arial" (font_size 8)))
+		(text "Test_1_2" (rect 280 232 333 246)(font "Arial" (font_size 8)))
+		(line (pt 360 240)(pt 344 240))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "phy_mgmt_readdata[31..0]" (rect 24 264 175 278)(font "Arial" (font_size 8)))
+		(text "phy_mgmt_readdata[31..0]" (rect 24 264 175 278)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 16 272)(color 0 128 255)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 344 288))
+	)
+)

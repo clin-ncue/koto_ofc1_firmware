@@ -1,0 +1,8 @@
+(
+	result_sig[]
+) = Const_3CBC	(
+
+)
+RETURNS (
+	.result[]
+);

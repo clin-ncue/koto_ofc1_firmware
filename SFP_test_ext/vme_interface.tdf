@@ -1,0 +1,156 @@
+--
+-- vme_interface.tdf
+-- The U. Chicago / CDF VME interface firmware
+-- 
+
+title "VME interface";
+ 
+function lpm_decode (
+  data[lpm_width-1..0], enable, clock, aclr)
+with (
+  lpm_width, lpm_decodes, lpm_pipeline)
+returns (eq[lpm_decodes-1..0]);
+
+function lpm_compare (
+  dataa[lpm_width-1..0], datab[lpm_width-1..0], clock, aclr)
+with (
+  lpm_width, lpm_representation, lpm_pipeline, chain_size, 
+  one_input_is_constant)
+returns (alb, aeb, agb, ageb, aneb, aleb);
+
+function lpm_counter (
+  data[lpm_width-1..0], clock, clk_en, cnt_en, updown, 
+  aclr, aset, aconst, aload, sclr, sset, sconst, sload)
+with (
+  lpm_width, lpm_direction, lpm_modulus, lpm_avalue, lpm_svalue)
+returns (q[lpm_width-1..0], eq[15..0]);
+
+subdesign vme_interface
+(
+  address[31..2]	: input;
+  _ga[4..0]			: input;
+  _lword			: input;
+  _vme_write		: input;
+  am[5..0]			: input;	-- address modifier
+  _as				: input;	-- address strobe
+  _iack				: input;	-- interrupt acknowledge
+  _ds[1..0]			: input;	-- data strobes
+  _delayed_modsel	: input; 
+  _delayed_ds		: input;	-- delayed data strobe
+  fromtapdel[5..1]	: input;	-- input from tapped delay line
+  _dtack			: bidir;	-- data acknowledge
+  _berr				: bidir;	-- bus error
+  _modsel			: output;	-- module select
+  _vme_data_str		: output;	-- data strobe (active low)
+  vme_write			: output;
+  dir_trans			: output;	-- goes to the dir pin of the ABTEs
+  vme_address[26..2]: output;
+  totapdel			: output;	-- output to tapped delay (40ns taps)
+  vmeas				: output;
+  vmeds				: output;
+  vmespare			: output;
+)
+
+variable
+  del80		: dff;
+  del120	: dff;
+  del160	: dff;
+  del240	: dff;
+  del280	: dff;
+  _ack		: node;
+  _vme_err	: node;
+  ga[4..0]	: node;
+  _data_str	: node;
+  modsel	: node;
+  comp		: lpm_compare 
+		  with (lpm_width=10, one_input_is_constant = "no");
+  address_cnt	: lpm_counter with (lpm_width=6);
+  valid_addr	: dff;			-- latch w/!_as the result 
+					-- of masking am and ga
+  blt		: dff;			-- block transfer bit
+  vme_addr[26..8] : dff;
+
+begin
+
+  defaults
+    _modsel = vcc;
+    _vme_data_str = vcc;
+  end defaults;
+
+  ga[] = !_ga[];
+  vme_write = !_vme_write;
+  dir_trans = _vme_write;
+  _data_str = _ds0 & _ds1;
+
+  % Preliminary Address & Address Modifier decoding %
+
+  comp.dataa0 = am0;
+  comp.dataa[3..1] = am[5..3];
+  comp.dataa4 = _lword;
+  comp.datab[4..0] = b"00011";
+  comp.dataa[9..5] = address[31..27];
+  comp.datab[9..5] = ga[];
+  valid_addr.clk = !_as;
+  valid_addr.d = comp.aeb;
+
+  % ex-vme2000 part %
+
+  _modsel =				-- hold until data_str negated
+    (!valid_addr.q # _as # !_iack) & 
+    (_modsel # _data_str);
+
+  _vme_data_str =			-- hold until data_str negated
+    (_modsel # !_dtack # !_berr # _data_str) & 
+    (_vme_data_str # _data_str);
+  _dtack = opndrn(_ack # !_vme_err # !_berr # _vme_data_str);
+
+  _berr = opndrn(			-- hold until ack negated
+    (_vme_err # _vme_data_str) & 
+    (_berr # _ack));
+
+  modsel = !_modsel;
+
+  % local vme_address initialization %
+
+  vme_addr[].clk = modsel;
+  vme_addr[].d = address[26..8];
+  vme_address[26..8] = vme_addr[26..8].q;
+
+  % local vme_address incrementation in case of a block transfer %
+
+  blt.clk = modsel;
+  blt.d = am1;
+  address_cnt.data[] = address[7..2];
+  address_cnt.aload = modsel & _delayed_modsel;
+  address_cnt.cnt_en = blt.q;
+  address_cnt.clock = _delayed_ds;
+  vme_address[7..2] = address_cnt.q[];
+
+  del80.d = VCC;
+  del80.clk = fromtapdel[1];
+  del80.clrn = !_vme_data_str;
+
+  del120.d = VCC;
+  del120.clk = fromtapdel[2];
+  del120.clrn = !_vme_data_str;
+
+  del160.d = VCC;
+  del160.clk = fromtapdel[3];
+  del160.clrn = !_vme_data_str;
+
+  del240.d = VCC;
+  del240.clk = fromtapdel[4];
+  del240.clrn = !_vme_data_str;
+
+  del280.d = VCC;
+  del280.clk = fromtapdel[5];
+  del280.clrn = !_vme_data_str;
+
+  totapdel = !_vme_data_str;
+  vmeas = del80.q;
+  vmeds = del160.q & !_vme_data_str & (_vme_write # !del240.q);
+  vmespare = del120.q;
+  _ack = !del280.q;
+  _vme_err = VCC; 
+
+end;
