@@ -1825,10 +1825,6 @@ agreement for further details.
 	(pt -1472 -1408)
 )
 (connector
-	(pt -2288 -1448)
-	(pt -1472 -1448)
-)
-(connector
 	(pt -920 -1448)
 	(pt -992 -1448)
 )
@@ -1909,14 +1905,6 @@ agreement for further details.
 (connector
 	(pt -2264 -832)
 	(pt -2264 -48)
-)
-(connector
-	(pt -2288 -1448)
-	(pt -2288 -872)
-)
-(connector
-	(pt -2288 -872)
-	(pt -2288 -88)
 )
 (connector
 	(pt -2000 -1288)
@@ -2075,6 +2063,18 @@ agreement for further details.
 	(pt 96 -472)
 	(pt 136 -472)
 	(bus)
+)
+(connector
+	(pt -1472 -1448)
+	(pt -2288 -1448)
+)
+(connector
+	(pt -2288 -1448)
+	(pt -2288 -872)
+)
+(connector
+	(pt -2288 -872)
+	(pt -2288 -88)
 )
 (junction (pt -2560 -1208))
 (junction (pt -2560 -1160))

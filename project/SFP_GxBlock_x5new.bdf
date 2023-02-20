@@ -4555,10 +4555,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt -2472 -5080)
-	(pt -2368 -5080)
-)
-(connector
 	(pt -2424 -5048)
 	(pt -2368 -5048)
 )
@@ -4586,14 +4582,6 @@ agreement for further details.
 (connector
 	(pt -2424 -5048)
 	(pt -2424 -4520)
-)
-(connector
-	(pt -2472 -5080)
-	(pt -2472 -4504)
-)
-(connector
-	(pt -2472 -4504)
-	(pt -2472 -3928)
 )
 (connector
 	(text "phy_mgmt_clk" (rect -40 -5016 78 -4998)(font "Arial" (font_size 12)))
@@ -4725,6 +4713,18 @@ agreement for further details.
 (connector
 	(pt -2128 -2928)
 	(pt -2128 -2208)
+)
+(connector
+	(pt -2368 -5080)
+	(pt -2472 -5080)
+)
+(connector
+	(pt -2472 -5080)
+	(pt -2472 -4504)
+)
+(connector
+	(pt -2472 -4504)
+	(pt -2472 -3928)
 )
 (junction (pt -2424 -5096))
 (junction (pt -2424 -5048))

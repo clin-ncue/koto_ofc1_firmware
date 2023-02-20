@@ -48,18 +48,3 @@ C:/workspace/firmware/OFC-I/main/project/package_storage_n55.tdf
 
 Dec 26 02PM:37:46>: Megafunction ALTSYNCRAM is not listed in any 
 wizard.lst file in the specified library path(s).Wizard launch aborted
-
-C:/workspace/firmware/OFC-I/main/project/package_storage_n52.tdf
-
-Jan 09 05PM:10:01>: Megafunction ALTSYNCRAM is not listed in any 
-wizard.lst file in the specified library path(s).Wizard launch aborted
-
-C:/workspace/firmware/OFC-I/main/project/package_storage_n52.tdf
-
-Jan 09 05PM:10:04>: Megafunction ALTSYNCRAM is not listed in any 
-wizard.lst file in the specified library path(s).Wizard launch aborted
-
-C:/workspace/firmware/OFC-I/main/project/package_storage_n52.tdf
-
-Jan 09 05PM:10:05>: Megafunction ALTSYNCRAM is not listed in any 
-wizard.lst file in the specified library path(s).Wizard launch aborted
