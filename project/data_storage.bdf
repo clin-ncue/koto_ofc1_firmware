@@ -133,8 +133,24 @@ agreement for further details.
 	(text "VCC" (rect 184 7 204 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect 96 824 264 840)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "masking" (rect 5 0 47 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
-	(rect 2208 752 2384 768)
+	(rect 2472 752 2648 768)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "complete" (rect 90 0 134 12)(font "Arial" ))
 	(pt 0 8)
@@ -150,7 +166,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect 2216 488 2392 504)
+	(rect 2496 496 2672 512)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "data_out[31..0]" (rect 90 0 164 12)(font "Arial" ))
 	(pt 0 8)
@@ -308,7 +324,7 @@ agreement for further details.
 	(flipx)
 )
 (symbol
-	(rect 2056 448 2200 528)
+	(rect 2336 456 2480 536)
 	(text "dff32" (rect 59 1 90 17)(font "Arial" (font_size 10)))
 	(text "inst1" (rect 8 64 31 76)(font "Arial" ))
 	(port
@@ -343,7 +359,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 2000 728 2144 808)
+	(rect 2264 728 2408 808)
 	(text "dff_one" (rect 52 63 100 79)(font "Arial" (font_size 10)))
 	(text "inst10" (rect 8 4 37 16)(font "Arial" ))
 	(port
@@ -478,9 +494,64 @@ agreement for further details.
 	)
 )
 (symbol
+	(rect 2072 440 2224 520)
+	(text "mux32_2" (rect 54 2 116 18)(font "Arial" (font_size 10)))
+	(text "inst5" (rect 8 64 31 76)(font "Arial" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "data1x[31..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data1x[31..0]" (rect 4 27 78 41)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 72 40)(line_width 3))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "data0x[31..0]" (rect 0 0 74 14)(font "Arial" (font_size 8)))
+		(text "data0x[31..0]" (rect 4 43 78 57)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 72 56)(line_width 3))
+	)
+	(port
+		(pt 80 80)
+		(input)
+		(text "sel" (rect 0 0 16 14)(font "Arial" (font_size 8)))
+		(text "sel" (rect 84 67 100 81)(font "Arial" (font_size 8)))
+		(line (pt 80 80)(pt 80 68))
+	)
+	(port
+		(pt 152 48)
+		(output)
+		(text "result[31..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "result[31..0]" (rect 92 35 159 49)(font "Arial" (font_size 8)))
+		(line (pt 152 48)(pt 88 48)(line_width 3))
+	)
+	(drawing
+		(line (pt 72 24)(pt 72 72))
+		(line (pt 88 32)(pt 88 64))
+		(line (pt 72 24)(pt 88 32))
+		(line (pt 72 72)(pt 88 64))
+	)
+)
+(symbol
+	(rect 1984 432 2000 464)
+	(text "VCC" (rect 0 5 10 25)(font "Arial" (font_size 6))(vertical))
+	(text "inst6" (rect 5 6 17 29)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 7 8 19 13)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 16 16)(pt 8 16))
+	)
+	(drawing
+		(line (pt 8 24)(pt 8 8))
+	)
+	(rotate90)
+)
+(symbol
 	(rect 1304 240 1560 384)
-	(text "package_storage_n52" (rect 65 1 214 17)(font "Arial" (font_size 10)))
-	(text "inst2" (rect 8 128 31 140)(font "Arial" ))
+	(text "package_storage_n47" (rect 65 1 214 17)(font "Arial" (font_size 10)))
+	(text "inst13" (rect 8 128 37 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -524,7 +595,7 @@ agreement for further details.
 		(line (pt 256 88)(pt 192 88)(line_width 3))
 	)
 	(drawing
-		(text "26832 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
+		(text "24252 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
 		(text "RAM" (rect 149 50 161 73)(font "Arial" )(vertical))
 		(text "Block Type: AUTO" (rect 41 124 133 136)(font "Arial" ))
 		(line (pt 128 24)(pt 168 24))
@@ -577,8 +648,8 @@ agreement for further details.
 )
 (symbol
 	(rect 1304 560 1560 704)
-	(text "package_storage_n52" (rect 65 1 214 17)(font "Arial" (font_size 10)))
-	(text "inst4" (rect 8 128 31 140)(font "Arial" ))
+	(text "package_storage_n47" (rect 65 1 214 17)(font "Arial" (font_size 10)))
+	(text "inst14" (rect 8 128 37 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -622,7 +693,7 @@ agreement for further details.
 		(line (pt 256 88)(pt 192 88)(line_width 3))
 	)
 	(drawing
-		(text "26832 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
+		(text "24252 Word(s)" (rect 136 29 148 100)(font "Arial" )(vertical))
 		(text "RAM" (rect 149 50 161 73)(font "Arial" )(vertical))
 		(text "Block Type: AUTO" (rect 41 124 133 136)(font "Arial" ))
 		(line (pt 128 24)(pt 168 24))
@@ -732,55 +803,6 @@ agreement for further details.
 (connector
 	(pt 1160 672)
 	(pt 1304 672)
-)
-(connector
-	(pt 1928 344)
-	(pt 1928 480)
-	(bus)
-)
-(connector
-	(pt 1928 480)
-	(pt 1928 632)
-	(bus)
-)
-(connector
-	(pt 2200 496)
-	(pt 2216 496)
-	(bus)
-)
-(connector
-	(pt 2056 496)
-	(pt 1960 496)
-)
-(connector
-	(pt 1160 720)
-	(pt 1960 720)
-)
-(connector
-	(pt 1960 760)
-	(pt 2000 760)
-)
-(connector
-	(pt 1960 496)
-	(pt 1960 720)
-)
-(connector
-	(pt 1960 720)
-	(pt 1960 760)
-)
-(connector
-	(pt 1448 776)
-	(pt 2000 776)
-)
-(connector
-	(pt 2144 760)
-	(pt 2208 760)
-)
-(connector
-	(text "rdata[31..0]" (rect 1938 464 1994 476)(font "Arial" ))
-	(pt 1928 480)
-	(pt 2056 480)
-	(bus)
 )
 (connector
 	(pt 1560 648)
@@ -1013,19 +1035,100 @@ agreement for further details.
 	(pt 1160 720)
 	(pt 1160 776)
 )
+(connector
+	(pt 1448 776)
+	(pt 2264 776)
+)
+(connector
+	(pt 2408 760)
+	(pt 2472 760)
+)
+(connector
+	(pt 1160 720)
+	(pt 1952 720)
+)
+(connector
+	(pt 1952 720)
+	(pt 1952 760)
+)
+(connector
+	(pt 2480 504)
+	(pt 2496 504)
+	(bus)
+)
+(connector
+	(text "rdata[31..0]" (rect 2002 480 2058 492)(font "Arial" ))
+	(pt 1928 496)
+	(pt 2072 496)
+	(bus)
+)
+(connector
+	(pt 1928 344)
+	(pt 1928 496)
+	(bus)
+)
+(connector
+	(pt 1928 496)
+	(pt 1928 632)
+	(bus)
+)
+(connector
+	(pt 2224 488)
+	(pt 2336 488)
+	(bus)
+)
+(connector
+	(pt 2056 480)
+	(pt 2056 448)
+	(bus)
+)
+(connector
+	(pt 2072 480)
+	(pt 2056 480)
+	(bus)
+)
+(connector
+	(pt 2000 448)
+	(pt 2056 448)
+	(bus)
+)
+(connector
+	(pt 2152 520)
+	(pt 2152 832)
+)
+(connector
+	(pt 264 832)
+	(pt 2152 832)
+)
+(connector
+	(pt 2336 504)
+	(pt 2240 504)
+)
+(connector
+	(pt 2240 760)
+	(pt 2240 504)
+)
+(connector
+	(pt 1952 760)
+	(pt 2240 760)
+)
+(connector
+	(pt 2240 760)
+	(pt 2264 760)
+)
 (junction (pt 1096 408))
 (junction (pt 424 184))
 (junction (pt 1160 352))
 (junction (pt 1160 472))
 (junction (pt 1592 472))
 (junction (pt 1160 672))
-(junction (pt 1928 480))
-(junction (pt 1960 720))
 (junction (pt 1160 720))
+(junction (pt 1928 496))
+(junction (pt 2240 760))
 (text "Even number (0,2,4,...)" (rect 1296 208 1532 232)(font "Times New Roman" (color 255 170 0)(font_size 16)(bold_italic)))
 (text "Odd number (1,3,5,...)" (rect 1304 536 1531 560)(font "Times New Roman" (color 255 170 0)(font_size 16)(bold_italic)))
 (text "Data Storage" (rect 56 96 296 139)(font "Times New Roman" (color 255 170 0)(font_size 28)(bold_italic)))
 (text "2021.12.13 C. Lin" (rect 48 848 236 872)(font "Times New Roman" (color 255 85 0)(font_size 16)(bold_italic)))
 (text "- 2022.11.02 update to fit the ADC firmware v2464 or above." (rect 40 888 515 907)(font "Times New Roman" (color 0 0 255)(font_size 12)(bold_italic)))
 (text "Memory Depth = 52 * 516 = 26832 words" (rect 1192 176 1620 200)(font "Times New Roman" (color 255 0 0)(font_size 16)(bold_italic)))
-(rectangle (rect 24 80 2400 920)(color 255 170 0)(line_width 5))
+(rectangle (rect 24 80 2688 920)(color 255 170 0)(line_width 5))
