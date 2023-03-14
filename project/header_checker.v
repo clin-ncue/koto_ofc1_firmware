@@ -27,7 +27,8 @@ module header_checker
   
   // output
   evtno_err         ,
-  spillno_err            
+  spillno_err       ,
+  in_counter  
 );
 
 
@@ -43,6 +44,7 @@ input wire         get_package;
 // output
 output reg         evtno_err;
 output reg         spillno_err;
+output reg [15 :0] in_counter;
 
 //
 reg        [15: 0] exp_evtno;
@@ -55,13 +57,15 @@ always @(posedge clk) begin
 	   evtno_err <= 1'b0;
 		spillno_err <= 1'b0;
 		exp_evtno <= 1;
+		in_counter <= 0;
 	end
 
    /// check consistency
 	if( get_package == 1'b1 ) begin
 	   evtno_err <= (pkg_evtno != exp_evtno) ? 1'b1 : 1'b0; 
 		spillno_err <= (pkg_spillno != exp_spillno) ? 1'b1 : 1'b0;
-	   exp_evtno <= exp_evtno + 1;	
+	   exp_evtno <= exp_evtno + 1;
+	   in_counter <= in_counter + 1;	
 	end
 	
 end

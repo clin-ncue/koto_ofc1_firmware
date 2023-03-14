@@ -21,9 +21,9 @@ agreement for further details.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 232 176)
+	(rect 16 16 232 208)
 	(text "error_protocol" (rect 5 0 86 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 144 25 156)(font "Arial" ))
+	(text "inst" (rect 8 176 25 188)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -74,6 +74,13 @@ agreement for further details.
 		(line (pt 0 128)(pt 16 128))
 	)
 	(port
+		(pt 0 144)
+		(input)
+		(text "ol_err[15..0]" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "ol_err[15..0]" (rect 21 139 89 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
 		(pt 216 32)
 		(output)
 		(text "error_output" (rect 0 0 70 14)(font "Arial" (font_size 8)))
@@ -81,6 +88,6 @@ agreement for further details.
 		(line (pt 216 32)(pt 200 32))
 	)
 	(drawing
-		(rectangle (rect 16 16 200 144))
+		(rectangle (rect 16 16 200 176))
 	)
 )
