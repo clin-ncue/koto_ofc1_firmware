@@ -13,7 +13,7 @@
 --applicable agreement for further details.
 
 
-FUNCTION out_counter 
+FUNCTION counter16_ena_rst 
 (
 	clock,
 	cnt_en,

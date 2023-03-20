@@ -4,7 +4,7 @@
 -- MODULE: lpm_counter 
 
 -- ============================================================
--- File Name: out_counter.tdf
+-- File Name: counter16_ena_rst.tdf
 -- Megafunction Name(s):
 -- 			lpm_counter
 --
@@ -36,7 +36,7 @@ INCLUDE "lpm_counter.inc";
 
 
 
-SUBDESIGN out_counter
+SUBDESIGN counter16_ena_rst
 (
 	clock	 : INPUT;
 	cnt_en	 : INPUT;
@@ -97,11 +97,11 @@ END;
 -- Retrieval info: CONNECT: @cnt_en 0 0 0 0 cnt_en 0 0 0 0
 -- Retrieval info: CONNECT: @sclr 0 0 0 0 sclr 0 0 0 0
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
--- Retrieval info: GEN_FILE: TYPE_NORMAL out_counter.tdf TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL out_counter.inc TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL out_counter.cmp FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL out_counter.bsf TRUE FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL out_counter_inst.tdf FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL out_counter_waveforms.html TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL out_counter_wave*.jpg FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL counter16_ena_rst.tdf TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL counter16_ena_rst.inc TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL counter16_ena_rst.cmp FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL counter16_ena_rst.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL counter16_ena_rst_inst.tdf FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL counter16_ena_rst_waveforms.html TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL counter16_ena_rst_wave*.jpg FALSE
 -- Retrieval info: LIB_FILE: lpm

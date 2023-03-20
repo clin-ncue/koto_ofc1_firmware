@@ -136,7 +136,7 @@ agreement for further details.
 	(input)
 	(rect 96 824 264 840)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "masking" (rect 5 0 47 12)(font "Arial" ))
+	(text "ena" (rect 5 0 23 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -533,7 +533,7 @@ agreement for further details.
 	)
 )
 (symbol
-	(rect 1984 432 2000 464)
+	(rect 2008 520 2024 552)
 	(text "VCC" (rect 0 5 10 25)(font "Arial" (font_size 6))(vertical))
 	(text "inst6" (rect 5 6 17 29)(font "Arial" )(vertical)(invisible))
 	(port
@@ -1057,39 +1057,8 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "rdata[31..0]" (rect 2002 480 2058 492)(font "Arial" ))
-	(pt 1928 496)
-	(pt 2072 496)
-	(bus)
-)
-(connector
-	(pt 1928 344)
-	(pt 1928 496)
-	(bus)
-)
-(connector
-	(pt 1928 496)
-	(pt 1928 632)
-	(bus)
-)
-(connector
 	(pt 2224 488)
 	(pt 2336 488)
-	(bus)
-)
-(connector
-	(pt 2056 480)
-	(pt 2056 448)
-	(bus)
-)
-(connector
-	(pt 2072 480)
-	(pt 2056 480)
-	(bus)
-)
-(connector
-	(pt 2000 448)
-	(pt 2056 448)
 	(bus)
 )
 (connector
@@ -1116,6 +1085,37 @@ agreement for further details.
 	(pt 2240 760)
 	(pt 2264 760)
 )
+(connector
+	(text "rdata[31..0]" (rect 2010 464 2066 476)(font "Arial" ))
+	(pt 1928 480)
+	(pt 2072 480)
+	(bus)
+)
+(connector
+	(pt 1928 344)
+	(pt 1928 480)
+	(bus)
+)
+(connector
+	(pt 1928 480)
+	(pt 1928 632)
+	(bus)
+)
+(connector
+	(pt 2072 496)
+	(pt 2048 496)
+	(bus)
+)
+(connector
+	(pt 2048 496)
+	(pt 2048 536)
+	(bus)
+)
+(connector
+	(pt 2024 536)
+	(pt 2048 536)
+	(bus)
+)
 (junction (pt 1096 408))
 (junction (pt 424 184))
 (junction (pt 1160 352))
@@ -1123,8 +1123,8 @@ agreement for further details.
 (junction (pt 1592 472))
 (junction (pt 1160 672))
 (junction (pt 1160 720))
-(junction (pt 1928 496))
 (junction (pt 2240 760))
+(junction (pt 1928 480))
 (text "Even number (0,2,4,...)" (rect 1296 208 1532 232)(font "Times New Roman" (color 255 170 0)(font_size 16)(bold_italic)))
 (text "Odd number (1,3,5,...)" (rect 1304 536 1531 560)(font "Times New Roman" (color 255 170 0)(font_size 16)(bold_italic)))
 (text "Data Storage" (rect 56 96 296 139)(font "Times New Roman" (color 255 170 0)(font_size 28)(bold_italic)))
