@@ -38,14 +38,13 @@ output reg [15 :0] n_trig;
 
 ////////////////////////////////////////////
 always @(posedge clk) begin
-
-   /// reset ///
-   if( live_rising == 1'b1 ) begin
-      busy <=  1'b0;
-		read_overflow <= 1'b0;
-	    n_trig <= 0;
+	
+	//
+	// n_trig is driven by trig.
+	//
+	if( trig==1'b1 ) begin
+	   n_trig <= n_trig + 1;
 	end
-		
 	
 	//
 	// if #read > #trig, something is wrong, read_overflow is HIGH.
@@ -65,6 +64,16 @@ always @(posedge clk) begin
       busy <= 1'b0;
    end	
 	
+	
+   ///
+   /// reset 
+	/// put in the bottom to ensure the reset
+	///
+   if( live_rising == 1'b1 ) begin
+      busy <=  1'b0;
+		read_overflow <= 1'b0;
+	   n_trig <= 0;
+	end
 	
 end
 

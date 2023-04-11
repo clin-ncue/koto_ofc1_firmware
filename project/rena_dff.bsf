@@ -22,7 +22,7 @@ agreement for further details.
 (header "symbol" (version "1.2"))
 (symbol
 	(rect 16 16 112 112)
-	(text "rena_dff5" (rect 5 0 61 14)(font "Arial" (font_size 8)))
+	(text "rena_dff" (rect 5 0 54 14)(font "Arial" (font_size 8)))
 	(text "inst" (rect 8 80 25 92)(font "Arial" ))
 	(port
 		(pt 0 32)

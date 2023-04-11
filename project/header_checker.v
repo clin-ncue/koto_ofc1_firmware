@@ -28,7 +28,10 @@ module header_checker
   // output
   evtno_err         ,
   spillno_err       ,
-  in_counter  
+  in_counter        ,
+  r_evtno           ,
+  r_expevtno        ,
+  r_spillno   
 );
 
 
@@ -45,27 +48,54 @@ input wire         get_package;
 output reg         evtno_err;
 output reg         spillno_err;
 output reg [15 :0] in_counter;
+output reg [15 :0] r_evtno;
+output reg [15 :0] r_expevtno;
+output reg [ 9 :0] r_spillno;
+
 
 //
 reg        [15: 0] exp_evtno;
+reg                lock_evtno;
+reg                lock_spillno;
 
 ////////////////////////////////////////////
 always @(posedge clk) begin
 
-   /// reset
-	if( live_rising == 1'b1 ) begin
-	   evtno_err <= 1'b0;
-		spillno_err <= 1'b0;
-		exp_evtno <= 1;
-		in_counter <= 0;
+   
+   ///
+	/// lock the event number and spill number read from the header.
+	/// can only unlock by live reset
+   ///	
+	if( lock_evtno == 1'b0 && evtno_err ==1'b1 ) begin
+	   r_evtno <= pkg_evtno;
+		r_expevtno <= exp_evtno;
+		lock_evtno <= 1'b1;
 	end
-
+	
+	if( lock_spillno == 1'b0 && spillno_err == 1'b1 ) begin
+	   r_spillno <= pkg_spillno;
+		lock_spillno <= 1'b1;
+	end
+	
    /// check consistency
 	if( get_package == 1'b1 ) begin
 	   evtno_err <= (pkg_evtno != exp_evtno) ? 1'b1 : 1'b0; 
 		spillno_err <= (pkg_spillno != exp_spillno) ? 1'b1 : 1'b0;
 	   exp_evtno <= exp_evtno + 1;
 	   in_counter <= in_counter + 1;	
+	end
+	
+	/// reset
+	if( live_rising == 1'b1 ) begin
+	   evtno_err <= 1'b0;
+		spillno_err <= 1'b0;
+		exp_evtno <= 1;
+		in_counter <= 0;
+		lock_evtno <= 1'b0;
+		lock_spillno <= 1'b0;
+		r_evtno <= 0;
+		r_expevtno <= 0;
+		r_spillno <= 0;
 	end
 	
 end

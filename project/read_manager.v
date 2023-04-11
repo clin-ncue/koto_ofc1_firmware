@@ -17,6 +17,7 @@ module read_manager
   live_rising       ,
   HALF_PACKAGE_LENGTH    ,
   MEMORY_DEPTH      ,
+  MAX_NEVENT        ,
   input_ena         ,
   w_complete        ,
    
@@ -26,6 +27,7 @@ module read_manager
   n_write           ,
   n_read            ,
   timeout           ,
+  buffer_full       ,
   read_input_id          
 );
 
@@ -37,6 +39,7 @@ input wire         live_rising;
 input wire [15 :0] w_complete;
 input wire [9  :0] HALF_PACKAGE_LENGTH;
 input wire [14 :0] MEMORY_DEPTH;
+input wire [5  :0] MAX_NEVENT;
 input wire [15 :0] input_ena;
 
 // output
@@ -45,32 +48,18 @@ output reg [14 :0] raddr;
 output reg [15 :0] n_write;
 output reg [15 :0] n_read;
 output reg         timeout;
+output reg         buffer_full;
 output reg [3  :0] read_input_id;
 
 // 
-reg        [15 :0] w_tag;
 reg        [14 :0] init_addr;
-reg        [11 :0] cnt;                         
+reg        [11 :0] cnt; 
+reg        [15 :0] w_tag;                        
 
 reg        [9 : 0] timeout_cnt;
 
 ////////////////////////////////////////////
 always @(posedge clk) begin
-
-   /// reset ///
-   if( live_rising == 1'b1 ) begin
-	   read_input_id <= 0;
-		ren <= 1'b0;
-		raddr <= 0;
-		n_write <= 0;
-		n_read <= 0;
-		timeout <= 1'b0;
-		init_addr <= 0;
-		w_tag <= 0;
-		cnt <= 0;
-		timeout_cnt <= 0;
-	end
-		
 	
 	//
 	// read logic
@@ -115,7 +104,6 @@ always @(posedge clk) begin
    if( (w_complete | w_tag) == input_ena ) begin
 	   n_write <= n_write + 1;
 	   w_tag <= 0;
-	   n_write <= n_write + 1;	
 	end 
 	else begin
 	   w_tag <= (w_complete | w_tag);
@@ -134,6 +122,34 @@ always @(posedge clk) begin
 	if( timeout_cnt > MAX_WAITING_TIME ) begin
 	   timeout <= 1'b1;
 	end
+	
+	// memory full
+	// #events written in queue should be less than the RAM depth.
+	//                                                 (MAX_NEVENT)
+	// if it somehow happens, this memory_full error is raised.
+	//
+	if( n_write > n_read + MAX_NEVENT ) begin
+	   buffer_full <= 1'b1;
+	end
+	
+	///
+   /// reset 
+	/// put in the bottom to ensure the reset
+	///
+   if( live_rising == 1'b1 ) begin
+	   read_input_id <= 0;
+		ren <= 1'b0;
+		raddr <= 0;
+		n_write <= 0;
+		n_read <= 0;
+		timeout <= 1'b0;
+		buffer_full <= 1'b0;
+		init_addr <= 0;
+		w_tag <= 0;
+		cnt <= 0;
+		timeout_cnt <= 0;
+	end
+		
 	
 end
 

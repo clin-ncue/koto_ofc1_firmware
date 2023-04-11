@@ -42,18 +42,24 @@ reg         lock;
 ////////////////////////////////////////////
 always @(posedge clk) begin
 
-   /// reset ///
-   if( reset == 1'b1 ) begin
-	   out_cnt <= 0;
-		lock <= 1'b0;
-		lock_cnt <= 0;
-	end
-	
+   
+	//
+	// if received ena when unlocked, lock is latched and start counting
+   //	elapsed time.
+	// 
 	if( lock==1'b0 && ena == 1'b1 ) begin
 	   out_cnt <= out_cnt + 1;
 		lock <= 1'b1;
 	end
+		
+	//
+	// when locked, lock_cnt is incremented as the elapsed time.
+   //
+	if( lock <= 1'b1 ) begin
+	   lock_cnt <= lock_cnt + 1;
+	end
 	
+	//
 	// when lock_cnt reaches LOCK_TIME,
 	// unlock the "ena" and reset lock_cnt.
 	//
@@ -62,9 +68,13 @@ always @(posedge clk) begin
 	   lock_cnt <= 0;	
 	end
 	
-	// when locked, lock_cnt is incremented as the elapsed time.
-	if( lock <= 1'b1 ) begin
-	   lock_cnt <= lock_cnt + 1;
+	///
+	/// reset 
+	/// 
+   if( reset == 1'b1 ) begin
+	   out_cnt <= 0;
+		lock <= 1'b0;
+		lock_cnt <= 0;
 	end
 	
 end
