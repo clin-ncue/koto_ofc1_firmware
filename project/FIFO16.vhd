@@ -48,7 +48,9 @@ ENTITY FIFO16 IS
 		rdreq		: IN STD_LOGIC ;
 		wrclk		: IN STD_LOGIC ;
 		wrreq		: IN STD_LOGIC ;
-		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+		rdempty		: OUT STD_LOGIC ;
+		wrfull		: OUT STD_LOGIC 
 	);
 END FIFO16;
 
@@ -56,6 +58,8 @@ END FIFO16;
 ARCHITECTURE SYN OF fifo16 IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (15 DOWNTO 0);
+	SIGNAL sub_wire1	: STD_LOGIC ;
+	SIGNAL sub_wire2	: STD_LOGIC ;
 
 
 
@@ -79,21 +83,25 @@ ARCHITECTURE SYN OF fifo16 IS
 			rdreq	: IN STD_LOGIC ;
 			wrclk	: IN STD_LOGIC ;
 			wrreq	: IN STD_LOGIC ;
-			q	: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+			q	: OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+			rdempty	: OUT STD_LOGIC ;
+			wrfull	: OUT STD_LOGIC 
 	);
 	END COMPONENT;
 
 BEGIN
 	q    <= sub_wire0(15 DOWNTO 0);
+	rdempty    <= sub_wire1;
+	wrfull    <= sub_wire2;
 
 	dcfifo_component : dcfifo
 	GENERIC MAP (
 		intended_device_family => "Arria V",
-		lpm_numwords => 32,
+		lpm_numwords => 512,
 		lpm_showahead => "OFF",
 		lpm_type => "dcfifo",
 		lpm_width => 16,
-		lpm_widthu => 5,
+		lpm_widthu => 9,
 		overflow_checking => "ON",
 		rdsync_delaypipe => 5,
 		underflow_checking => "ON",
@@ -106,7 +114,9 @@ BEGIN
 		rdreq => rdreq,
 		wrclk => wrclk,
 		wrreq => wrreq,
-		q => sub_wire0
+		q => sub_wire0,
+		rdempty => sub_wire1,
+		wrfull => sub_wire2
 	);
 
 
@@ -122,7 +132,7 @@ END SYN;
 -- Retrieval info: PRIVATE: AlmostFullThr NUMERIC "-1"
 -- Retrieval info: PRIVATE: CLOCKS_ARE_SYNCHRONIZED NUMERIC "0"
 -- Retrieval info: PRIVATE: Clock NUMERIC "4"
--- Retrieval info: PRIVATE: Depth NUMERIC "32"
+-- Retrieval info: PRIVATE: Depth NUMERIC "512"
 -- Retrieval info: PRIVATE: Empty NUMERIC "1"
 -- Retrieval info: PRIVATE: Full NUMERIC "1"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Arria V"
@@ -140,21 +150,21 @@ END SYN;
 -- Retrieval info: PRIVATE: diff_widths NUMERIC "0"
 -- Retrieval info: PRIVATE: msb_usedw NUMERIC "0"
 -- Retrieval info: PRIVATE: output_width NUMERIC "16"
--- Retrieval info: PRIVATE: rsEmpty NUMERIC "0"
+-- Retrieval info: PRIVATE: rsEmpty NUMERIC "1"
 -- Retrieval info: PRIVATE: rsFull NUMERIC "0"
 -- Retrieval info: PRIVATE: rsUsedW NUMERIC "0"
 -- Retrieval info: PRIVATE: sc_aclr NUMERIC "0"
 -- Retrieval info: PRIVATE: sc_sclr NUMERIC "0"
 -- Retrieval info: PRIVATE: wsEmpty NUMERIC "0"
--- Retrieval info: PRIVATE: wsFull NUMERIC "0"
+-- Retrieval info: PRIVATE: wsFull NUMERIC "1"
 -- Retrieval info: PRIVATE: wsUsedW NUMERIC "0"
 -- Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Arria V"
--- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "32"
+-- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "512"
 -- Retrieval info: CONSTANT: LPM_SHOWAHEAD STRING "OFF"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "dcfifo"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "16"
--- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "5"
+-- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "9"
 -- Retrieval info: CONSTANT: OVERFLOW_CHECKING STRING "ON"
 -- Retrieval info: CONSTANT: RDSYNC_DELAYPIPE NUMERIC "5"
 -- Retrieval info: CONSTANT: UNDERFLOW_CHECKING STRING "ON"
@@ -163,8 +173,10 @@ END SYN;
 -- Retrieval info: USED_PORT: data 0 0 16 0 INPUT NODEFVAL "data[15..0]"
 -- Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL "q[15..0]"
 -- Retrieval info: USED_PORT: rdclk 0 0 0 0 INPUT NODEFVAL "rdclk"
+-- Retrieval info: USED_PORT: rdempty 0 0 0 0 OUTPUT NODEFVAL "rdempty"
 -- Retrieval info: USED_PORT: rdreq 0 0 0 0 INPUT NODEFVAL "rdreq"
 -- Retrieval info: USED_PORT: wrclk 0 0 0 0 INPUT NODEFVAL "wrclk"
+-- Retrieval info: USED_PORT: wrfull 0 0 0 0 OUTPUT NODEFVAL "wrfull"
 -- Retrieval info: USED_PORT: wrreq 0 0 0 0 INPUT NODEFVAL "wrreq"
 -- Retrieval info: CONNECT: @data 0 0 16 0 data 0 0 16 0
 -- Retrieval info: CONNECT: @rdclk 0 0 0 0 rdclk 0 0 0 0
@@ -172,6 +184,8 @@ END SYN;
 -- Retrieval info: CONNECT: @wrclk 0 0 0 0 wrclk 0 0 0 0
 -- Retrieval info: CONNECT: @wrreq 0 0 0 0 wrreq 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 16 0 @q 0 0 16 0
+-- Retrieval info: CONNECT: rdempty 0 0 0 0 @rdempty 0 0 0 0
+-- Retrieval info: CONNECT: wrfull 0 0 0 0 @wrfull 0 0 0 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL FIFO16.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL FIFO16.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL FIFO16.cmp TRUE
