@@ -3439,41 +3439,6 @@ agreement for further details.
 	(pt -2152 -4680)
 )
 (connector
-	(pt -1336 -5256)
-	(pt -1728 -5256)
-	(bus)
-)
-(connector
-	(pt -1336 -5240)
-	(pt -1728 -5240)
-)
-(connector
-	(pt -1336 -5224)
-	(pt -1728 -5224)
-	(bus)
-)
-(connector
-	(pt -1336 -5208)
-	(pt -1728 -5208)
-)
-(connector
-	(pt -1336 -5192)
-	(pt -1728 -5192)
-)
-(connector
-	(pt -1336 -5176)
-	(pt -1728 -5176)
-	(bus)
-)
-(connector
-	(pt -2048 -5240)
-	(pt -2128 -5240)
-)
-(connector
-	(pt -2048 -5256)
-	(pt -2152 -5256)
-)
-(connector
 	(pt -2400 -4456)
 	(pt -2424 -4456)
 )
@@ -3533,22 +3498,6 @@ agreement for further details.
 (connector
 	(pt -1536 -4560)
 	(pt -1344 -4560)
-)
-(connector
-	(pt -2128 -5296)
-	(pt -2128 -5240)
-)
-(connector
-	(pt -2128 -5240)
-	(pt -2128 -4720)
-)
-(connector
-	(pt -2152 -5336)
-	(pt -2152 -5256)
-)
-(connector
-	(pt -2152 -5256)
-	(pt -2152 -4760)
 )
 (connector
 	(pt -1336 -5096)
@@ -4725,6 +4674,57 @@ agreement for further details.
 (connector
 	(pt -2472 -4504)
 	(pt -2472 -3928)
+)
+(connector
+	(pt -1336 -5256)
+	(pt -1728 -5256)
+	(bus)
+)
+(connector
+	(pt -2152 -5256)
+	(pt -2048 -5256)
+)
+(connector
+	(pt -1336 -5240)
+	(pt -1728 -5240)
+)
+(connector
+	(pt -2128 -5240)
+	(pt -2048 -5240)
+)
+(connector
+	(pt -1336 -5224)
+	(pt -1728 -5224)
+	(bus)
+)
+(connector
+	(pt -1336 -5208)
+	(pt -1728 -5208)
+)
+(connector
+	(pt -1336 -5192)
+	(pt -1728 -5192)
+)
+(connector
+	(pt -1336 -5176)
+	(pt -1728 -5176)
+	(bus)
+)
+(connector
+	(pt -2152 -5336)
+	(pt -2152 -5256)
+)
+(connector
+	(pt -2152 -5256)
+	(pt -2152 -4760)
+)
+(connector
+	(pt -2128 -5296)
+	(pt -2128 -5240)
+)
+(connector
+	(pt -2128 -5240)
+	(pt -2128 -4720)
 )
 (junction (pt -2424 -5096))
 (junction (pt -2424 -5048))

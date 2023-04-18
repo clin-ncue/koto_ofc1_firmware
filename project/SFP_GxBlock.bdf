@@ -182,7 +182,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect -2200 -1376 -2000 -1360)
+	(rect -2632 -1448 -2432 -1432)
 	(text "INPUT" (rect 157 0 185 10)(font "Arial" (font_size 6)))
 	(text "phy_mgmt_addr[8..0]" (rect 5 0 111 12)(font "Arial" ))
 	(pt 200 8)
@@ -198,7 +198,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect -2184 -1360 -2000 -1344)
+	(rect -2616 -1432 -2432 -1416)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
 	(text "phy_mgmt_read" (rect 5 0 85 12)(font "Arial" ))
 	(pt 184 8)
@@ -214,7 +214,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect -2232 -1296 -2000 -1280)
+	(rect -2664 -1368 -2432 -1352)
 	(text "INPUT" (rect 189 0 217 10)(font "Arial" (font_size 6)))
 	(text "phy_mgmt_writedata[31..0]" (rect 5 0 139 12)(font "Arial" ))
 	(pt 232 8)
@@ -230,7 +230,7 @@ agreement for further details.
 )
 (pin
 	(input)
-	(rect -2184 -1312 -2000 -1296)
+	(rect -2616 -1384 -2432 -1368)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
 	(text "phy_mgmt_write" (rect 5 0 86 12)(font "Arial" ))
 	(pt 184 8)
@@ -470,7 +470,7 @@ agreement for further details.
 )
 (pin
 	(output)
-	(rect -2232 -1344 -2000 -1328)
+	(rect -2664 -1416 -2432 -1400)
 	(text "OUTPUT" (rect 193 0 231 10)(font "Arial" (font_size 6)))
 	(text "phy_mgmt_readdata[31..0]" (rect 5 0 138 12)(font "Arial" ))
 	(pt 232 8)
@@ -1532,6 +1532,242 @@ agreement for further details.
 		(line (pt 22 48)(pt 16 54))
 	)
 )
+(symbol
+	(rect -1600 -24 -1568 8)
+	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
+	(text "inst13" (rect -1 3 11 32)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 32 16)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 24 16)(pt 32 16))
+	)
+	(drawing
+		(line (pt 24 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 24))
+		(line (pt 24 8)(pt 24 24))
+	)
+	(rotate270)
+)
+(symbol
+	(rect -1600 8 -1568 40)
+	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
+	(text "inst14" (rect -1 3 11 32)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 32 16)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 24 16)(pt 32 16))
+	)
+	(drawing
+		(line (pt 24 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 24))
+		(line (pt 24 8)(pt 24 24))
+	)
+	(rotate270)
+)
+(symbol
+	(rect -1672 -8 -1640 24)
+	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
+	(text "inst15" (rect -1 3 11 32)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 32 16)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 24 16)(pt 32 16))
+	)
+	(drawing
+		(line (pt 24 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 24))
+		(line (pt 24 8)(pt 24 24))
+	)
+	(rotate270)
+)
+(symbol
+	(rect -1672 24 -1640 56)
+	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
+	(text "inst16" (rect -1 3 11 32)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 32 16)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 24 16)(pt 32 16))
+	)
+	(drawing
+		(line (pt 24 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 24))
+		(line (pt 24 8)(pt 24 24))
+	)
+	(rotate270)
+)
+(symbol
+	(rect -1672 40 -1640 72)
+	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
+	(text "inst17" (rect -1 3 11 32)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 32 16)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 24 16)(pt 32 16))
+	)
+	(drawing
+		(line (pt 24 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 24))
+		(line (pt 24 8)(pt 24 24))
+	)
+	(rotate270)
+)
+(symbol
+	(rect -1600 56 -1568 88)
+	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
+	(text "inst19" (rect -1 3 11 32)(font "Arial" )(vertical)(invisible))
+	(port
+		(pt 32 16)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 24 16)(pt 32 16))
+	)
+	(drawing
+		(line (pt 24 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 24))
+		(line (pt 24 8)(pt 24 24))
+	)
+	(rotate270)
+)
+(symbol
+	(rect -2056 -1400 -1736 -1256)
+	(text "user_logic_phy_controller" (rect 5 0 130 12)(font "Arial" ))
+	(text "inst18" (rect 8 128 37 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "phy_mgmt_clk" (rect 0 0 73 12)(font "Arial" ))
+		(text "phy_mgmt_clk" (rect 21 27 94 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "phy_mgmt_clk_reset" (rect 0 0 103 12)(font "Arial" ))
+		(text "phy_mgmt_clk_reset" (rect 21 43 124 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 320 64)
+		(input)
+		(text "phy_mgmt_readdata[31..0]" (rect 0 0 133 12)(font "Arial" ))
+		(text "phy_mgmt_readdata[31..0]" (rect 162 56 295 68)(font "Arial" ))
+		(line (pt 304 64)(pt 320 64)(line_width 3))
+	)
+	(port
+		(pt 320 80)
+		(input)
+		(text "phy_mgmt_waitrequest" (rect 0 0 114 12)(font "Arial" ))
+		(text "phy_mgmt_waitrequest" (rect 181 72 295 84)(font "Arial" ))
+		(line (pt 304 80)(pt 320 80))
+	)
+	(port
+		(pt 320 32)
+		(output)
+		(text "phy_mgmt_address[8..0]" (rect 0 0 123 12)(font "Arial" ))
+		(text "phy_mgmt_address[8..0]" (rect 195 27 318 39)(font "Arial" ))
+		(line (pt 320 32)(pt 304 32)(line_width 3))
+	)
+	(port
+		(pt 320 48)
+		(output)
+		(text "phy_mgmt_read" (rect 0 0 80 12)(font "Arial" ))
+		(text "phy_mgmt_read" (rect 232 43 312 55)(font "Arial" ))
+		(line (pt 320 48)(pt 304 48))
+	)
+	(port
+		(pt 320 96)
+		(output)
+		(text "phy_mgmt_write" (rect 0 0 81 12)(font "Arial" ))
+		(text "phy_mgmt_write" (rect 231 91 312 103)(font "Arial" ))
+		(line (pt 320 96)(pt 304 96))
+	)
+	(port
+		(pt 320 112)
+		(output)
+		(text "phy_mgmt_writedata[31..0]" (rect 0 0 134 12)(font "Arial" ))
+		(text "phy_mgmt_writedata[31..0]" (rect 186 107 320 119)(font "Arial" ))
+		(line (pt 320 112)(pt 304 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 304 128))
+	)
+)
+(symbol
+	(rect -2112 -824 -1792 -680)
+	(text "user_logic_phy_controller" (rect 5 0 130 12)(font "Arial" ))
+	(text "inst20" (rect 8 128 37 140)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "phy_mgmt_clk" (rect 0 0 73 12)(font "Arial" ))
+		(text "phy_mgmt_clk" (rect 21 27 94 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "phy_mgmt_clk_reset" (rect 0 0 103 12)(font "Arial" ))
+		(text "phy_mgmt_clk_reset" (rect 21 43 124 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 320 64)
+		(input)
+		(text "phy_mgmt_readdata[31..0]" (rect 0 0 133 12)(font "Arial" ))
+		(text "phy_mgmt_readdata[31..0]" (rect 162 56 295 68)(font "Arial" ))
+		(line (pt 304 64)(pt 320 64)(line_width 3))
+	)
+	(port
+		(pt 320 80)
+		(input)
+		(text "phy_mgmt_waitrequest" (rect 0 0 114 12)(font "Arial" ))
+		(text "phy_mgmt_waitrequest" (rect 181 72 295 84)(font "Arial" ))
+		(line (pt 304 80)(pt 320 80))
+	)
+	(port
+		(pt 320 32)
+		(output)
+		(text "phy_mgmt_address[8..0]" (rect 0 0 123 12)(font "Arial" ))
+		(text "phy_mgmt_address[8..0]" (rect 195 27 318 39)(font "Arial" ))
+		(line (pt 320 32)(pt 304 32)(line_width 3))
+	)
+	(port
+		(pt 320 48)
+		(output)
+		(text "phy_mgmt_read" (rect 0 0 80 12)(font "Arial" ))
+		(text "phy_mgmt_read" (rect 232 43 312 55)(font "Arial" ))
+		(line (pt 320 48)(pt 304 48))
+	)
+	(port
+		(pt 320 96)
+		(output)
+		(text "phy_mgmt_write" (rect 0 0 81 12)(font "Arial" ))
+		(text "phy_mgmt_write" (rect 231 91 312 103)(font "Arial" ))
+		(line (pt 320 96)(pt 304 96))
+	)
+	(port
+		(pt 320 112)
+		(output)
+		(text "phy_mgmt_writedata[31..0]" (rect 0 0 134 12)(font "Arial" ))
+		(text "phy_mgmt_writedata[31..0]" (rect 186 107 320 119)(font "Arial" ))
+		(line (pt 320 112)(pt 304 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 304 128))
+	)
+)
 (connector
 	(pt -976 -8)
 	(pt -888 -8)
@@ -1750,46 +1986,6 @@ agreement for further details.
 	(pt -1520 -48)
 )
 (connector
-	(pt -1480 -744)
-	(pt -1912 -744)
-)
-(connector
-	(pt -1920 -776)
-	(pt -1920 -1352)
-)
-(connector
-	(pt -1920 -776)
-	(pt -1480 -776)
-)
-(connector
-	(pt -1960 -728)
-	(pt -1960 -1304)
-)
-(connector
-	(pt -1960 -728)
-	(pt -1480 -728)
-)
-(connector
-	(pt -1480 -792)
-	(pt -1904 -792)
-	(bus)
-)
-(connector
-	(pt -1904 -1368)
-	(pt -1904 -792)
-	(bus)
-)
-(connector
-	(pt -1936 -712)
-	(pt -1480 -712)
-	(bus)
-)
-(connector
-	(pt -1936 -712)
-	(pt -1936 -1288)
-	(bus)
-)
-(connector
 	(pt -920 -1408)
 	(pt -992 -1408)
 )
@@ -1821,10 +2017,6 @@ agreement for further details.
 	(pt -1672 -1248)
 )
 (connector
-	(pt -2264 -1408)
-	(pt -1472 -1408)
-)
-(connector
 	(pt -920 -1448)
 	(pt -992 -1448)
 )
@@ -1843,17 +2035,8 @@ agreement for further details.
 	(pt -992 -1208)
 )
 (connector
-	(pt -2000 -1336)
-	(pt -1472 -1336)
-	(bus)
-)
-(connector
 	(pt -936 -1248)
 	(pt -992 -1248)
-)
-(connector
-	(pt -1472 -1320)
-	(pt -2000 -1320)
 )
 (connector
 	(pt -1696 -1208)
@@ -1871,50 +2054,6 @@ agreement for further details.
 (connector
 	(pt -1672 -672)
 	(pt -1480 -672)
-)
-(connector
-	(pt -2000 -1368)
-	(pt -1904 -1368)
-	(bus)
-)
-(connector
-	(pt -1904 -1368)
-	(pt -1472 -1368)
-	(bus)
-)
-(connector
-	(pt -2000 -1352)
-	(pt -1920 -1352)
-)
-(connector
-	(pt -1920 -1352)
-	(pt -1472 -1352)
-)
-(connector
-	(pt -2000 -1304)
-	(pt -1960 -1304)
-)
-(connector
-	(pt -1960 -1304)
-	(pt -1472 -1304)
-)
-(connector
-	(pt -2264 -1408)
-	(pt -2264 -832)
-)
-(connector
-	(pt -2264 -832)
-	(pt -2264 -48)
-)
-(connector
-	(pt -2000 -1288)
-	(pt -1936 -1288)
-	(bus)
-)
-(connector
-	(pt -1936 -1288)
-	(pt -1472 -1288)
-	(bus)
 )
 (connector
 	(pt -504 -1128)
@@ -2065,16 +2204,141 @@ agreement for further details.
 	(bus)
 )
 (connector
+	(pt -2288 -1448)
 	(pt -1472 -1448)
-	(pt -2288 -1448)
+)
+(connector
+	(pt -1568 72)
+	(pt -1520 72)
+	(bus)
+)
+(connector
+	(pt -1520 56)
+	(pt -1640 56)
+)
+(connector
+	(pt -1520 40)
+	(pt -1640 40)
+)
+(connector
+	(pt -1520 -8)
+	(pt -1568 -8)
+	(bus)
+)
+(connector
+	(pt -1520 8)
+	(pt -1640 8)
+)
+(connector
+	(pt -1520 24)
+	(pt -1568 24)
+	(bus)
+)
+(connector
+	(pt -2264 -1408)
+	(pt -1472 -1408)
+)
+(connector
+	(pt -1736 -1368)
+	(pt -1472 -1368)
+	(bus)
+)
+(connector
+	(pt -1736 -1352)
+	(pt -1472 -1352)
+)
+(connector
+	(pt -1736 -1336)
+	(pt -1472 -1336)
+	(bus)
+)
+(connector
+	(pt -1736 -1320)
+	(pt -1472 -1320)
+)
+(connector
+	(pt -1736 -1304)
+	(pt -1472 -1304)
+)
+(connector
+	(pt -1736 -1288)
+	(pt -1472 -1288)
+	(bus)
+)
+(connector
+	(pt -2056 -1368)
+	(pt -2288 -1368)
 )
 (connector
 	(pt -2288 -1448)
+	(pt -2288 -1368)
+)
+(connector
+	(pt -2288 -1368)
 	(pt -2288 -872)
 )
 (connector
+	(pt -2056 -1352)
+	(pt -2264 -1352)
+)
+(connector
+	(pt -2264 -1408)
+	(pt -2264 -1352)
+)
+(connector
+	(pt -2264 -1352)
+	(pt -2264 -832)
+)
+(connector
+	(pt -1792 -792)
+	(pt -1480 -792)
+	(bus)
+)
+(connector
+	(pt -1792 -776)
+	(pt -1480 -776)
+)
+(connector
+	(pt -1792 -760)
+	(pt -1480 -760)
+	(bus)
+)
+(connector
+	(pt -1792 -744)
+	(pt -1480 -744)
+)
+(connector
+	(pt -1792 -728)
+	(pt -1480 -728)
+)
+(connector
+	(pt -1792 -712)
+	(pt -1480 -712)
+	(bus)
+)
+(connector
+	(pt -2112 -792)
+	(pt -2288 -792)
+)
+(connector
 	(pt -2288 -872)
+	(pt -2288 -792)
+)
+(connector
+	(pt -2288 -792)
 	(pt -2288 -88)
+)
+(connector
+	(pt -2112 -776)
+	(pt -2264 -776)
+)
+(connector
+	(pt -2264 -832)
+	(pt -2264 -776)
+)
+(connector
+	(pt -2264 -776)
+	(pt -2264 -48)
 )
 (junction (pt -2560 -1208))
 (junction (pt -2560 -1160))
@@ -2085,13 +2349,13 @@ agreement for further details.
 (junction (pt -2608 -616))
 (junction (pt -2288 -88))
 (junction (pt -2264 -48))
-(junction (pt -1920 -1352))
-(junction (pt -1960 -1304))
-(junction (pt -1904 -1368))
-(junction (pt -1936 -1288))
 (junction (pt -728 -1168))
 (junction (pt -2696 -616))
 (junction (pt -568 -1056))
 (junction (pt -544 -592))
 (junction (pt -392 -480))
+(junction (pt -2288 -1368))
+(junction (pt -2264 -1352))
+(junction (pt -2288 -792))
+(junction (pt -2264 -776))
 (rectangle (rect -3176 -1776 728 472)(color 0 85 0)(line_width 3))
