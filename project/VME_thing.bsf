@@ -440,9 +440,16 @@ agreement for further details.
 	(port
 		(pt 0 976)
 		(input)
+		(text "In74[31..0]" (rect 0 0 59 14)(font "Arial" (font_size 8)))
+		(text "In74[31..0]" (rect 21 971 80 985)(font "Arial" (font_size 8)))
+		(line (pt 0 976)(pt 16 976)(line_width 3))
+	)
+	(port
+		(pt 0 992)
+		(input)
 		(text "Outclk" (rect 0 0 35 14)(font "Arial" (font_size 8)))
-		(text "Outclk" (rect 21 971 56 985)(font "Arial" (font_size 8)))
-		(line (pt 0 976)(pt 16 976))
+		(text "Outclk" (rect 21 987 56 1001)(font "Arial" (font_size 8)))
+		(line (pt 0 992)(pt 16 992))
 	)
 	(port
 		(pt 184 32)
@@ -856,6 +863,13 @@ agreement for further details.
 		(text "Out73[31..0]" (rect 0 0 69 14)(font "Arial" (font_size 8)))
 		(text "Out73[31..0]" (rect 94 955 163 969)(font "Arial" (font_size 8)))
 		(line (pt 184 960)(pt 168 960)(line_width 3))
+	)
+	(port
+		(pt 184 976)
+		(output)
+		(text "Out74[31..0]" (rect 0 0 69 14)(font "Arial" (font_size 8)))
+		(text "Out74[31..0]" (rect 94 971 163 985)(font "Arial" (font_size 8)))
+		(line (pt 184 976)(pt 168 976)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 168 1008))

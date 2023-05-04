@@ -85,9 +85,9 @@ subdesign tdc_vme
   test_mode       	: output;     -- puts the chip in test mode: write memories, registers,etc.
   reset           	: output;     -- resets the chip
   ena_simu				: output;     -- switch from real data to test data
-  SPI_start				: output;
+  phy_mgmt_reset		: output;
   
-  vmel2a_mode			: output;     -- switch level2 accept from DAQ to VME
+  clksw_mode			: output;     -- switch level2 accept from DAQ to VME
   reset1					: output;     -- one more reset  
   halt_mode				: output;     -- freeze content of memories
   
@@ -166,8 +166,8 @@ variable
   haltmode         : node;      -- alias for halt mode register
   testmodereg      : dff;       -- test mode register
   testmode         : node;      -- alias for test mode register
-  vmel2amodereg    : dff;       -- vmel2a mode register
-  vmel2amode       : node;      -- alias for vmel2a mode register
+  clkswmodereg    : dff;       -- clksw mode register
+  clkswmode       : node;      -- alias for clksw mode register
   ctrlreg1[31..0]  : dff;		-- misc control registers
   ctrlreg2[31..0]  : dff;		-- misc control registers
   ctrlreg3[31..0]  : dff;		-- misc control registers
@@ -224,11 +224,11 @@ variable
   vme_reset       : node;		-- reset output for chip
   vme_reset1       : node;		-- reset output for chip
   vme_ena_simu		: node;
-  vme_SPI_start	: node;
+  vme_phy_mgmt_reset	: node;
   vme_testmodewrite : node;     -- write test mode register
   vme_testdatamodewrite : node;     -- write test mode register
   vme_haltmodewrite : node;     -- write test mode register
-  vme_vmel2amodewrite : node;   -- write vmel2a mode register
+  vme_clkswmodewrite : node;   -- write clksw mode register
   vme_ctrlwrite1   : node;		-- write control register1
   vme_ctrlwrite2   : node;		-- write control register2
   vme_ctrlwrite3   : node;		-- write control register3
@@ -305,10 +305,10 @@ begin
 
   -- put chips in "vmel2-mode" by writing H"1" on address H"B"
   -- put chips in "daql2-mode" by writing H"1" on address H"0"
-  vme_vmel2amodewrite = vmeas & vmewrite & (addr[25..2]==H"B");
-  vmel2amodereg.d = data[0];
-  vmel2amodereg.clk =  vme_vmel2amodewrite;
-  vmel2amode = vmel2amodereg.q;
+  vme_clkswmodewrite = vmeas & vmewrite & (addr[25..2]==H"B");
+  clkswmodereg.d = data[0];
+  clkswmodereg.clk =  vme_clkswmodewrite;
+  clkswmode = clkswmodereg.q;
 
   -- write registers via vme - (chip has to be in "test-mode"
   vme_ctrlwrite1 = vmeas & vmewrite &(testmode==H"1")&(addr[26]==id)&(addr[25..2]==H"1");
@@ -468,7 +468,7 @@ begin
   -- do reset via vme (chip has to be in "test-mode") - works on bouth chips at once
  vme_reset = vmeas & vmewrite &(testmode==H"1")&(addr[25..2]==H"11");
  vme_reset1 = vmeas & vmewrite &(testmode==H"1")&(addr[25..2]==H"12");
- vme_SPI_start = vmeas & vmewrite &(testmode==H"1")&(addr[25..2]==H"13");
+ vme_phy_mgmt_reset = vmeas & vmewrite &(testmode==H"1")&(addr[25..2]==H"13");
  vme_ena_simu = vmeas & vmewrite &(addr[25..2]==H"14");
   -- read memorys via vme
  
@@ -508,7 +508,7 @@ begin
     dataout[7].in = GND;
     dataout[6].in = GND;
     dataout[5].in = GND;
-    dataout[4].in = vmel2amode;
+    dataout[4].in = clkswmode;
     dataout[3].in = haltmode;
     dataout[2].in = testmode;
     dataout[1].in = testdatamode;
@@ -808,7 +808,7 @@ begin
   -- reset chip via vme
   reset = vme_reset;
   reset1 = vme_reset1;
-  SPI_start = vme_SPI_start;
+  phy_mgmt_reset = vme_phy_mgmt_reset;
   ena_simu = vme_ena_simu;
   -- output VME registers for use inside big chip
   test_mode = testmode;  -- this is "H" if you write "1" at addr "F" and it stays like that
@@ -816,7 +816,7 @@ begin
 
   halt_mode = haltmode;  -- this is "H" if you write "1" at addr "C" and it stays like that
                          -- until you write "0" at addr "C".
-  vmel2a_mode = vmel2amode;  -- this is "H" if you write "1" at addr "B" and it stays like that
+  clksw_mode = clkswmode;  -- this is "H" if you write "1" at addr "B" and it stays like that
                          -- until you write "0" at addr "B".
 
 
