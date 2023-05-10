@@ -1423,4 +1423,5 @@ set_global_assignment -name SIGNALTAP_FILE stp_mar21_v0.stp
 set_global_assignment -name SIGNALTAP_FILE stp_SFP0.stp
 set_global_assignment -name SIGNALTAP_FILE stp_fiber.stp
 set_global_assignment -name VERILOG_FILE Check_Data.v
+set_global_assignment -name VERILOG_FILE max_nevent_ram_man.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -2,11 +2,17 @@
     OL_controller_5G
 	 Author: Y.-C. Tung, arranged by C. Lin at Oct 27, 2022 
 	   
-       The automatic alignment block with diagnosis function.
-		 The original was designed by Y.-C. Tung, I modifed it to fit with 5G block.
+      The automatic alignment block with diagnosis function.
+		The original was designed by Y.-C. Tung, I modifed it to fit with 5G block.
 
-		 Comments were added for other developers to understand the logic faster.
-		 
+		Comments were added for other developers to understand the logic faster.
+	
+   2023.05.10
+	   Fix bugs in the alignment mode: the control incrementation was limited at 20'hFEEEE.
+	   This leads to a trap in the mode = 0 if control > 20'hFEEEE.
+		
+		Add case default statememt as a protection, though it should not happen.
+	
 */
 
 module OL_Controller_5G(	
@@ -60,7 +66,7 @@ always @(posedge clk)
 begin
 	
 	// switch to alignment mode while LIVE is off.
-	mode = (LIVE==1'b0)? 2'b00:mode;
+	mode = (LIVE==1'b0)? 2'b00 : mode;
 	
 	case(mode)
 	
@@ -72,17 +78,16 @@ begin
 		// - data output should be alignment word.
 		//
 		ena_tx   = (control<20'hFDDDD)? 1'b0 : 1'b1;
-		
 		datak    = (control<20'hFDDDD)? 4'b1111 : 4'b0000;	
 	   data_out = pattern_align; 
 	
 	   //
 	   // "control" is continuously incremented until it hits 20'hFEEEE.	
 		// When the LIVE is on, it switches to test mode.
-		// - Send 0xFFFF0000 for one clock at LIVE rising edge(according to Joseph's design).
+		// - Send 0xFFFF0000 for one clock at LIVE rising edge (according to Joseph's design).
 		// - Next clock goes to test mode.
 		// 
-		control = (control < 20'hFEEEE) ? (control + 1'b1) : control;
+		control = control + 1;
 
 		if( control==20'hFEEEE && LIVE==1'b1 ) begin
 		   mode = 2'b01;
@@ -167,6 +172,8 @@ begin
 		send_err = 1'b1;
 		
 	end
+	
+	default: mode = 2'b00;
 	
 	endcase
 	
