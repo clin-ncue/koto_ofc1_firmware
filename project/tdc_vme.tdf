@@ -504,7 +504,7 @@ begin
   
   -- read DEADBE and status registers via vme
   if ((addr[26]== id) & (addr[25..2]==H"0")) then 
-    dataout[31..8].in = H"c10002";
+    dataout[31..8].in = H"c10100";
     dataout[7].in = GND;
     dataout[6].in = GND;
     dataout[5].in = GND;
