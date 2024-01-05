@@ -41,8 +41,8 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "MAX_NEVENT[5..0]" (rect 0 0 90 12)(font "Arial" ))
-		(text "MAX_NEVENT[5..0]" (rect 21 59 111 71)(font "Arial" ))
+		(text "MAX_NEVENT[4..0]" (rect 0 0 92 12)(font "Arial" ))
+		(text "MAX_NEVENT[4..0]" (rect 21 59 113 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port

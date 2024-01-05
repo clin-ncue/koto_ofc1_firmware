@@ -3,6 +3,9 @@
    C. Lin, chiehlin@uchicago.edu
 		
 	2023.03.17 updated version
+	
+	2024.01.04 (v1.01.01) 
+	- update the bus width for two-OFC-II system.
 */
 
 module busy_control
@@ -27,7 +30,7 @@ input wire         clk;
 
 // inputs
 input wire         live_rising;
-input wire [5  :0] MAX_NEVENT;
+input wire [4  :0] MAX_NEVENT;
 input wire         trig;
 input wire [15 :0] global_n_read;
 

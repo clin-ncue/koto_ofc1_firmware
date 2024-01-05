@@ -48,8 +48,8 @@ agreement for further details.
 	(port
 		(pt 0 80)
 		(input)
-		(text "raddr[14..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
-		(text "raddr[14..0]" (rect 21 75 87 89)(font "Arial" (font_size 8)))
+		(text "raddr[13..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "raddr[13..0]" (rect 21 75 87 89)(font "Arial" (font_size 8)))
 		(line (pt 0 80)(pt 16 80)(line_width 3))
 	)
 	(port
@@ -69,8 +69,8 @@ agreement for further details.
 	(port
 		(pt 0 128)
 		(input)
-		(text "memory_depth[14..0]" (rect 0 0 119 14)(font "Arial" (font_size 8)))
-		(text "memory_depth[14..0]" (rect 21 123 140 137)(font "Arial" (font_size 8)))
+		(text "memory_depth[13..0]" (rect 0 0 119 14)(font "Arial" (font_size 8)))
+		(text "memory_depth[13..0]" (rect 21 123 140 137)(font "Arial" (font_size 8)))
 		(line (pt 0 128)(pt 16 128)(line_width 3))
 	)
 	(port
