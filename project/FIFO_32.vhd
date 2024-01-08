@@ -101,11 +101,11 @@ BEGIN
 	dcfifo_component : dcfifo
 	GENERIC MAP (
 		intended_device_family => "Arria V",
-		lpm_numwords => 512,
+		lpm_numwords => 32,
 		lpm_showahead => "OFF",
 		lpm_type => "dcfifo",
 		lpm_width => 32,
-		lpm_widthu => 9,
+		lpm_widthu => 5,
 		overflow_checking => "ON",
 		rdsync_delaypipe => 5,
 		read_aclr_synch => "OFF",
@@ -139,7 +139,7 @@ END SYN;
 -- Retrieval info: PRIVATE: AlmostFullThr NUMERIC "-1"
 -- Retrieval info: PRIVATE: CLOCKS_ARE_SYNCHRONIZED NUMERIC "0"
 -- Retrieval info: PRIVATE: Clock NUMERIC "4"
--- Retrieval info: PRIVATE: Depth NUMERIC "512"
+-- Retrieval info: PRIVATE: Depth NUMERIC "32"
 -- Retrieval info: PRIVATE: Empty NUMERIC "1"
 -- Retrieval info: PRIVATE: Full NUMERIC "1"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Arria V"
@@ -167,11 +167,11 @@ END SYN;
 -- Retrieval info: PRIVATE: wsUsedW NUMERIC "0"
 -- Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Arria V"
--- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "512"
+-- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "32"
 -- Retrieval info: CONSTANT: LPM_SHOWAHEAD STRING "OFF"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "dcfifo"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"
--- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "9"
+-- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "5"
 -- Retrieval info: CONSTANT: OVERFLOW_CHECKING STRING "ON"
 -- Retrieval info: CONSTANT: RDSYNC_DELAYPIPE NUMERIC "5"
 -- Retrieval info: CONSTANT: READ_ACLR_SYNCH STRING "OFF"
