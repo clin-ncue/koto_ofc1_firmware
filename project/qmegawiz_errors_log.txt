@@ -68,3 +68,13 @@ C:/workspace/firmware/OFC-I/main/project/dff32.vhd
 
 Jan 05 01PM:07:36>: Megafunction LPM_FF is not listed in any 
 wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/firmware/OFC-I/main/project/dff16.vhd
+
+Jan 17 12PM:33:31>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/workspace/firmware/OFC-I/main/project/dff16_clken.tdf
+
+Jan 17 12PM:54:29>: Megafunction LPM_FF is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
