@@ -33604,10 +33604,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 6256 4112)
-	(pt 6256 4376)
-)
-(connector
 	(pt 6240 4128)
 	(pt 6240 4392)
 )
@@ -38230,87 +38226,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(pt 7768 528)
-	(pt 7768 648)
-	(bus)
-)
-(connector
-	(pt 7768 648)
-	(pt 7904 648)
-	(bus)
-)
-(connector
-	(pt 7784 472)
-	(pt 7784 632)
-	(bus)
-)
-(connector
-	(pt 7784 632)
-	(pt 7904 632)
-	(bus)
-)
-(connector
-	(pt 8272 600)
-	(pt 8232 600)
-	(bus)
-)
-(connector
-	(pt 6648 616)
-	(pt 7904 616)
-)
-(connector
-	(pt 7856 1152)
-	(pt 7856 696)
-	(bus)
-)
-(connector
-	(pt 7856 696)
-	(pt 7904 696)
-	(bus)
-)
-(connector
-	(text "input_ena[15..0]" (rect 7752 672 7868 688)(font "Arial" (font_size 10)(bold_italic)))
-	(pt 7904 680)
-	(pt 7864 680)
-	(bus)
-)
-(connector
-	(pt 8512 616)
-	(pt 8232 616)
-)
-(connector
-	(text "MAX_NEVENT[4..0]" (rect 7538 648 7681 664)(font "Arial" (font_size 10)(bold_italic)))
-	(pt 7528 664)
-	(pt 7904 664)
-	(bus)
-)
-(connector
-	(pt 8480 696)
-	(pt 8232 696)
-	(bus)
-)
-(connector
-	(pt 8272 408)
-	(pt 8272 600)
-	(bus)
-)
-(connector
-	(pt 6648 560)
-	(pt 6648 616)
-)
-(connector
-	(pt 6648 616)
-	(pt 6648 1088)
-)
-(connector
-	(pt 6672 600)
-	(pt 7720 600)
-)
-(connector
-	(pt 7720 600)
-	(pt 7904 600)
-)
-(connector
 	(text "L1A" (rect 8354 1304 8383 1320)(font "Arial" (font_size 10)(bold_italic)))
 	(pt 8440 1312)
 	(pt 8392 1312)
@@ -38365,18 +38280,6 @@ agreement for further details.
 	(bus)
 )
 (connector
-	(text "global_n_write_A[15..0]" (rect 8288 624 8460 640)(font "Arial" (font_size 10)(bold_italic)))
-	(pt 8232 632)
-	(pt 8272 632)
-	(bus)
-)
-(connector
-	(text "global_n_read_A[15..0]" (rect 8288 640 8456 656)(font "Arial" (font_size 10)(bold_italic)))
-	(pt 8232 648)
-	(pt 8272 648)
-	(bus)
-)
-(connector
 	(text "global_n_read_A[15..0]" (rect 8240 1320 8408 1336)(font "Arial" (font_size 10)(bold_italic)))
 	(pt 8440 1328)
 	(pt 8392 1328)
@@ -38387,16 +38290,6 @@ agreement for further details.
 	(pt 8440 1344)
 	(pt 8392 1344)
 	(bus)
-)
-(connector
-	(text "TIMEOUT_ERR_A" (rect 8288 656 8417 672)(font "Arial" (font_size 10)(bold_italic)))
-	(pt 8232 664)
-	(pt 8272 664)
-)
-(connector
-	(text "BUFFER_FULL_A" (rect 8288 672 8416 688)(font "Arial" (font_size 10)(bold_italic)))
-	(pt 8232 680)
-	(pt 8272 680)
 )
 (connector
 	(pt 8680 6672)
@@ -39677,10 +39570,6 @@ agreement for further details.
 (connector
 	(pt 5752 1872)
 	(pt 5752 2136)
-)
-(connector
-	(pt 5752 2136)
-	(pt 5752 2416)
 )
 (connector
 	(text "00_identifier_data_out[15..0]" (rect 6010 1184 6150 1196)(font "Arial" ))
@@ -41578,6 +41467,197 @@ agreement for further details.
 	(pt 8856 7440)
 	(bus)
 )
+(connector
+	(pt 7768 528)
+	(pt 7768 648)
+	(bus)
+)
+(connector
+	(pt 7768 648)
+	(pt 7904 648)
+	(bus)
+)
+(connector
+	(pt 7784 472)
+	(pt 7784 632)
+	(bus)
+)
+(connector
+	(pt 7784 632)
+	(pt 7904 632)
+	(bus)
+)
+(connector
+	(pt 8272 600)
+	(pt 8232 600)
+	(bus)
+)
+(connector
+	(pt 6648 616)
+	(pt 7904 616)
+)
+(connector
+	(pt 7856 1152)
+	(pt 7856 696)
+	(bus)
+)
+(connector
+	(pt 7856 696)
+	(pt 7904 696)
+	(bus)
+)
+(connector
+	(text "input_ena[15..0]" (rect 7752 672 7868 688)(font "Arial" (font_size 10)(bold_italic)))
+	(pt 7904 680)
+	(pt 7864 680)
+	(bus)
+)
+(connector
+	(pt 8512 616)
+	(pt 8232 616)
+)
+(connector
+	(text "MAX_NEVENT[4..0]" (rect 7538 648 7681 664)(font "Arial" (font_size 10)(bold_italic)))
+	(pt 7528 664)
+	(pt 7904 664)
+	(bus)
+)
+(connector
+	(pt 8480 696)
+	(pt 8232 696)
+	(bus)
+)
+(connector
+	(pt 8272 408)
+	(pt 8272 600)
+	(bus)
+)
+(connector
+	(text "global_n_write_A[15..0]" (rect 8288 624 8460 640)(font "Arial" (font_size 10)(bold_italic)))
+	(pt 8232 632)
+	(pt 8272 632)
+	(bus)
+)
+(connector
+	(text "global_n_read_A[15..0]" (rect 8288 640 8456 656)(font "Arial" (font_size 10)(bold_italic)))
+	(pt 8232 648)
+	(pt 8272 648)
+	(bus)
+)
+(connector
+	(text "TIMEOUT_ERR_A" (rect 8288 656 8417 672)(font "Arial" (font_size 10)(bold_italic)))
+	(pt 8232 664)
+	(pt 8272 664)
+)
+(connector
+	(text "BUFFER_FULL_A" (rect 8288 672 8416 688)(font "Arial" (font_size 10)(bold_italic)))
+	(pt 8232 680)
+	(pt 8272 680)
+)
+(connector
+	(pt 6648 560)
+	(pt 6648 616)
+)
+(connector
+	(pt 6648 616)
+	(pt 6648 1088)
+)
+(connector
+	(pt 6672 600)
+	(pt 7720 600)
+)
+(connector
+	(pt 7720 600)
+	(pt 7904 600)
+)
+(connector
+	(pt 5752 2672)
+	(pt 5760 2672)
+)
+(connector
+	(pt 5752 2136)
+	(pt 5752 2416)
+)
+(connector
+	(pt 5752 2920)
+	(pt 5760 2920)
+)
+(connector
+	(pt 5752 2416)
+	(pt 5752 2672)
+)
+(connector
+	(pt 5752 3168)
+	(pt 5760 3168)
+)
+(connector
+	(pt 5752 2672)
+	(pt 5752 2920)
+)
+(connector
+	(pt 5752 3432)
+	(pt 5760 3432)
+)
+(connector
+	(pt 5752 3688)
+	(pt 5760 3688)
+)
+(connector
+	(pt 5752 3952)
+	(pt 5760 3952)
+)
+(connector
+	(pt 5752 3432)
+	(pt 5752 3688)
+)
+(connector
+	(pt 5752 4224)
+	(pt 5760 4224)
+)
+(connector
+	(pt 5752 3688)
+	(pt 5752 3952)
+)
+(connector
+	(pt 5752 4488)
+	(pt 5760 4488)
+)
+(connector
+	(pt 5752 3952)
+	(pt 5752 4224)
+)
+(connector
+	(pt 5752 4768)
+	(pt 5760 4768)
+)
+(connector
+	(pt 5752 5056)
+	(pt 5760 5056)
+)
+(connector
+	(pt 5752 4488)
+	(pt 5752 4768)
+)
+(connector
+	(pt 5752 4768)
+	(pt 5752 5056)
+)
+(connector
+	(pt 5752 2920)
+	(pt 5752 3168)
+)
+(connector
+	(pt 5752 3168)
+	(pt 5752 3432)
+)
+(connector
+	(pt 5752 4224)
+	(pt 5752 4488)
+)
+(connector
+	(pt 6256 4112)
+	(pt 6256 4376)
+)
 (junction (pt 3752 2936))
 (junction (pt 456 864))
 (junction (pt 888 792))
@@ -42162,6 +42242,16 @@ agreement for further details.
 (junction (pt 7736 7160))
 (junction (pt 8200 7160))
 (junction (pt 8472 7336))
+(junction (pt 5752 2416))
+(junction (pt 5752 2672))
+(junction (pt 5752 2920))
+(junction (pt 5752 3432))
+(junction (pt 5752 3688))
+(junction (pt 5752 3952))
+(junction (pt 5752 4224))
+(junction (pt 5752 4488))
+(junction (pt 5752 4768))
+(junction (pt 5752 3168))
 (text "Clock/PLL Block" (rect -1464 1816 -1050 1870)(font "Times New Roman" (font_size 36)(bold_italic)))
 (text "VME Interface" (rect -144 248 217 302)(font "Times New Roman" (font_size 36)(bold_italic)))
 (text "LED1-3" (rect 1648 664 1709 681)(font "Times New Roman" (font_size 11)(bold)))
