@@ -127,10 +127,10 @@ always @(posedge clk) begin
 	   odd_wren  <= ( ((pkg_cnt - 6) / 16 ) % 2 == 1'b1 ) ? 1'b1 : 1'b0;	
 		
 		even_addr <= ( ((pkg_cnt - 6) / 16 ) % 2 == 1'b0 ) ? 
-		             3 + ( (pkg_cnt - 6) / 16 ) / 2 + ( (pkg_cnt - 6) % 16 ) * 64 / 2 :
+		             3 + init_addr + ( (pkg_cnt - 6) / 16 ) / 2 + ( (pkg_cnt - 6) % 16 ) * 64 / 2 :
 						 even_addr;
 	   odd_addr  <= ( ((pkg_cnt - 6) / 16 ) % 2 == 1'b1 ) ? 
-		             3 + ( (pkg_cnt - 6) / 16 ) / 2 + ( (pkg_cnt - 6) % 16 ) * 64 / 2 :
+		             3 + init_addr + ( (pkg_cnt - 6) / 16 ) / 2 + ( (pkg_cnt - 6) % 16 ) * 64 / 2 :
 						 odd_addr;
 		
 		even_data <= (((pkg_cnt - 6) / 16 ) % 2 == 1'b0 ) ? input_data : even_data;
