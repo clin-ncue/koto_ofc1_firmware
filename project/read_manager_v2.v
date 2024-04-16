@@ -12,6 +12,11 @@
 	
 	2024.01.04 (v1.01.01)
 	Update the bus widths to fit the two-OFC-II system design.
+	
+	2024.04.14 (v1.01.12)
+	Introduce the snooze logic to the piled events.
+	(To deal with the OFC-II flapping issue.)
+	
 */
 
 module read_manager_v2
@@ -27,6 +32,7 @@ module read_manager_v2
   MAX_NEVENT        ,
   input_ena         ,
   w_complete        ,
+  snooze_threshold  ,
    
   // output
   raddr             ,
@@ -48,6 +54,7 @@ input wire [9  :0] HALF_PACKAGE_LENGTH;
 input wire [13 :0] MEMORY_DEPTH;
 input wire [4  :0] MAX_NEVENT;
 input wire [15 :0] input_ena;
+input wire [15 :0] snooze_threshold;
 
 // output
 output reg         ren;
@@ -64,9 +71,15 @@ reg        [11 :0] cnt;
 reg        [15 :0] w_tag;                        
 
 reg        [9 : 0] timeout_cnt;
+reg        [15: 0] snooze_cnt;
 
 ////////////////////////////////////////////
 always @(posedge clk) begin
+	
+	//
+	// snooze counter
+	//
+	snooze_cnt <= ( snooze_cnt<16'hFFFF ) ? (snooze_cnt + 1) : snooze_cnt;
 	
 	//
 	// read logic
@@ -76,12 +89,21 @@ always @(posedge clk) begin
 	// when reading is done, n_read is incremented and init_addr is updated
 	// for the next event.
 	//
-	if( timeout==1'b0 && ren == 1'b0 && n_write > n_read ) begin
+	// 2024.04.14 
+	// - Add snooze requirement.
+	// 
+	//
+	if( timeout==1'b0 && ren == 1'b0 && n_write > n_read && snooze_cnt >= snooze_threshold ) begin
       ren <= 1'b1;
 		raddr <= init_addr;
 		read_input_id <= 0;
 		cnt <= 0;
    end	
+	
+	//
+	// 2024.04.14
+	// Reset snooze counter when the reading is completed.
+	//
 	
 	if( ren ==1'b1 ) begin
 	   if( cnt < HALF_PACKAGE_LENGTH - 1 ) begin
@@ -97,6 +119,8 @@ always @(posedge clk) begin
 		   ren <= 1'b0;
 			n_read <= n_read + 1;
 			init_addr <= (init_addr + HALF_PACKAGE_LENGTH) % MEMORY_DEPTH;
+			
+			snooze_cnt <= 0;
 		end
 	end
 	
@@ -155,6 +179,7 @@ always @(posedge clk) begin
 		w_tag <= 0;
 		cnt <= 0;
 		timeout_cnt <= 0;
+		snooze_cnt <= 16'hFFFF;
 	end
 		
 	
