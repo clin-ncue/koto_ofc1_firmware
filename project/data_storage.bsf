@@ -81,10 +81,6 @@ agreement for further details.
 		(line (pt 0 144)(pt 16 144))
 	)
 	(port
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 		(pt 0 160)
 		(input)
 		(text "mode_sel[1..0]" (rect 0 0 82 14)(font "Arial" (font_size 8)))
@@ -92,8 +88,6 @@ agreement for further details.
 		(line (pt 0 160)(pt 16 160)(line_width 3))
 	)
 	(port
->>>>>>> 5dc287a (v1.01.13 Replace energy words with a constant, a counter, or a delta)
->>>>>>> dev
 		(pt 288 32)
 		(output)
 		(text "data_out[31..0]" (rect 0 0 84 14)(font "Arial" (font_size 8)))

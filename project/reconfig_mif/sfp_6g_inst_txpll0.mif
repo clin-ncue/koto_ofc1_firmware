@@ -1,5 +1,5 @@
 
--- File Name = C:/workspace/firmware/OFC-I/main/project/reconfig_mif/sfp_6g_inst_txpll0.mif.mif
+-- File Name = C:/workspace/firmware/OFC-I/project/reconfig_mif/sfp_6g_inst_txpll0.mif.mif
 WIDTH=16;
 DEPTH=12;
 

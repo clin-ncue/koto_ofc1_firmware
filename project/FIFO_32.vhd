@@ -101,18 +101,18 @@ BEGIN
 	dcfifo_component : dcfifo
 	GENERIC MAP (
 		intended_device_family => "Arria V",
-		lpm_numwords => 32,
+		lpm_numwords => 256,
 		lpm_showahead => "OFF",
 		lpm_type => "dcfifo",
 		lpm_width => 32,
-		lpm_widthu => 5,
+		lpm_widthu => 8,
 		overflow_checking => "ON",
-		rdsync_delaypipe => 5,
+		rdsync_delaypipe => 7,
 		read_aclr_synch => "OFF",
 		underflow_checking => "ON",
 		use_eab => "ON",
 		write_aclr_synch => "OFF",
-		wrsync_delaypipe => 5
+		wrsync_delaypipe => 7
 	)
 	PORT MAP (
 		aclr => aclr,
@@ -139,7 +139,7 @@ END SYN;
 -- Retrieval info: PRIVATE: AlmostFullThr NUMERIC "-1"
 -- Retrieval info: PRIVATE: CLOCKS_ARE_SYNCHRONIZED NUMERIC "0"
 -- Retrieval info: PRIVATE: Clock NUMERIC "4"
--- Retrieval info: PRIVATE: Depth NUMERIC "32"
+-- Retrieval info: PRIVATE: Depth NUMERIC "256"
 -- Retrieval info: PRIVATE: Empty NUMERIC "1"
 -- Retrieval info: PRIVATE: Full NUMERIC "1"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Arria V"
@@ -167,18 +167,18 @@ END SYN;
 -- Retrieval info: PRIVATE: wsUsedW NUMERIC "0"
 -- Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Arria V"
--- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "32"
+-- Retrieval info: CONSTANT: LPM_NUMWORDS NUMERIC "256"
 -- Retrieval info: CONSTANT: LPM_SHOWAHEAD STRING "OFF"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "dcfifo"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "32"
--- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "5"
+-- Retrieval info: CONSTANT: LPM_WIDTHU NUMERIC "8"
 -- Retrieval info: CONSTANT: OVERFLOW_CHECKING STRING "ON"
--- Retrieval info: CONSTANT: RDSYNC_DELAYPIPE NUMERIC "5"
+-- Retrieval info: CONSTANT: RDSYNC_DELAYPIPE NUMERIC "7"
 -- Retrieval info: CONSTANT: READ_ACLR_SYNCH STRING "OFF"
 -- Retrieval info: CONSTANT: UNDERFLOW_CHECKING STRING "ON"
 -- Retrieval info: CONSTANT: USE_EAB STRING "ON"
 -- Retrieval info: CONSTANT: WRITE_ACLR_SYNCH STRING "OFF"
--- Retrieval info: CONSTANT: WRSYNC_DELAYPIPE NUMERIC "5"
+-- Retrieval info: CONSTANT: WRSYNC_DELAYPIPE NUMERIC "7"
 -- Retrieval info: USED_PORT: aclr 0 0 0 0 INPUT GND "aclr"
 -- Retrieval info: USED_PORT: data 0 0 32 0 INPUT NODEFVAL "data[31..0]"
 -- Retrieval info: USED_PORT: q 0 0 32 0 OUTPUT NODEFVAL "q[31..0]"

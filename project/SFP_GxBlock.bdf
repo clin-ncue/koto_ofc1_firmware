@@ -2108,10 +2108,6 @@ agreement for further details.
 	(pt -1520 -88)
 )
 (connector
-	(pt -2736 -48)
-	(pt -2264 -48)
-)
-(connector
 	(pt -2264 -48)
 	(pt -1520 -48)
 )
@@ -2518,6 +2514,46 @@ agreement for further details.
 	(pt -448 -752)
 	(pt -448 -440)
 )
+(connector
+	(pt -2504 -1120)
+	(pt -2904 -1120)
+)
+(connector
+	(pt -2904 -544)
+	(pt -2536 -544)
+)
+(connector
+	(pt -2696 -48)
+	(pt -2696 16)
+)
+(connector
+	(pt -2736 -48)
+	(pt -2696 -48)
+)
+(connector
+	(pt -2696 -48)
+	(pt -2264 -48)
+)
+(connector
+	(pt -2992 16)
+	(pt -2992 -248)
+)
+(connector
+	(pt -2992 16)
+	(pt -2696 16)
+)
+(connector
+	(pt -2904 -248)
+	(pt -2992 -248)
+)
+(connector
+	(pt -2904 -1120)
+	(pt -2904 -544)
+)
+(connector
+	(pt -2904 -544)
+	(pt -2904 -248)
+)
 (junction (pt -2560 -1208))
 (junction (pt -2560 -1160))
 (junction (pt -2560 -632))
@@ -2538,4 +2574,6 @@ agreement for further details.
 (junction (pt -2264 -776))
 (junction (pt -2704 -616))
 (junction (pt -1672 -1248))
+(junction (pt -2696 -48))
+(junction (pt -2904 -544))
 (rectangle (rect -3176 -1776 728 472)(color 0 85 0)(line_width 3))
